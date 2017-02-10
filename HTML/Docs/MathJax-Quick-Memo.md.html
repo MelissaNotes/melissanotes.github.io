@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>MathJax-Quick-Memo</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ jax: ["input/TeX","output/HTML-CSS"], extensions: [], TeX: { extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"] }, showMathMenu: false });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <style>
+    .markdown-preview:not([data-use-github-style]) {
+      padding: 2em;
+      font-size: 1.2em;
+      color: rgb(171, 178, 191);
+      overflow: auto;
+      background-color: rgb(40, 44, 52);
+    }
+
+    .markdown-preview:not([data-use-github-style]) >:first-child {
+      margin-top: 0px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h1,
+    .markdown-preview:not([data-use-github-style]) h2,
+    .markdown-preview:not([data-use-github-style]) h3,
+    .markdown-preview:not([data-use-github-style]) h4,
+    .markdown-preview:not([data-use-github-style]) h5,
+    .markdown-preview:not([data-use-github-style]) h6 {
+      line-height: 1.2;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) h1 {
+      font-size: 2.4em;
+      font-weight: 300;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h2 {
+      font-size: 1.8em;
+      font-weight: 400;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h3 {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h4 {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h5 {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h6 {
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) strong {
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) del {
+      color: rgb(124, 135, 156);
+    }
+
+    .markdown-preview:not([data-use-github-style]) a,
+    .markdown-preview:not([data-use-github-style]) a code {
+      color: rgb(82, 139, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) img {
+      max-width: 100%;
+    }
+
+    .markdown-preview:not([data-use-github-style]) > p {
+      margin-top: 0px;
+      margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style]) > ul,
+    .markdown-preview:not([data-use-github-style]) > ol {
+      margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style]) blockquote {
+      margin: 1.5em 0px;
+      font-size: inherit;
+      color: rgb(124, 135, 156);
+      border-color: rgb(75, 83, 98);
+      border-width: 4px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) hr {
+      margin: 3em 0px;
+      border-top-width: 2px;
+      border-top-style: dashed;
+      border-top-color: rgb(75, 83, 98);
+      background: none;
+    }
+
+    .markdown-preview:not([data-use-github-style]) table {
+      margin: 1.5em 0px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) th {
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) th,
+    .markdown-preview:not([data-use-github-style]) td {
+      padding: 0.66em 1em;
+      border: 1px solid rgb(75, 83, 98);
+    }
+
+    .markdown-preview:not([data-use-github-style]) pre,
+    .markdown-preview:not([data-use-github-style]) code {
+      color: rgb(255, 255, 255);
+      background-color: rgb(58, 63, 75);
+    }
+
+    .markdown-preview:not([data-use-github-style]) pre,
+    .markdown-preview:not([data-use-github-style]) pre.editor-colors {
+      margin: 1.5em 0px;
+      padding: 1em;
+      font-size: 0.92em;
+      border-radius: 3px;
+      background-color: rgb(49, 54, 63);
+    }
+
+    .markdown-preview:not([data-use-github-style]) kbd {
+      color: rgb(255, 255, 255);
+      border-width: 1px 1px 2px;
+      border-style: solid;
+      border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81);
+      background-color: rgb(58, 63, 75);
+    }
+
+    .markdown-preview[data-use-github-style] {
+      font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+      line-height: 1.6;
+      word-wrap: break-word;
+      padding: 30px;
+      font-size: 16px;
+      color: rgb(51, 51, 51);
+      overflow: scroll;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview[data-use-github-style] >:first-child {
+      margin-top: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style] >:last-child {
+      margin-bottom: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style] a:not([href]) {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] .absent {
+      color: rgb(204, 0, 0);
+    }
+
+    .markdown-preview[data-use-github-style] .anchor {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+      padding-right: 6px;
+      padding-left: 30px;
+      margin-left: -30px;
+    }
+
+    .markdown-preview[data-use-github-style] .anchor:focus {
+      outline: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1,
+    .markdown-preview[data-use-github-style] h2,
+    .markdown-preview[data-use-github-style] h3,
+    .markdown-preview[data-use-github-style] h4,
+    .markdown-preview[data-use-github-style] h5,
+    .markdown-preview[data-use-github-style] h6 {
+      position: relative;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .markdown-preview[data-use-github-style] h1 .octicon-link,
+    .markdown-preview[data-use-github-style] h2 .octicon-link,
+    .markdown-preview[data-use-github-style] h3 .octicon-link,
+    .markdown-preview[data-use-github-style] h4 .octicon-link,
+    .markdown-preview[data-use-github-style] h5 .octicon-link,
+    .markdown-preview[data-use-github-style] h6 .octicon-link {
+      display: none;
+      color: rgb(0, 0, 0);
+      vertical-align: middle;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor,
+    .markdown-preview[data-use-github-style] h2:hover .anchor,
+    .markdown-preview[data-use-github-style] h3:hover .anchor,
+    .markdown-preview[data-use-github-style] h4:hover .anchor,
+    .markdown-preview[data-use-github-style] h5:hover .anchor,
+    .markdown-preview[data-use-github-style] h6:hover .anchor {
+      padding-left: 8px;
+      margin-left: -30px;
+      text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link {
+      display: inline-block;
+    }
+
+    .markdown-preview[data-use-github-style] h1 tt,
+    .markdown-preview[data-use-github-style] h2 tt,
+    .markdown-preview[data-use-github-style] h3 tt,
+    .markdown-preview[data-use-github-style] h4 tt,
+    .markdown-preview[data-use-github-style] h5 tt,
+    .markdown-preview[data-use-github-style] h6 tt,
+    .markdown-preview[data-use-github-style] h1 code,
+    .markdown-preview[data-use-github-style] h2 code,
+    .markdown-preview[data-use-github-style] h3 code,
+    .markdown-preview[data-use-github-style] h4 code,
+    .markdown-preview[data-use-github-style] h5 code,
+    .markdown-preview[data-use-github-style] h6 code {
+      font-size: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] h1 {
+      padding-bottom: 0.3em;
+      font-size: 2.25em;
+      line-height: 1.2;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h1 .anchor {
+      line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.75em;
+      line-height: 1.225;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h2 .anchor {
+      line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h3 {
+      font-size: 1.5em;
+      line-height: 1.43;
+    }
+
+    .markdown-preview[data-use-github-style] h3 .anchor {
+      line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h4 {
+      font-size: 1.25em;
+    }
+
+    .markdown-preview[data-use-github-style] h4 .anchor {
+      line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h5 {
+      font-size: 1em;
+    }
+
+    .markdown-preview[data-use-github-style] h5 .anchor {
+      line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] h6 {
+      font-size: 1em;
+      color: rgb(119, 119, 119);
+    }
+
+    .markdown-preview[data-use-github-style] h6 .anchor {
+      line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] p,
+    .markdown-preview[data-use-github-style] blockquote,
+    .markdown-preview[data-use-github-style] ul,
+    .markdown-preview[data-use-github-style] ol,
+    .markdown-preview[data-use-github-style] dl,
+    .markdown-preview[data-use-github-style] table,
+    .markdown-preview[data-use-github-style] pre {
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] hr {
+      height: 4px;
+      padding: 0px;
+      margin: 16px 0px;
+      border: 0px none;
+      background-color: rgb(231, 231, 231);
+    }
+
+    .markdown-preview[data-use-github-style] ul,
+    .markdown-preview[data-use-github-style] ol {
+      padding-left: 2em;
+    }
+
+    .markdown-preview[data-use-github-style] ul.no-list,
+    .markdown-preview[data-use-github-style] ol.no-list {
+      padding: 0px;
+      list-style-type: none;
+    }
+
+    .markdown-preview[data-use-github-style] ul ul,
+    .markdown-preview[data-use-github-style] ul ol,
+    .markdown-preview[data-use-github-style] ol ol,
+    .markdown-preview[data-use-github-style] ol ul {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] li > p {
+      margin-top: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] dl {
+      padding: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] dl dt {
+      padding: 0px;
+      margin-top: 16px;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] dl dd {
+      padding: 0px 16px;
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote {
+      padding: 0px 15px;
+      color: rgb(119, 119, 119);
+      border-left-width: 4px;
+      border-left-style: solid;
+      border-left-color: rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] blockquote >:first-child {
+      margin-top: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote >:last-child {
+      margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] table {
+      display: block;
+      width: 100%;
+      overflow: auto;
+      word-break: keep-all;
+    }
+
+    .markdown-preview[data-use-github-style] table th {
+      font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] table th,
+    .markdown-preview[data-use-github-style] table td {
+      padding: 6px 13px;
+      border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] table tr {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: rgb(204, 204, 204);
+      background-color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview[data-use-github-style] table tr:nth-child(2n) {
+      background-color: rgb(248, 248, 248);
+    }
+
+    .markdown-preview[data-use-github-style] img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .markdown-preview[data-use-github-style] .emoji {
+      max-width: none;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame {
+      display: block;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame > span {
+      display: block;
+      float: left;
+      width: auto;
+      padding: 7px;
+      margin: 13px 0px 0px;
+      overflow: hidden;
+      border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span img {
+      display: block;
+      float: left;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span span {
+      display: block;
+      padding: 5px 0px 0px;
+      clear: both;
+      color: rgb(51, 51, 51);
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center {
+      display: block;
+      overflow: hidden;
+      clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center > span {
+      display: block;
+      margin: 13px auto 0px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center span img {
+      margin: 0px auto;
+      text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right {
+      display: block;
+      overflow: hidden;
+      clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right > span {
+      display: block;
+      margin: 13px 0px 0px;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right span img {
+      margin: 0px;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left {
+      display: block;
+      float: left;
+      margin-right: 13px;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left span {
+      margin: 13px 0px 0px;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right {
+      display: block;
+      float: right;
+      margin-left: 13px;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right > span {
+      display: block;
+      margin: 13px auto 0px;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] code,
+    .markdown-preview[data-use-github-style] tt {
+      padding: 0.2em 0px;
+      margin: 0px;
+      font-size: 85%;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.0392157);
+    }
+
+    .markdown-preview[data-use-github-style] code::before,
+    .markdown-preview[data-use-github-style] tt::before,
+    .markdown-preview[data-use-github-style] code::after,
+    .markdown-preview[data-use-github-style] tt::after {
+      letter-spacing: -0.2em;
+      content: " ";
+    }
+
+    .markdown-preview[data-use-github-style] code br,
+    .markdown-preview[data-use-github-style] tt br {
+      display: none;
+    }
+
+    .markdown-preview[data-use-github-style] del code {
+      text-decoration: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre > code {
+      padding: 0px;
+      margin: 0px;
+      font-size: 100%;
+      word-break: normal;
+      white-space: pre;
+      border: 0px;
+      background: transparent;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight {
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre,
+    .markdown-preview[data-use-github-style] pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      border-radius: 3px;
+      background-color: rgb(247, 247, 247);
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre {
+      margin-bottom: 0px;
+      word-break: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre {
+      word-wrap: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre code,
+    .markdown-preview[data-use-github-style] pre tt {
+      display: inline;
+      max-width: initial;
+      padding: 0px;
+      margin: 0px;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: normal;
+      border: 0px;
+      background-color: transparent;
+    }
+
+    .markdown-preview[data-use-github-style] pre code::before,
+    .markdown-preview[data-use-github-style] pre tt::before,
+    .markdown-preview[data-use-github-style] pre code::after,
+    .markdown-preview[data-use-github-style] pre tt::after {
+      content: normal;
+    }
+
+    .markdown-preview[data-use-github-style] kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      font-size: 11px;
+      line-height: 10px;
+      color: rgb(85, 85, 85);
+      vertical-align: middle;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
+      border-radius: 3px;
+      box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
+      background-color: rgb(252, 252, 252);
+    }
+
+    .markdown-preview[data-use-github-style] a {
+      color: rgb(51, 122, 183);
+    }
+
+    .markdown-preview[data-use-github-style] pre,
+    .markdown-preview[data-use-github-style] code {
+      color: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre,
+    .markdown-preview[data-use-github-style] pre.editor-colors {
+      padding: 0.8em 1em;
+      margin-bottom: 1em;
+      font-size: 0.85em;
+      border-radius: 4px;
+      overflow: auto;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar,
+    .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar {
+      visibility: hidden;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar,
+    .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar {
+      visibility: visible;
+    }
+
+    .markdown-preview del {
+      text-decoration: none;
+      position: relative;
+    }
+
+    .markdown-preview del::after {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      content: "";
+      left: 0px;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+    }
+
+    .markdown-preview .flash {
+      animation: flash 1s ease-out 1;
+      outline: rgba(255, 0, 0, 0) solid 1px;
+    }
+
+    .markdown-preview .flash:not(li) {
+      display: block;
+    }
+
+    .bracket-matcher .region {
+      border-bottom: 1px dotted lime;
+      position: absolute;
+    }
+
+    .spell-check-misspelling .region {
+      border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+    }
+
+    pre.editor-colors,
+    .host {
+      background-color: #282c34;
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .line.cursor-line,
+    .host .line.cursor-line {
+      background-color: rgba(153, 187, 255, 0.04);
+    }
+
+    pre.editor-colors .invisible,
+    .host .invisible {
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .cursor,
+    .host .cursor {
+      border-left: 2px solid #528bff;
+    }
+
+    pre.editor-colors .selection .region,
+    .host .selection .region {
+      background-color: #3e4451;
+    }
+
+    pre.editor-colors .bracket-matcher .region,
+    .host .bracket-matcher .region {
+      border-bottom: 1px solid #528bff;
+      box-sizing: border-box;
+    }
+
+    pre.editor-colors .invisible-character,
+    .host .invisible-character {
+      color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .indent-guide,
+    .host .indent-guide {
+      color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .wrap-guide,
+    .host .wrap-guide {
+      background-color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .find-result .region.region.region,
+    .host .find-result .region.region.region,
+    pre.editor-colors .current-result .region.region.region,
+    .host .current-result .region.region.region {
+      border-radius: 0px;
+      background-color: rgba(82, 139, 255, 0.24);
+      transition: border-color 0.4s;
+    }
+
+    pre.editor-colors .find-result .region.region.region,
+    .host .find-result .region.region.region {
+      border: 2px solid transparent;
+    }
+
+    pre.editor-colors .current-result .region.region.region,
+    .host .current-result .region.region.region {
+      border: 2px solid #528bff;
+      transition-duration: .1s;
+    }
+
+    pre.editor-colors .gutter .line-number,
+    .host .gutter .line-number {
+      color: #636d83;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    pre.editor-colors .gutter .line-number.cursor-line,
+    .host .gutter .line-number.cursor-line {
+      color: #abb2bf;
+      background-color: #2c313a;
+    }
+
+    pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+    .host .gutter .line-number.cursor-line-no-selection {
+      background-color: transparent;
+    }
+
+    pre.editor-colors .gutter .line-number .icon-right,
+    .host .gutter .line-number .icon-right {
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+    .host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+      bottom: -3px;
+    }
+
+    pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+    .host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 25px;
+      border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+      pointer-events: none;
+    }
+
+    pre.editor-colors .gutter .line-number.folded,
+    .host .gutter .line-number.folded,
+    pre.editor-colors .gutter .line-number:after,
+    .host .gutter .line-number:after,
+    pre.editor-colors .fold-marker:after,
+    .host .fold-marker:after {
+      color: #abb2bf;
+    }
+
+    .comment {
+      color: #5c6370;
+      font-style: italic;
+    }
+
+    .comment .markup.link {
+      color: #5c6370;
+    }
+
+    .entity.name.type {
+      color: #e5c07b;
+    }
+
+    .entity.other.inherited-class {
+      color: #98c379;
+    }
+
+    .keyword {
+      color: #c678dd;
+    }
+
+    .keyword.control {
+      color: #c678dd;
+    }
+
+    .keyword.operator {
+      color: #abb2bf;
+    }
+
+    .keyword.other.special-method {
+      color: #61afef;
+    }
+
+    .keyword.other.unit {
+      color: #d19a66;
+    }
+
+    .storage {
+      color: #c678dd;
+    }
+
+    .storage.type.annotation,
+    .storage.type.primitive {
+      color: #c678dd;
+    }
+
+    .storage.modifier.package,
+    .storage.modifier.import {
+      color: #abb2bf;
+    }
+
+    .constant {
+      color: #d19a66;
+    }
+
+    .constant.variable {
+      color: #d19a66;
+    }
+
+    .constant.character.escape {
+      color: #56b6c2;
+    }
+
+    .constant.numeric {
+      color: #d19a66;
+    }
+
+    .constant.other.color {
+      color: #56b6c2;
+    }
+
+    .constant.other.symbol {
+      color: #56b6c2;
+    }
+
+    .variable {
+      color: #e06c75;
+    }
+
+    .variable.interpolation {
+      color: #be5046;
+    }
+
+    .variable.parameter {
+      color: #abb2bf;
+    }
+
+    .string {
+      color: #98c379;
+    }
+
+    .string.regexp {
+      color: #56b6c2;
+    }
+
+    .string.regexp .source.ruby.embedded {
+      color: #e5c07b;
+    }
+
+    .string.other.link {
+      color: #e06c75;
+    }
+
+    .punctuation.definition.comment {
+      color: #5c6370;
+    }
+
+    .punctuation.definition.method-parameters,
+    .punctuation.definition.function-parameters,
+    .punctuation.definition.parameters,
+    .punctuation.definition.separator,
+    .punctuation.definition.seperator,
+    .punctuation.definition.array {
+      color: #abb2bf;
+    }
+
+    .punctuation.definition.heading,
+    .punctuation.definition.identity {
+      color: #61afef;
+    }
+
+    .punctuation.definition.bold {
+      color: #e5c07b;
+      font-weight: bold;
+    }
+
+    .punctuation.definition.italic {
+      color: #c678dd;
+      font-style: italic;
+    }
+
+    .punctuation.section.embedded {
+      color: #be5046;
+    }
+
+    .punctuation.section.method,
+    .punctuation.section.class,
+    .punctuation.section.inner-class {
+      color: #abb2bf;
+    }
+
+    .support.class {
+      color: #e5c07b;
+    }
+
+    .support.type {
+      color: #56b6c2;
+    }
+
+    .support.function {
+      color: #56b6c2;
+    }
+
+    .support.function.any-method {
+      color: #61afef;
+    }
+
+    .entity.name.function {
+      color: #61afef;
+    }
+
+    .entity.name.class,
+    .entity.name.type.class {
+      color: #e5c07b;
+    }
+
+    .entity.name.section {
+      color: #61afef;
+    }
+
+    .entity.name.tag {
+      color: #e06c75;
+    }
+
+    .entity.other.attribute-name {
+      color: #d19a66;
+    }
+
+    .entity.other.attribute-name.id {
+      color: #61afef;
+    }
+
+    .meta.class {
+      color: #e5c07b;
+    }
+
+    .meta.class.body {
+      color: #abb2bf;
+    }
+
+    .meta.method-call,
+    .meta.method {
+      color: #abb2bf;
+    }
+
+    .meta.definition.variable {
+      color: #e06c75;
+    }
+
+    .meta.link {
+      color: #d19a66;
+    }
+
+    .meta.require {
+      color: #61afef;
+    }
+
+    .meta.selector {
+      color: #c678dd;
+    }
+
+    .meta.separator {
+      background-color: #373b41;
+      color: #abb2bf;
+    }
+
+    .meta.tag {
+      color: #abb2bf;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .none {
+      color: #abb2bf;
+    }
+
+    .invalid.deprecated {
+      color: #523d14 !important;
+      background-color: #e0c285 !important;
+    }
+
+    .invalid.illegal {
+      color: #ffffff !important;
+      background-color: #e05252 !important;
+    }
+
+    .markup.bold {
+      color: #d19a66;
+      font-weight: bold;
+    }
+
+    .markup.changed {
+      color: #c678dd;
+    }
+
+    .markup.deleted {
+      color: #e06c75;
+    }
+
+    .markup.italic {
+      color: #c678dd;
+      font-style: italic;
+    }
+
+    .markup.heading {
+      color: #e06c75;
+    }
+
+    .markup.heading .punctuation.definition.heading {
+      color: #61afef;
+    }
+
+    .markup.link {
+      color: #c678dd;
+    }
+
+    .markup.inserted {
+      color: #98c379;
+    }
+
+    .markup.quote {
+      color: #d19a66;
+    }
+
+    .markup.raw {
+      color: #98c379;
+    }
+
+    .source.cs .keyword.operator {
+      color: #c678dd;
+    }
+
+    .source.css .property-name,
+    .source.css .property-value {
+      color: #828997;
+    }
+
+    .source.css .property-name.support,
+    .source.css .property-value.support {
+      color: #abb2bf;
+    }
+
+    .source.gfm .markup {
+      -webkit-font-smoothing: auto;
+    }
+
+    .source.gfm .link .entity {
+      color: #61afef;
+    }
+
+    .source.go .storage.type.string {
+      color: #c678dd;
+    }
+
+    .source.ini .keyword.other.definition.ini {
+      color: #e06c75;
+    }
+
+    .source.java .storage.modifier.import {
+      color: #e5c07b;
+    }
+
+    .source.java .storage.type {
+      color: #e5c07b;
+    }
+
+    .source.java .keyword.operator.instanceof {
+      color: #c678dd;
+    }
+
+    .source.java-properties .meta.key-pair {
+      color: #e06c75;
+    }
+
+    .source.java-properties .meta.key-pair > .punctuation {
+      color: #abb2bf;
+    }
+
+    .source.js .keyword.operator {
+      color: #56b6c2;
+    }
+
+    .source.js .keyword.operator.delete,
+    .source.js .keyword.operator.in,
+    .source.js .keyword.operator.of,
+    .source.js .keyword.operator.instanceof,
+    .source.js .keyword.operator.new,
+    .source.js .keyword.operator.typeof,
+    .source.js .keyword.operator.void {
+      color: #c678dd;
+    }
+
+    .source.json .meta.structure.dictionary.json > .string.quoted.json {
+      color: #e06c75;
+    }
+
+    .source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+      color: #e06c75;
+    }
+
+    .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+    .source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+    .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+    .source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+      color: #98c379;
+    }
+
+    .source.json .meta.structure.dictionary.json > .constant.language.json,
+    .source.json .meta.structure.array.json > .constant.language.json {
+      color: #56b6c2;
+    }
+
+    .source.ruby .constant.other.symbol > .punctuation {
+      color: inherit;
+    }
+
+    .source.python .keyword.operator.logical.python {
+      color: #c678dd;
+    }
+
+    .source.python .variable.parameter {
+      color: #d19a66;
+    }
+  </style>
+</head>
+
+<body class='markdown-preview'>
+  <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+  <ul>
+    <li><a href="#mathjax-quick-memo">MathJax Quick Memo</a>
+      <ul>
+        <li><a href="#basis">Basis</a>
+          <ul>
+            <li><a href="#formula-mark">Formula Mark</a></li>
+            <li><a href="#greek-letter">Greek Letter</a></li>
+            <li><a href="#superscript-subscript">Superscript &amp; Subscript</a></li>
+            <li><a href="#brackets">Brackets</a></li>
+            <li><a href="#summation-integration">Summation &amp; Integration</a></li>
+            <li><a href="#fraction-radical-expression">Fraction &amp; Radical Expression</a></li>
+            <li><a href="#font-family">Font Family</a></li>
+            <li><a href="#special-functions-symbols">Special Functions &amp; Symbols</a></li>
+            <li><a href="#space">Space</a></li>
+            <li><a href="#symbols-over-letters">Symbols over letters</a></li>
+          </ul>
+        </li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#matrix">Matrix</a>
+          <ul>
+            <li><a href="#basis-usage">Basis Usage</a></li>
+            <li><a href="#matrix-brackets">Matrix Brackets</a></li>
+            <li><a href="#ellipsis">Ellipsis</a></li>
+            <li><a href="#augmented-matrix">Augmented Matrix</a></li>
+          </ul>
+        </li>
+        <li><a href="#aligned-formula">Aligned Formula</a></li>
+        <li><a href="#piecewise-expression">Piecewise Expression</a></li>
+        <li><a href="#space-problem">Space Problem</a>
+          <ul>
+            <li><a href="#using-of-frac">Using of \frac</a></li>
+            <li><a href="#separator">Separator</a></li>
+            <li><a href="#multiple-integration">Multiple Integration</a></li>
+          </ul>
+        </li>
+        <li><a href="#continued-fraction">Continued Fraction</a></li>
+        <li><a href="#equation-set">Equation Set</a></li>
+        <li><a href="#color">Color</a></li>
+        <li><a href="#formula-mark-quote">Formula Mark &amp; Quote</a></li>
+        <li><a href="#html-color-quick-reference">HTML Color Quick Reference</a></li>
+        <li><a href="#mathematics-symbols-quick-reference">Mathematics Symbols Quick Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+  <!-- /TOC -->
+  <h1>MathJax Quick Memo</h1>
+  <h2>Basis</h2>
+  <hr>
+  <h3>Formula Mark</h3>
+  <p>使用<code>MathJax</code>时，需要用一些适当的标记告诉<code>MathJax</code>某段文本是公式代码。此外，<code>MathJax</code>中的公式排版有两种方式，<code>inline</code>和<code>displayed</code>。<code>inline</code>表示公式嵌入到文本段中，<code>displayed</code>表示公式独自成为一个段落（也就是居中显示）。例如 <span class="math"><script type="math/tex">f(x) = 3 * x</script></span>    这是一个<code>inline</code>公式，而下面：</p>
+  <span class="math"><script type="math/tex; mode=display">f(x) = 3 * x
+</script></span>
+  <p>这就是一个<code>displayed</code>公式。</p>
+  <p>在<code>MathJax</code>中，默认的<code>displayed</code>公式分隔符有<code>$$...$$</code>和<code>\[...\]</code>，而默认的<code>inline</code>公式分隔符是<code>$...$</code>。</p>
+  <h3>Greek Letter</h3>
+  <p>具体见下表：</p>
+  <table>
+    <thead>
+      <tr>
+        <th>名称</th>
+        <th>大写</th>
+        <th>Tex</th>
+        <th>小写</th>
+        <th>Tex</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>alpha</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\alpha</script></span></td>
+        <td>\alpha</td>
+      </tr>
+      <tr>
+        <td>beta</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\beta</script></span></td>
+        <td>\beta</td>
+      </tr>
+      <tr>
+        <td>gamma</td>
+        <td><span class="math"><script type="math/tex">\Gamma</script></span></td>
+        <td>\Gamma</td>
+        <td><span class="math"><script type="math/tex">\gamma</script></span></td>
+        <td>\gamma</td>
+      </tr>
+      <tr>
+        <td>delta</td>
+        <td><span class="math"><script type="math/tex">\Delta</script></span></td>
+        <td>\Delta</td>
+        <td><span class="math"><script type="math/tex">\delta</script></span></td>
+        <td>\delta</td>
+      </tr>
+      <tr>
+        <td>epsilon</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\epsilon</script></span></td>
+        <td>\epsilon</td>
+      </tr>
+      <tr>
+        <td>zeta</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\zeta</script></span></td>
+        <td>\zeta</td>
+      </tr>
+      <tr>
+        <td>eta</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\eta</script></span></td>
+        <td>\eta</td>
+      </tr>
+      <tr>
+        <td>theta</td>
+        <td><span class="math"><script type="math/tex">\Theta</script></span></td>
+        <td>\theta</td>
+        <td><span class="math"><script type="math/tex">\Theta</script></span></td>
+        <td>\theta</td>
+      </tr>
+      <tr>
+        <td>iota</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\iota</script></span></td>
+        <td>\iota</td>
+      </tr>
+      <tr>
+        <td>kappa</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\kappa</script></span></td>
+        <td>\kappa</td>
+      </tr>
+      <tr>
+        <td>lambda</td>
+        <td><span class="math"><script type="math/tex">\Lambda</script></span></td>
+        <td>\Lambda</td>
+        <td><span class="math"><script type="math/tex">\lambda</script></span></td>
+        <td>\lambda</td>
+      </tr>
+      <tr>
+        <td>mu</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\mu</script></span></td>
+        <td>\mu</td>
+      </tr>
+      <tr>
+        <td>nu</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\nu</script></span></td>
+        <td>\nu</td>
+      </tr>
+      <tr>
+        <td>xi</td>
+        <td><span class="math"><script type="math/tex">\Xi</script></span></td>
+        <td>\Xi</td>
+        <td><span class="math"><script type="math/tex">\xi</script></span></td>
+        <td>\xi</td>
+      </tr>
+      <tr>
+        <td>omicron</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\omicron</script></span></td>
+        <td>\omicron</td>
+      </tr>
+      <tr>
+        <td>pi</td>
+        <td><span class="math"><script type="math/tex">\Pi</script></span></td>
+        <td>\Pi</td>
+        <td><span class="math"><script type="math/tex">\pi</script></span></td>
+        <td>\pi</td>
+      </tr>
+      <tr>
+        <td>rho</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\rho</script></span></td>
+        <td>\rho</td>
+      </tr>
+      <tr>
+        <td>sigma</td>
+        <td><span class="math"><script type="math/tex">\Sigma</script></span></td>
+        <td>\Sigma</td>
+        <td><span class="math"><script type="math/tex">\sigma</script></span></td>
+        <td>\sigma</td>
+      </tr>
+      <tr>
+        <td>tau</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\tau</script></span></td>
+        <td>\tau</td>
+      </tr>
+      <tr>
+        <td>upsilon</td>
+        <td><span class="math"><script type="math/tex">\Upsilon</script></span></td>
+        <td>\Upsilon</td>
+        <td><span class="math"><script type="math/tex">\upsilon</script></span></td>
+        <td>\upsilon</td>
+      </tr>
+      <tr>
+        <td>phi</td>
+        <td><span class="math"><script type="math/tex">\Phi</script></span></td>
+        <td>\Phi</td>
+        <td><span class="math"><script type="math/tex">\phi</script></span></td>
+        <td>\phi</td>
+      </tr>
+      <tr>
+        <td>chi</td>
+        <td></td>
+        <td></td>
+        <td><span class="math"><script type="math/tex">\chi</script></span></td>
+        <td>\chi</td>
+      </tr>
+      <tr>
+        <td>psi</td>
+        <td><span class="math"><script type="math/tex">\Psi</script></span></td>
+        <td>\Psi</td>
+        <td><span class="math"><script type="math/tex">\psi</script></span></td>
+        <td>\psi</td>
+      </tr>
+      <tr>
+        <td>omega</td>
+        <td><span class="math"><script type="math/tex">\Omega</script></span></td>
+        <td>\Omega</td>
+        <td><span class="math"><script type="math/tex">\omega</script></span></td>
+        <td>\omega</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Superscript &amp; Subscript</h3>
+  <p>上标和下标分别用<code>^</code>和<code>_</code>，如<code>x_i^2</code>:<span class="math"><script type="math/tex">x_i^2</script></span>，但是<code>^</code>和<code>_</code>分别只对下一个数起作用，比如<code>10^10</code>会得到<span class="math"><script type="math/tex">10^10</script></span>而不是
+    <span
+    class="math">
+      <script type="math/tex">10^{10}</script>
+      </span>，这事需要用<code>{...}</code>把要组合的数组合起来，也就是<code>10^{10}</code>。总之，加了大括号总归不会错。</p>
+  <h3>Brackets</h3>
+  <ul>
+    <li>小括号和方括号，就用原始的<code>()</code>和<code>[]</code>:<span class="math"><script type="math/tex">(2+2)</script></span> <span class="math"><script type="math/tex">[3+3]</script></span>;</li>
+    <li>大括号，由于大括号用来<code>分组</code>,所以如果要在公式里面加大括号就使用<code>\{</code>和<code>\}</code>或者用<code>\lbrace</code>和<code>\rbrace</code>来表示。如<code>\{a*b\}</code>:<span class="math"><script type="math/tex">\{a*b\}</script></span>,<code>\lbrace a*b \rbrace</code>:
+      <span
+      class="math">
+        <script type="math/tex">\lbrace a*b \rbrace</script>
+        </span>;</li>
+    <li>尖括号，使用<code>\langle</code>和<code>\rangle</code>表示左右尖括号，<code>\langle x \rangle</code>: <span class="math"><script type="math/tex">\langle x \rangle</script></span>;</li>
+    <li>上取整，使用<code>\lceil</code>和<code>\rceil</code>表示左右尖括号，<code>\lceil x \rceil</code>: <span class="math"><script type="math/tex">\lceil x \rceil</script></span>;</li>
+    <li>下取整，使用<code>\lfloor</code>和<code>\rfloor</code>表示左右尖括号，<code>\lfloor x \rfloor</code>: <span class="math"><script type="math/tex">\lfloor x \rfloor</script></span>;</li>
+    <li>不可见括号，使用<code>\left.</code>和<code>\right.</code>表示，<code>\left. x\right.</code>:<span class="math"><script type="math/tex">\left. x\right.</script></span></li>
+  </ul>
+  <p>需要注意的是，原始的符号不会随着公式的变大而缩放，比如<code>\frac{1}{2}</code>:<span class="math"><script type="math/tex">\frac{1}{2}</script></span>。可以使用<code>\left( ... \right)</code>进行缩放，如下：</p>
+  <p align="center">
+    <code>
+\{ \sum_{i=0}^{n}i^2 = \frac {(n^2+n)(2n+1)}{6} \}
+</code>
+  </p>
+  <span class="math"><script type="math/tex; mode=display">\{ \sum_{i=0}^{n}i^2 = \frac {(n^2+n)(2n+1)}{6} \}
+</script></span>
+  <p align="center">
+    <code>
+\left\{ \sum_{i=0}^{n}i^2 = \frac {(n^2+n)(2n+1)}{6} \right\}
+</code>
+  </p>
+  <span class="math"><script type="math/tex; mode=display">\left\{ \sum_{i=0}^{n}i^2 = \frac {(n^2+n)(2n+1)}{6} \right\}
+</script></span>
+  <h3>Summation &amp; Integration</h3>
+  <ul>
+    <li><code>\sum</code>用来表示求和符号，上标表示上限，下标表示下限。如，<code>\sum_{i=1}^{n}i^2</code>:<span class="math"><script type="math/tex">\sum_{i=1}^{n}i^2</script></span>;</li>
+    <li><code>\int</code>用来表示积分符号，上标表示上限，下标表示下限。如，<code>\int_{1}^{\infty}i^2</code>:<span class="math"><script type="math/tex">\int_{1}^{\infty}i^2</script></span>;</li>
+    <li>类似的符号还有，<code>\prod</code>:<span class="math"><script type="math/tex">\prod</script></span>, <code>\igcup</code>:<span class="math"><script type="math/tex">\bigcup</script></span>, <code>\bigcap</code>:<span class="math"><script type="math/tex">\bigcap</script></span>,
+      <code>\iint</code>:<span class="math"><script type="math/tex">\iint</script></span></li>
+  </ul>
+  <h3>Fraction &amp; Radical Expression</h3>
+  <ul>
+    <li>分式，第一种表示为<code>\frac{a}{b}</code>:<span class="math"><script type="math/tex">\frac{a}{b}</script></span>。第二种表示为<code>{a+1 \over b+1}</code>:<span class="math"><script type="math/tex">{a+1 \over b+1}</script></span>;</li>
+    <li>根式，表示为<code>\sqrt</code>,比如<code>\sqrt[4]{\frac {x}{y}}</code>:<span class="math"><script type="math/tex">\sqrt[4]{\frac {x}{y}}</script></span></li>
+  </ul>
+  <h3>Font Family</h3>
+  <ul>
+    <li>黑板粗体字，例如 <code>\mathbb</code>或者<code>\Bbb</code>，这种字体常用来表示实数、整数、有理数、复数的大写字母，<code>\mathbb A</code>:<span class="math"><script type="math/tex">\mathbb A</script></span>,或者<code>\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+    <li>黑体字，例如 <code>mathbf</code>, <code>\mathbf A</code>:<span class="math"><script type="math/tex">\mathbf A</script></span>,或者<code>\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+    <li>打印机字体，例如 <code>mathtt</code>, <code>\mathtt A</code>:<span class="math"><script type="math/tex">\mathtt A</script></span>,或者<code>\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+    <li>罗马字体，例如 <code>mathrm</code>, <code>\mathrm A</code>:<span class="math"><script type="math/tex">\mathrm A</script></span>,或者<code>\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+    <li>手写字体，例如 <code>mathscr</code>, <code>\mathscr A</code>:<span class="math"><script type="math/tex">\mathscr A</script></span>,或者<code>\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+    <li><code>Fraktur</code>一种德国字体，例如 <code>mathfrak</code>, <code>\mathfrak A</code>:<span class="math"><script type="math/tex">\mathfrak A</script></span>,或者<code>\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</code>:<span class="math"><script type="math/tex">\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZ}</script></span>;</li>
+  </ul>
+  <h3>Special Functions &amp; Symbols</h3>
+  <ul>
+    <li>常见的三角函数、求极限符号可以直接使用缩写即可，如 <code>\sin (x)</code>:<span class="math"><script type="math/tex">\sin (x)</script></span>, <code>\arctan (x)</code>:<span class="math"><script type="math/tex">\arctan (x)</script></span>, <code>\lim_{1\rightarrow\infty}x</code>:
+      <span
+      class="math">
+        <script type="math/tex">\lim_{1\rightarrow\infty}x</script>
+        </span>;</li>
+    <li>比较运算符，<code>\lt</code>:<span class="math"><script type="math/tex">\lt</script></span>, <code>\gt</code>:<span class="math"><script type="math/tex">\gt</script></span>, <code>\le</code>:<span class="math"><script type="math/tex">\le</script></span>,
+      <code>\ge</code>:<span class="math"><script type="math/tex">\ge</script></span>, <code>\neq</code>:<span class="math"><script type="math/tex">\neq</script></span>,同时如果在前面加上<code>\not</code>就可以是 <code>\not\lt</code>:<span class="math"><script type="math/tex">\not\lt</script></span>;</li>
+    <li>运算符， <code>\times</code>:<span class="math"><script type="math/tex">\times</script></span>,<code>\div</code>:<span class="math"><script type="math/tex">\div</script></span>,<code>\pm</code>:<span class="math"><script type="math/tex">\pm</script></span>,<code>\mp</code>:
+      <span
+      class="math">
+        <script type="math/tex">\mp</script>
+        </span>,<code>x \cdot y</code>:<span class="math"><script type="math/tex">x \cdot y</script></span>;</li>
+    <li>集合关系运算，<code>\cup</code>: <span class="math"><script type="math/tex">\cup</script></span>,<code>\cap</code>: <span class="math"><script type="math/tex">\cap</script></span>,<code>\setminus</code>: <span class="math"><script type="math/tex">\setminus</script></span>,<code>\subset</code>:
+      <span class="math"><script type="math/tex">\subset</script></span>,<code>\subseteq</code>: <span class="math"><script type="math/tex">\subseteq</script></span>,<code>\subsetneq</code>: <span class="math"><script type="math/tex">\subsetneq</script></span>,<code>\supset</code>:
+      <span class="math"><script type="math/tex">\supset</script></span>,<code>\in</code>: <span class="math"><script type="math/tex">\in</script></span>,<code>\notin</code>: <span class="math"><script type="math/tex">\notin</script></span>,<code>\emptyset</code>:
+      <span class="math"><script type="math/tex">\emptyset</script></span>,<code>\varnothing</code>: <span class="math"><script type="math/tex">\varnothing</script></span>;</li>
+    <li>表示排列使用<code>{n+1 \choose 2k}</code>或者<code>\binom{n+1}{2k}</code>表示 <span class="math"><script type="math/tex">\binom{n+1}{2k}</script></span>;</li>
+    <li>箭头，<code>\to</code>:<span class="math"><script type="math/tex">\to</script></span>,<code>\rightarrow</code>:<span class="math"><script type="math/tex">\rightarrow</script></span>,<code>\Rightarrow</code>:<span class="math"><script type="math/tex">\Rightarrow</script></span>,<code>\leftarrow</code>:
+      <span
+      class="math">
+        <script type="math/tex">\leftarrow</script>
+        </span>,<code>\Leftarrow</code>:<span class="math"><script type="math/tex">\Leftarrow</script></span>,<code>\mapsto</code>:<span class="math"><script type="math/tex">\mapsto</script></span>,</li>
+    <li>逻辑运算符， <code>\land</code>:<span class="math"><script type="math/tex">\land</script></span>,<code>\lor</code>:<span class="math"><script type="math/tex">\lor</script></span>,<code>\lnot</code>:<span class="math"><script type="math/tex">\lnot</script></span>,<code>\forall</code>:
+      <span
+      class="math">
+        <script type="math/tex">\forall</script>
+        </span>,<code>\exists</code>:<span class="math"><script type="math/tex">\exists</script></span>,<code>\top</code>:<span class="math"><script type="math/tex">\top</script></span>,<code>\bot</code>:<span class="math"><script type="math/tex">\bot</script></span>,<code>\vdash</code>:
+        <span
+        class="math">
+          <script type="math/tex">\vdash</script>
+          </span>,<code>\vDash</code>:<span class="math"><script type="math/tex">\vDash</script></span>;</li>
+    <li>特殊运算符， <code>\star</code>:<span class="math"><script type="math/tex">\star</script></span>,<code>\ast</code>:<span class="math"><script type="math/tex">\ast</script></span>,<code>\oplus</code>:<span class="math"><script type="math/tex">\oplus</script></span>,<code>\circ</code>:
+      <span
+      class="math">
+        <script type="math/tex">\circ</script>
+        </span>,<code>\bullet</code>:<span class="math"><script type="math/tex">\bullet</script></span>;</li>
+    <li>等于运算符， <code>\approx</code>:<span class="math"><script type="math/tex">\approx</script></span>,<code>\sim</code>:<span class="math"><script type="math/tex">\sim</script></span>,<code>\cong</code>:<span class="math"><script type="math/tex">\cong</script></span>,<code>\equiv</code>:
+      <span
+      class="math">
+        <script type="math/tex">\equiv</script>
+        </span>,<code>\prec</code>:<span class="math"><script type="math/tex">\prec</script></span>;</li>
+    <li>特殊符号， <code>\infty</code>:<span class="math"><script type="math/tex">\infty</script></span>,<code>\aleph_0</code>:<span class="math"><script type="math/tex">\aleph_0</script></span>,<code>\nabla</code>:<span class="math"><script type="math/tex">\nabla</script></span>,<code>\partial</code>:
+      <span
+      class="math">
+        <script type="math/tex">\partial</script>
+        </span>,<code>\Im</code>:<span class="math"><script type="math/tex">\Im</script></span>,<code>\Re</code>:<span class="math"><script type="math/tex">\Re</script></span>;</li>
+    <li>膜运算符， <code>a \pmod b</code>:<span class="math"><script type="math/tex">a \pmod b</script></span>， 例如 <code>a\equiv b\pmod n</code>:<span class="math"><script type="math/tex">a\equiv b\pmod n</script></span>;</li>
+    <li>省略符， <code>\ldots</code>:<span class="math"><script type="math/tex">\ldots</script></span> 与 <code>\cdots</code>:<span class="math"><script type="math/tex">\cdots</script></span>，就是位置不一样的3个点;</li>
+    <li>一些希腊字母的变体形式， 例如 <code>\epsilon</code>:<span class="math"><script type="math/tex">\epsilon</script></span>,<code>\varepsilon</code>:<span class="math"><script type="math/tex">\varepsilon</script></span>,<code>\phi</code>:<span class="math"><script type="math/tex">\phi</script></span>,<code>\varphi</code>:
+      <span
+      class="math">
+        <script type="math/tex">\varphi</script>
+        </span>。</li>
+  </ul>
+  <h3>Space</h3>
+  <p>由于<code>MathJax</code>的空间管理比较特殊，所以 <code>a.b</code>或者 <code>a.........b</code>（…表示空格），都会显示为 <code>a b</code>:<span class="math"><script type="math/tex">a b</script></span>,如果要增加间隙，可以使用 <code>a\,b</code>:<span class="math"><script type="math/tex">a\,b</script></span>，较宽的间隙
+    <code>a\;b</code>:<span class="math"><script type="math/tex">a\;b</script></span>，或者是使用 <code>a\quad b</code>:<span class="math"><script type="math/tex">a\quad b</script></span> 或 <code>a\qquad b</code>:<span class="math"><script type="math/tex">a\qquad b</script></span>。还有一种比较方便的方法是不使用转义字符<code>\</code>而是这样
+    <code>a~b</code>:<span class="math"><script type="math/tex">a~b</script></span>，可以表示一个空格。</p>
+  <h3>Symbols over letters</h3>
+  <p>对于单字符， <code>\hat x</code>:<span class="math"><script type="math/tex">\hat x</script></span>，对于多个字符使用 <code>\widehat {xy}</code>:<span class="math"><script type="math/tex">\widehat {xy}</script></span>，类似的还有 <code>\overline {xy}</code>:<span class="math"><script type="math/tex">\overline {xy}</script></span>,<code>\vec {xy}</code>:
+    <span
+    class="math">
+      <script type="math/tex">\vec {xy}</script>
+      </span>,<code>\overrightarrow {xy}</code>:<span class="math"><script type="math/tex">\overrightarrow {xy}</script></span>,<code>\dot {xy}</code>:<span class="math"><script type="math/tex">\dot  {xy}</script></span>,<code>\ddot {xy}</code>:<span class="math"><script type="math/tex">\ddot  {xy}</script></span>,</p>
+  <h2>Form</h2>
+  <hr>
+  <p>可以使用 <code>$$\begin{array}{列样式}…\end{array}$$</code>的方式来创建表格，其中<code>列样式</code>可以<code>clr</code>分别表示<code>居中</code> <code>左</code> <code>右</code>，还可以用<code>|</code>表示一条竖线。表格中每一行用<code>\\</code>分隔，每一列使用 <code>&amp;</code>分隔，使用 <code>\hline</code>在本行前面加一条直线，例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{c|lcr}</span></span></div><div class="line"><span class="text plain null-grammar"><span>n&nbsp;&amp;&nbsp;\text{Left}&nbsp;&amp;&nbsp;\text{Center}&nbsp;&amp;&nbsp;\text{Right}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;0.24&nbsp;&amp;&nbsp;1&nbsp;&amp;&nbsp;125&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>2&nbsp;&amp;&nbsp;-1&nbsp;&amp;&nbsp;189&nbsp;&amp;&nbsp;-8&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>3&nbsp;&amp;&nbsp;-20&nbsp;&amp;&nbsp;2000&nbsp;&amp;&nbsp;1+10i&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{array}{c|lcr}
+n & \text{Left} & \text{Center} & \text{Right} \\
+\hline
+1 & 0.24 & 1 & 125 \\
+2 & -1 & 189 & -8 \\
+3 & -20 & 2000 & 1+10i \\
+\end{array}
+</script></span>
+  <p>一个可以复用的例子如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{c|ccc}</span></span></div><div class="line"><span class="text plain null-grammar"><span>n&nbsp;&amp;&nbsp;\text{0}&nbsp;&amp;&nbsp;\text{1}&nbsp;&amp;&nbsp;\text{2}&nbsp;&amp;&nbsp;\text{3}\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;1&nbsp;&amp;&nbsp;2&nbsp;&amp;&nbsp;3&nbsp;&amp;&nbsp;4&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>2&nbsp;&amp;&nbsp;2&nbsp;&amp;&nbsp;3&nbsp;&amp;&nbsp;4&nbsp;&amp;&nbsp;5&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>3&nbsp;&amp;&nbsp;3&nbsp;&amp;&nbsp;4&nbsp;&amp;&nbsp;5&nbsp;&amp;&nbsp;6&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>4&nbsp;&amp;&nbsp;4&nbsp;&amp;&nbsp;5&nbsp;&amp;&nbsp;6&nbsp;&amp;&nbsp;7&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{array}{c|ccc}
+n & \text{0} & \text{1} & \text{2} & \text{3}\\
+\hline
+1 & 1 & 2 & 3 & 4 \\
+2 & 2 & 3 & 4 & 5 \\
+3 & 3 & 4 & 5 & 6 \\
+4 & 4 & 5 & 6 & 7 \\
+\end{array}
+</script></span>
+  <h2>Matrix</h2>
+  <hr>
+  <h3>Basis Usage</h3>
+  <p>使用<code>$$\begin{matrix}…\end{matrix}$$</code>来表示矩阵，同样使用 <code>\\</code>作为行分隔符，<code>&amp;</code>使用列分隔符。</p>
+  <p>例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{matrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{matrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{matrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{matrix}
+</script></span>
+  <h3>Matrix Brackets</h3>
+  <p>如果要加括号，可以使用<code>\left</code>和<code>\right</code>，也可以使用特殊的<code>Matrix</code>，例如:</p>
+  <ul>
+    <li>单独加括号</li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\left&nbsp;(&nbsp;\begin{matrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{matrix}\right&nbsp;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \left ( \begin{matrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{matrix}\right )
+</script></span>
+  <ul>
+    <li>使用<code>pmatrix</code></li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{pmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{pmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{pmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{pmatrix}
+</script></span>
+  <ul>
+    <li>使用<code>bmatrix</code></li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{bmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{bmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{bmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{bmatrix}
+</script></span>
+  <ul>
+    <li>使用<code>Bmatrix</code></li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{Bmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{Bmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{Bmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{Bmatrix}
+</script></span>
+  <ul>
+    <li>使用<code>vmatrix</code></li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{vmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{vmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{vmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{vmatrix}
+</script></span>
+  <ul>
+    <li>使用<code>Vmatrix</code></li>
+  </ul>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{Vmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{Vmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{Vmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{Vmatrix}
+</script></span>
+  <h3>Ellipsis</h3>
+  <p>可以使用<code>\cdots</code> <code>\ddots</code> <code>\vdots</code> 来省略矩阵中的元素，例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{pmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;x&nbsp;&amp;&nbsp;x^2&nbsp;&amp;&nbsp;\cdots&nbsp;&amp;&nbsp;x^n\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;y&nbsp;&amp;&nbsp;y^2&nbsp;&amp;&nbsp;\cdots&nbsp;&amp;&nbsp;y^n\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;z&nbsp;&amp;&nbsp;z^2&nbsp;&amp;&nbsp;\cdots&nbsp;&amp;&nbsp;z^n\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\vdots&nbsp;&amp;&nbsp;\vdots&nbsp;&amp;&nbsp;\vdots&nbsp;&amp;&nbsp;\ddots&nbsp;&amp;&nbsp;\vdots\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>1&nbsp;&amp;&nbsp;n&nbsp;&amp;&nbsp;n^2&nbsp;&amp;&nbsp;\cdots&nbsp;&amp;&nbsp;n^n\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{pmatrix}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">        \begin{pmatrix}
+        1 & x & x^2 & \cdots & x^n\\
+        1 & y & y^2 & \cdots & y^n\\
+        1 & z & z^2 & \cdots & z^n\\
+        \vdots & \vdots & \vdots & \ddots & \vdots\\
+        1 & n & n^2 & \cdots & n^n\\
+        \end{pmatrix}
+</script></span>
+  <h3>Augmented Matrix</h3>
+  <p>增广矩阵需要使用前面的<code>array</code>来实现，例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$&nbsp;\left[</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{array}{cc|c}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&amp;2&amp;3\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&amp;5&amp;6</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\right]</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display"> \left[
+      \begin{array}{cc|c}
+        1&2&3\\
+        4&5&6
+      \end{array}
+    \right]
+</script></span>
+  <h2>Aligned Formula</h2>
+  <hr>
+  <p>如果需要一系列的公式中等号对齐，可以使用<code>\begin{align}…\end{align}</code>，其中使用 <code>&amp;</code> 来对其位置，例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{align}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\sqrt{37}&nbsp;&amp;&nbsp;=&nbsp;\sqrt{\frac{73^2-1}{12^2}}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&amp;&nbsp;=&nbsp;\sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&amp;&nbsp;=&nbsp;\sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&amp;&nbsp;=&nbsp;\frac{73}{12}\sqrt{1&nbsp;-&nbsp;\frac{1}{73^2}}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&amp;&nbsp;\approx&nbsp;\frac{73}{12}\left(1&nbsp;-&nbsp;\frac{1}{2\cdot73^2}\right)</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{align}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{align}
+\sqrt{37} & = \sqrt{\frac{73^2-1}{12^2}} \\
+ & = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\
+ & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
+ & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\
+ & \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)
+\end{align}
+</script></span>
+  <h2>Piecewise Expression</h2>
+  <hr>
+  <p>分类表达式可以使用 <code>\begin{cases}…\end{cases}</code> 其中用<code>&amp;</code>指示对齐的位置，例如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>f(n)&nbsp;=</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>n/2,&nbsp;&nbsp;&amp;&nbsp;\text{if&nbsp;$n$&nbsp;is&nbsp;even}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>3n+1,&nbsp;&amp;&nbsp;\text{if&nbsp;$n$&nbsp;is&nbsp;odd}&nbsp;&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">f(n) =
+\begin{cases}
+n/2,  & \text{if $n$ is even} \\
+3n+1, & \text{if $n$ is odd}  \\
+\end{cases}
+</script></span>
+  <p>上述公式的括号也可以移动到右侧，不过需要使用<code>array</code>来实现，如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\left.</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{l}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\text{if&nbsp;$n$&nbsp;is&nbsp;even:}&amp;n/2\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\text{if&nbsp;$n$&nbsp;is&nbsp;odd:}&amp;3n+1</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\right\}</span></span></div><div class="line"><span class="text plain null-grammar"><span>=f(n)</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\left.
+\begin{array}{l}
+\text{if $n$ is even:}&n/2\\
+\text{if $n$ is odd:}&3n+1
+\end{array}
+\right\}
+=f(n)
+</script></span>
+  <p>最后，如果想分类之间的垂直间隔变大，可以使用<code>\[2ex]</code>代替<code>\</code>来分隔不同的情况。(<code>3ex</code>,<code>4ex</code>也可以用，<code>1ex</code>相当于原始距离）。</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>f(n)&nbsp;=</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>n/2,&nbsp;&nbsp;&amp;&nbsp;\text{if&nbsp;$n$&nbsp;is&nbsp;even}&nbsp;\\[4ex]</span></span></div><div class="line"><span class="text plain null-grammar"><span>3n+1,&nbsp;&amp;&nbsp;\text{if&nbsp;$n$&nbsp;is&nbsp;odd}&nbsp;&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">f(n) =
+\begin{cases}
+n/2,  & \text{if $n$ is even} \\[4ex]
+3n+1, & \text{if $n$ is odd}  \\
+\end{cases}
+</script></span>
+  <h2>Space Problem</h2>
+  <hr>
+  <h3>Using of \frac</h3>
+  <p>不要在再指数或者积分中使用 <code>\frac</code>，在指数或者积分表达式中使用 <code>\frac</code>会使表达式看起来不清晰，因此在专业的数学排版中很少被使用。应该使用一个水平的<code>/</code>来代替，效果如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{cc}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\mathrm{Bad}&nbsp;&amp;&nbsp;\mathrm{Better}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\hline&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>e^{i\frac{\pi}2}&nbsp;\quad&nbsp;e^{\frac{i\pi}2}&amp;&nbsp;e^{i\pi/2}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\int_{-\frac\pi2}^\frac\pi2&nbsp;\sin&nbsp;x\,dx&nbsp;&amp;&nbsp;\int_{-\pi/2}^{\pi/2}\sin&nbsp;x\,dx&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{array}{cc}
+\mathrm{Bad} & \mathrm{Better} \\
+\hline \\
+e^{i\frac{\pi}2} \quad e^{\frac{i\pi}2}& e^{i\pi/2} \\
+\int_{-\frac\pi2}^\frac\pi2 \sin x\,dx & \int_{-\pi/2}^{\pi/2}\sin x\,dx \\
+\end{array}
+</script></span>
+  <h3>Separator</h3>
+  <p>使用 <code>\mid</code> 代替 <code>|</code> 作为分隔符，符号 <code>|</code> 作为分隔符时有排版空间大小的问题，应该使用<code>\mid</code>代替。效果如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{cc}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\mathrm{Bad}&nbsp;&amp;&nbsp;\mathrm{Better}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\hline&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\{x|x^2\in\Bbb&nbsp;Z\}&nbsp;&amp;&nbsp;\{x\mid&nbsp;x^2\in\Bbb&nbsp;Z\}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{array}{cc}
+\mathrm{Bad} & \mathrm{Better} \\
+\hline \\
+\{x|x^2\in\Bbb Z\} & \{x\mid x^2\in\Bbb Z\} \\
+\end{array}
+</script></span>
+  <h3>Multiple Integration</h3>
+  <p>对于多重积分，不要使用<code>\int\int</code>此类的表达，应该使用<code>\iint</code> <code>\iiint</code>等特殊形式。效果如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>\begin{array}{cc}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\mathrm{Bad}&nbsp;&amp;&nbsp;\mathrm{Better}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\hline&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\int\int_S&nbsp;f(x)\,dy\,dx&nbsp;&amp;&nbsp;\iint_S&nbsp;f(x)\,dy\,dx&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>\int\int\int_V&nbsp;f(x)\,dz\,dy\,dx&nbsp;&amp;&nbsp;\iiint_V&nbsp;f(x)\,dz\,dy\,dx</span></span></div><div class="line"><span class="text plain null-grammar"><span>\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">\begin{array}{cc}
+\mathrm{Bad} & \mathrm{Better} \\
+\hline \\
+\int\int_S f(x)\,dy\,dx & \iint_S f(x)\,dy\,dx \\
+\int\int\int_V f(x)\,dz\,dy\,dx & \iiint_V f(x)\,dz\,dy\,dx
+\end{array}
+</script></span>
+  <h2>Continued Fraction</h2>
+  <hr>
+  <p>书写连分数表达式时，请使用<code>\cfrac</code>代替<code>\frac</code>或者<code>\over</code>两者效果对比如下:</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>x&nbsp;=&nbsp;a_0&nbsp;+&nbsp;\cfrac{1^2}{a_1</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;\cfrac{2^2}{a_2</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;\cfrac{3^2}{a_3&nbsp;+&nbsp;\cfrac{4^4}{a_4&nbsp;+&nbsp;\cdots}}}}&nbsp;\tag{\cfrac}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">x = a_0 + \cfrac{1^2}{a_1
+          + \cfrac{2^2}{a_2
+          + \cfrac{3^2}{a_3 + \cfrac{4^4}{a_4 + \cdots}}}} \tag{\cfrac}
+</script></span>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>x&nbsp;=&nbsp;a_0&nbsp;+&nbsp;\frac{1^2}{a_1</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;\frac{2^2}{a_2</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;\frac{3^2}{a_3&nbsp;+&nbsp;\frac{4^4}{a_4&nbsp;+&nbsp;\cdots}}}}&nbsp;\tag{\frac}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">x = a_0 + \frac{1^2}{a_1
+          + \frac{2^2}{a_2
+          + \frac{3^2}{a_3 + \frac{4^4}{a_4 + \cdots}}}} \tag{\frac}
+</script></span>
+  <h2>Equation Set</h2>
+  <hr>
+  <p>对于方程组可以使用<code>\begin{array} … \end{array}</code>与<code>\left{…\right.</code>配合，表示方程组：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\left\{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{array}{c}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_1x+b_1y+c_1z=d_1&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_2x+b_2y+c_2z=d_2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_3x+b_3y+c_3z=d_3</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\right.</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \left\{
+        \begin{array}{c}
+            a_1x+b_1y+c_1z=d_1 \\
+            a_2x+b_2y+c_2z=d_2 \\
+            a_3x+b_3y+c_3z=d_3
+        \end{array}
+    \right.
+</script></span>
+  <p>同时，还可以使用<code>\begin{cases}…\end{cases}</code>表达同样的方程组，如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\begin{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_1x+b_1y+c_1z=d_1&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_2x+b_2y+c_2z=d_2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_3x+b_3y+c_3z=d_3</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\end{cases}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \begin{cases}
+        a_1x+b_1y+c_1z=d_1 \\
+        a_2x+b_2y+c_2z=d_2 \\
+        a_3x+b_3y+c_3z=d_3
+    \end{cases}
+</script></span>
+  <p>对齐方程组中的 <code>=</code> 号，可以使用 <code>\being{aligned} .. \end{aligned}</code>，如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\left\{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{aligned}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_1x+b_1y+c_1z&nbsp;&amp;=d_1+e_1&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_2x+b_2y&amp;=d_2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_3x+b_3y+c_3z&nbsp;&amp;=d_3</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{aligned}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\right.</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \left\{
+        \begin{aligned}
+            a_1x+b_1y+c_1z &=d_1+e_1 \\
+            a_2x+b_2y&=d_2 \\
+            a_3x+b_3y+c_3z &=d_3
+        \end{aligned}
+    \right.
+</script></span>
+  <p>如果要对齐 = 号 和项，可以使用\being{array}{列样式} … \end{array}，如：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\left\{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin{array}{ll}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_1x+b_1y+c_1z&nbsp;&amp;=d_1+e_1&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_2x+b_2y&nbsp;&amp;=d_2&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a_3x+b_3y+c_3z&nbsp;&amp;=d_3</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\right.</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \left\{
+        \begin{array}{ll}
+            a_1x+b_1y+c_1z &=d_1+e_1 \\
+            a_2x+b_2y &=d_2 \\
+            a_3x+b_3y+c_3z &=d_3
+        \end{array}
+    \right.
+</script></span>
+  <h2>Color</h2>
+  <hr>
+  <p>命名颜色是浏览器相关的，如果浏览器没有定义相关的颜色名称，则相关文本将被渲染为黑色，具体列表如下：</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\begin{array}{|rc|}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{black}{text}+&nbsp;&amp;&nbsp;\color{black}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{gray}{text}+&nbsp;&amp;&nbsp;\color{gray}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{silver}{text}+&nbsp;&amp;&nbsp;\color{silver}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{white}{text}+&nbsp;&amp;&nbsp;\color{white}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{maroon}{text}+&nbsp;&amp;&nbsp;\color{maroon}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{red}{text}+&nbsp;&amp;&nbsp;\color{red}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{yellow}{text}+&nbsp;&amp;&nbsp;\color{yellow}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{lime}{text}+&nbsp;&amp;&nbsp;\color{lime}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{olive}{text}+&nbsp;&amp;&nbsp;\color{olive}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{green}{text}+&nbsp;&amp;&nbsp;\color{green}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{teal}{text}+&nbsp;&amp;&nbsp;\color{teal}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{aqua}{text}+&nbsp;&amp;&nbsp;\color{aqua}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{blue}{text}+&nbsp;&amp;&nbsp;\color{blue}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{navy}{text}+&nbsp;&amp;&nbsp;\color{navy}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{purple}{text}+&nbsp;&amp;&nbsp;\color{purple}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+\color{fuchsia}{text}+&nbsp;&amp;&nbsp;\color{magenta}{text}&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \begin{array}{|rc|}
+        \hline
+            \verb+\color{black}{text}+ & \color{black}{text} \\
+            \verb+\color{gray}{text}+ & \color{gray}{text} \\
+            \verb+\color{silver}{text}+ & \color{silver}{text} \\
+            \verb+\color{white}{text}+ & \color{white}{text} \\
+        \hline
+            \verb+\color{maroon}{text}+ & \color{maroon}{text} \\
+            \verb+\color{red}{text}+ & \color{red}{text} \\
+            \verb+\color{yellow}{text}+ & \color{yellow}{text} \\
+            \verb+\color{lime}{text}+ & \color{lime}{text} \\
+            \verb+\color{olive}{text}+ & \color{olive}{text} \\
+            \verb+\color{green}{text}+ & \color{green}{text} \\
+            \verb+\color{teal}{text}+ & \color{teal}{text} \\
+            \verb+\color{aqua}{text}+ & \color{aqua}{text} \\
+            \verb+\color{blue}{text}+ & \color{blue}{text} \\
+            \verb+\color{navy}{text}+ & \color{navy}{text} \\
+            \verb+\color{purple}{text}+ & \color{purple}{text} \\
+            \verb+\color{fuchsia}{text}+ & \color{magenta}{text} \\
+        \hline
+    \end{array}
+</script></span>
+  <p>此外，<code>HTML5</code>与<code>CSS3</code>也定义了一些颜色名称。 同时，颜色也可以使用<code>#rgb</code>的形式来表示，<code>r</code>、<code>g</code>、<code>b</code>分别表示代表颜色值得16进制数，如:</p>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\begin{array}{|rrrrrrrr|}\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+#000+&nbsp;&amp;&nbsp;\color{#000}{text}&nbsp;&amp;&nbsp;&amp;&nbsp;&amp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+#00F+&nbsp;&amp;&nbsp;\color{#00F}{text}&nbsp;&amp;&nbsp;&amp;&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&nbsp;&amp;&nbsp;\verb+#0F0+&nbsp;&amp;&nbsp;\color{#0F0}{text}&nbsp;&amp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&nbsp;&amp;&nbsp;\verb+#0FF+&nbsp;&amp;&nbsp;\color{#0FF}{text}\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+#F00+&nbsp;&amp;&nbsp;\color{#F00}{text}&nbsp;&amp;&nbsp;&amp;&nbsp;&amp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\verb+#F0F+&nbsp;&amp;&nbsp;\color{#F0F}{text}&nbsp;&amp;&nbsp;&amp;&nbsp;\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&nbsp;&amp;&nbsp;\verb+#FF0+&nbsp;&amp;&nbsp;\color{#FF0}{text}&nbsp;&amp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&nbsp;&amp;&nbsp;\verb+#FFF+&nbsp;&amp;&nbsp;\color{#FFF}{text}\\</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\hline</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;\end{array}</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <span class="math"><script type="math/tex; mode=display">    \begin{array}{|rrrrrrrr|}\hline
+        \verb+#000+ & \color{#000}{text} & & &
+        \verb+#00F+ & \color{#00F}{text} & & \\
+        & & \verb+#0F0+ & \color{#0F0}{text} &
+        & & \verb+#0FF+ & \color{#0FF}{text}\\
+        \verb+#F00+ & \color{#F00}{text} & & &
+        \verb+#F0F+ & \color{#F0F}{text} & & \\
+        & & \verb+#FF0+ & \color{#FF0}{text} &
+        & & \verb+#FFF+ & \color{#FFF}{text}\\
+        \hline
+    \end{array}
+</script></span>
+  <h2>Formula Mark &amp; Quote</h2>
+  <hr>
+  <p>使用<code>\tag{yourtag}</code>来标记公式，如果想在之后引用该公式，则还需要加上<code>\label{yourlabel}</code>在<code>\tag</code>之后，如:</p>
+  <span class="math"><script type="math/tex; mode=display">a := x^2-y^3 \tag{1-1}\label{ 1-1}
+</script></span>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>\[</span></span></div><div class="line"><span class="text plain null-grammar"><span>a&nbsp;:=&nbsp;x^2-y^3&nbsp;\tag{1-1}\label{&nbsp;1-1}</span></span></div><div class="line"><span class="text plain null-grammar"><span>\]</span></span></div></pre>
+  <p>为了引用公式，可以使用<code>\eqref{rlabel}</code>，如：</p>
+  <span class="math"><script type="math/tex; mode=display">a+y^3 \stackrel{\eqref{1-1}}= x^2
+</script></span>
+  <pre class="editor-colors lang-Markdown"><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div><div class="line"><span class="text plain null-grammar"><span>a+y^3&nbsp;\stackrel{\eqref{1-1}}=&nbsp;x^2</span></span></div><div class="line"><span class="text plain null-grammar"><span>$$</span></span></div></pre>
+  <h2>HTML Color Quick Reference</h2>
+  <hr>
+  <p><a href="http://html-color-codes.info/chinese/">HTML色彩代码提取</a></p>
+  <p><a href="http://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></p>
+  <h2>Mathematics Symbols Quick Reference</h2>
+  <hr>
+  <p><code>Detexify</code>,一个数学符号查询手写识别系统，如图：</p>
+  <p><img src="..\..\Docs\assets\MathJax-Quick-Memo-51ba3.png?v=1475994320721" alt="detexify-demo"></p>
+  <p><code>Detexify</code> : <a href="http://detexify.kirelabs.org/classify.html"><span class="math"><script type="math/tex">Detexify^2</script></span></a></p>
+</body>
+
+</html>
