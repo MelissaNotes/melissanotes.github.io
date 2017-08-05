@@ -3,21 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>MGMT-109-Home</title>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ jax: ["input/TeX","output/HTML-CSS"], extensions: [], TeX: { extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"] }, showMathMenu: false });
-    </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <title>3. MGMT-109-notes</title>
     <style>
         .markdown-preview:not([data-use-github-style]) {
             padding: 2em;
             font-size: 1.2em;
-            color: rgb(171, 178, 191);
+            color: rgb(56, 58, 66);
             overflow: auto;
-            background-color: rgb(40, 44, 52);
+            background-color: rgb(250, 250, 250);
         }
-
+        
         .markdown-preview:not([data-use-github-style])> :first-child {
             margin-top: 0px;
         }
@@ -31,7 +26,7 @@
             line-height: 1.2;
             margin-top: 1.5em;
             margin-bottom: 0.5em;
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) h1 {
@@ -65,16 +60,16 @@
         }
 
         .markdown-preview:not([data-use-github-style]) strong {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) del {
-            color: rgb(124, 135, 156);
+            color: rgb(94, 97, 110);
         }
 
         .markdown-preview:not([data-use-github-style]) a,
         .markdown-preview:not([data-use-github-style]) a code {
-            color: rgb(82, 139, 255);
+            color: rgb(82, 111, 255);
         }
 
         .markdown-preview:not([data-use-github-style]) img {
@@ -94,14 +89,16 @@
         .markdown-preview:not([data-use-github-style]) blockquote {
             margin: 1.5em 0px;
             font-size: inherit;
-            color: rgb(124, 135, 156);
-            border-color: rgb(75, 83, 98);
+            color: rgb(94, 97, 110);
+            border-color: rgb(209, 209, 210);
             border-width: 4px;
         }
 
         .markdown-preview:not([data-use-github-style]) hr {
             margin: 3em 0px;
-            border-top: 2px dashed rgb(75, 83, 98);
+            border-top-width: 2px;
+            border-top-style: dashed;
+            border-top-color: rgb(209, 209, 210);
             background: none;
         }
 
@@ -110,19 +107,19 @@
         }
 
         .markdown-preview:not([data-use-github-style]) th {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) th,
         .markdown-preview:not([data-use-github-style]) td {
             padding: 0.66em 1em;
-            border: 1px solid rgb(75, 83, 98);
+            border: 1px solid rgb(209, 209, 210);
         }
 
         .markdown-preview:not([data-use-github-style]) pre,
         .markdown-preview:not([data-use-github-style]) code {
-            color: rgb(255, 255, 255);
-            background-color: rgb(58, 63, 75);
+            color: rgb(0, 0, 0);
+            background-color: rgb(234, 234, 235);
         }
 
         .markdown-preview:not([data-use-github-style]) pre,
@@ -131,19 +128,19 @@
             padding: 1em;
             font-size: 0.92em;
             border-radius: 3px;
-            background-color: rgb(49, 54, 63);
+            background-color: rgb(240, 240, 240);
         }
 
         .markdown-preview:not([data-use-github-style]) kbd {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             border-width: 1px 1px 2px;
             border-style: solid;
-            border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81);
-            background-color: rgb(58, 63, 75);
+            border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194);
+            background-color: rgb(234, 234, 235);
         }
 
         .markdown-preview[data-use-github-style] {
-            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
             line-height: 1.6;
             word-wrap: break-word;
             padding: 30px;
@@ -247,7 +244,9 @@
             padding-bottom: 0.3em;
             font-size: 2.25em;
             line-height: 1.2;
-            border-bottom: 1px solid rgb(238, 238, 238);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
         }
 
         .markdown-preview[data-use-github-style] h1 .anchor {
@@ -258,7 +257,9 @@
             padding-bottom: 0.3em;
             font-size: 1.75em;
             line-height: 1.225;
-            border-bottom: 1px solid rgb(238, 238, 238);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
         }
 
         .markdown-preview[data-use-github-style] h2 .anchor {
@@ -361,7 +362,9 @@
         .markdown-preview[data-use-github-style] blockquote {
             padding: 0px 15px;
             color: rgb(119, 119, 119);
-            border-left: 4px solid rgb(221, 221, 221);
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-left-color: rgb(221, 221, 221);
         }
 
         .markdown-preview[data-use-github-style] blockquote> :first-child {
@@ -390,7 +393,9 @@
         }
 
         .markdown-preview[data-use-github-style] table tr {
-            border-top: 1px solid rgb(204, 204, 204);
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(204, 204, 204);
             background-color: rgb(255, 255, 255);
         }
 
@@ -581,8 +586,8 @@
             line-height: 10px;
             color: rgb(85, 85, 85);
             vertical-align: middle;
-            border-width: 1px;
             border-style: solid;
+            border-width: 1px;
             border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
             border-radius: 3px;
             box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
@@ -607,13 +612,13 @@
             overflow: auto;
         }
 
-        .scrollbars-visible-always .markdown-preview pre.editor-colors.editor .vertical-scrollbar,
-        .scrollbars-visible-always .markdown-preview pre.editor-colors.editor .horizontal-scrollbar {
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar {
             visibility: hidden;
         }
 
-        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover.editor .vertical-scrollbar,
-        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover.editor .horizontal-scrollbar {
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar {
             visibility: visible;
         }
 
@@ -623,7 +628,9 @@
         }
 
         .markdown-preview del::after {
-            border-bottom: 1px solid black;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: black;
             content: "";
             left: 0px;
             position: absolute;
@@ -653,505 +660,610 @@
             width: 25em !important;
         }
 
-        pre.editor-colors {
-            background-color: #282c34;
-            color: #abb2bf;
+        pre.editor-colors,
+        .host {
+            background-color: #fafafa;
+            color: #383a42;
         }
 
-        pre.editor-colors .line.cursor-line {
-            background-color: rgba(153, 187, 255, 0.04);
+        pre.editor-colors .line.cursor-line,
+        .host .line.cursor-line {
+            background-color: rgba(56, 58, 66, 0.05);
         }
 
-        pre.editor-colors .invisible {
-            color: #abb2bf;
+        pre.editor-colors .invisible,
+        .host .invisible {
+            color: #383a42;
         }
 
-        pre.editor-colors .cursor {
-            border-left: 2px solid #528bff;
+        pre.editor-colors .cursor,
+        .host .cursor {
+            border-left: 2px solid #526fff;
         }
 
-        pre.editor-colors .selection .region {
-            background-color: #3e4451;
+        pre.editor-colors .selection .region,
+        .host .selection .region {
+            background-color: #e5e5e6;
         }
 
-        pre.editor-colors .bracket-matcher .region {
-            border-bottom: 1px solid #528bff;
+        pre.editor-colors .bracket-matcher .region,
+        .host .bracket-matcher .region {
+            border-bottom: 1px solid #526fff;
             box-sizing: border-box;
         }
 
-        pre.editor-colors .invisible-character {
-            color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .invisible-character,
+        .host .invisible-character {
+            color: rgba(56, 58, 66, 0.2);
         }
 
-        pre.editor-colors .indent-guide {
-            color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .indent-guide,
+        .host .indent-guide {
+            color: rgba(56, 58, 66, 0.2);
         }
 
-        pre.editor-colors .wrap-guide {
-            background-color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .wrap-guide,
+        .host .wrap-guide {
+            background-color: rgba(56, 58, 66, 0.2);
         }
 
         pre.editor-colors .find-result .region.region.region,
-        pre.editor-colors .current-result .region.region.region {
-            border-radius: 2px;
-            background-color: rgba(82, 139, 255, 0.24);
+        .host .find-result .region.region.region,
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border-radius: 0px;
+            background-color: rgba(82, 111, 255, 0.2);
             transition: border-color 0.4s;
         }
 
-        pre.editor-colors .find-result .region.region.region {
+        pre.editor-colors .find-result .region.region.region,
+        .host .find-result .region.region.region {
             border: 2px solid transparent;
         }
 
-        pre.editor-colors .current-result .region.region.region {
-            border: 2px solid #528bff;
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border: 2px solid #526fff;
             transition-duration: .1s;
         }
 
-        pre.editor-colors .gutter .line-number {
-            color: #636d83;
+        pre.editor-colors .gutter .line-number,
+        .host .gutter .line-number {
+            color: #9d9d9f;
             -webkit-font-smoothing: antialiased;
         }
 
-        pre.editor-colors .gutter .line-number.cursor-line {
-            color: #abb2bf;
-            background-color: #2c313a;
+        pre.editor-colors .gutter .line-number.cursor-line,
+        .host .gutter .line-number.cursor-line {
+            color: #383a42;
+            background-color: #f2f2f2;
         }
 
-        pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+        pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+        .host .gutter .line-number.cursor-line-no-selection {
             background-color: transparent;
         }
 
-        pre.editor-colors .gutter .line-number .icon-right {
-            color: #abb2bf;
+        pre.editor-colors .gutter .line-number .icon-right,
+        .host .gutter .line-number .icon-right {
+            color: #383a42;
         }
 
-        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
             bottom: -3px;
         }
 
-        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
             content: "";
             position: absolute;
             left: 0px;
             bottom: 0px;
             width: 25px;
-            border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+            border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
             pointer-events: none;
         }
 
         pre.editor-colors .gutter .line-number.folded,
+        .host .gutter .line-number.folded,
         pre.editor-colors .gutter .line-number:after,
-        pre.editor-colors .fold-marker:after {
-            color: #abb2bf;
+        .host .gutter .line-number:after,
+        pre.editor-colors .fold-marker:after,
+        .host .fold-marker:after {
+            color: #383a42;
         }
 
-        .syntax--comment {
-            color: #5c6370;
+        .comment {
+            color: #a0a1a7;
             font-style: italic;
         }
 
-        .syntax--comment .syntax--markup.syntax--link {
-            color: #5c6370;
+        .comment .markup.link {
+            color: #a0a1a7;
         }
 
-        .syntax--entity.syntax--name.syntax--type {
-            color: #e5c07b;
+        .entity.name.type {
+            color: #c18401;
         }
 
-        .syntax--entity.syntax--other.syntax--inherited-class {
-            color: #98c379;
+        .entity.other.inherited-class {
+            color: #50a14f;
         }
 
-        .syntax--keyword {
-            color: #c678dd;
+        .keyword {
+            color: #a626a4;
         }
 
-        .syntax--keyword.syntax--control {
-            color: #c678dd;
+        .keyword.control {
+            color: #a626a4;
         }
 
-        .syntax--keyword.syntax--operator {
-            color: #abb2bf;
+        .keyword.operator {
+            color: #383a42;
         }
 
-        .syntax--keyword.syntax--other.syntax--special-method {
-            color: #61afef;
+        .keyword.other.special-method {
+            color: #4078f2;
         }
 
-        .syntax--keyword.syntax--other.syntax--unit {
-            color: #d19a66;
+        .keyword.other.unit {
+            color: #986801;
         }
 
-        .syntax--storage {
-            color: #c678dd;
+        .storage {
+            color: #a626a4;
         }
 
-        .syntax--storage.syntax--type.syntax--annotation,
-        .syntax--storage.syntax--type.syntax--primitive {
-            color: #c678dd;
+        .storage.type.annotation,
+        .storage.type.primitive {
+            color: #a626a4;
         }
 
-        .syntax--storage.syntax--modifier.syntax--package,
-        .syntax--storage.syntax--modifier.syntax--import {
-            color: #abb2bf;
+        .storage.modifier.package,
+        .storage.modifier.import {
+            color: #383a42;
         }
 
-        .syntax--constant {
-            color: #d19a66;
+        .constant {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--variable {
-            color: #d19a66;
+        .constant.variable {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--character.syntax--escape {
-            color: #56b6c2;
+        .constant.character.escape {
+            color: #0184bc;
         }
 
-        .syntax--constant.syntax--numeric {
-            color: #d19a66;
+        .constant.numeric {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--other.syntax--color {
-            color: #56b6c2;
+        .constant.other.color {
+            color: #0184bc;
         }
 
-        .syntax--constant.syntax--other.syntax--symbol {
-            color: #56b6c2;
+        .constant.other.symbol {
+            color: #0184bc;
         }
 
-        .syntax--variable {
-            color: #e06c75;
+        .variable {
+            color: #e45649;
         }
 
-        .syntax--variable.syntax--interpolation {
-            color: #be5046;
+        .variable.interpolation {
+            color: #ca1243;
         }
 
-        .syntax--variable.syntax--parameter {
-            color: #abb2bf;
+        .variable.parameter {
+            color: #383a42;
         }
 
-        .syntax--string {
-            color: #98c379;
+        .string {
+            color: #50a14f;
         }
 
-        .syntax--string.syntax--regexp {
-            color: #56b6c2;
+        .string.regexp {
+            color: #0184bc;
         }
 
-        .syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
-            color: #e5c07b;
+        .string.regexp .source.ruby.embedded {
+            color: #c18401;
         }
 
-        .syntax--string.syntax--other.syntax--link {
-            color: #e06c75;
+        .string.other.link {
+            color: #e45649;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--comment {
-            color: #5c6370;
+        .punctuation.definition.comment {
+            color: #a0a1a7;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--method-parameters,
-        .syntax--punctuation.syntax--definition.syntax--function-parameters,
-        .syntax--punctuation.syntax--definition.syntax--parameters,
-        .syntax--punctuation.syntax--definition.syntax--separator,
-        .syntax--punctuation.syntax--definition.syntax--seperator,
-        .syntax--punctuation.syntax--definition.syntax--array {
-            color: #abb2bf;
+        .punctuation.definition.method-parameters,
+        .punctuation.definition.function-parameters,
+        .punctuation.definition.parameters,
+        .punctuation.definition.separator,
+        .punctuation.definition.seperator,
+        .punctuation.definition.array {
+            color: #383a42;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--heading,
-        .syntax--punctuation.syntax--definition.syntax--identity {
-            color: #61afef;
+        .punctuation.definition.heading,
+        .punctuation.definition.identity {
+            color: #4078f2;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--bold {
-            color: #e5c07b;
+        .punctuation.definition.bold {
+            color: #c18401;
             font-weight: bold;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--italic {
-            color: #c678dd;
+        .punctuation.definition.italic {
+            color: #a626a4;
             font-style: italic;
         }
 
-        .syntax--punctuation.syntax--section.syntax--embedded {
-            color: #be5046;
+        .punctuation.section.embedded {
+            color: #ca1243;
         }
 
-        .syntax--punctuation.syntax--section.syntax--method,
-        .syntax--punctuation.syntax--section.syntax--class,
-        .syntax--punctuation.syntax--section.syntax--inner-class {
-            color: #abb2bf;
+        .punctuation.section.method,
+        .punctuation.section.class,
+        .punctuation.section.inner-class {
+            color: #383a42;
         }
 
-        .syntax--support.syntax--class {
-            color: #e5c07b;
+        .support.class {
+            color: #c18401;
         }
 
-        .syntax--support.syntax--type {
-            color: #56b6c2;
+        .support.type {
+            color: #0184bc;
         }
 
-        .syntax--support.syntax--function {
-            color: #56b6c2;
+        .support.function {
+            color: #0184bc;
         }
 
-        .syntax--support.syntax--function.syntax--any-method {
-            color: #61afef;
+        .support.function.any-method {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--function {
-            color: #61afef;
+        .entity.name.function {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--class,
-        .syntax--entity.syntax--name.syntax--type.syntax--class {
-            color: #e5c07b;
+        .entity.name.class,
+        .entity.name.type.class {
+            color: #c18401;
         }
 
-        .syntax--entity.syntax--name.syntax--section {
-            color: #61afef;
+        .entity.name.section {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--tag {
-            color: #e06c75;
+        .entity.name.tag {
+            color: #e45649;
         }
 
-        .syntax--entity.syntax--other.syntax--attribute-name {
-            color: #d19a66;
+        .entity.other.attribute-name {
+            color: #986801;
         }
 
-        .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
-            color: #61afef;
+        .entity.other.attribute-name.id {
+            color: #4078f2;
         }
 
-        .syntax--meta.syntax--class {
-            color: #e5c07b;
+        .meta.class {
+            color: #c18401;
         }
 
-        .syntax--meta.syntax--class.syntax--body {
-            color: #abb2bf;
+        .meta.class.body {
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--method-call,
-        .syntax--meta.syntax--method {
-            color: #abb2bf;
+        .meta.method-call,
+        .meta.method {
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--definition.syntax--variable {
-            color: #e06c75;
+        .meta.definition.variable {
+            color: #e45649;
         }
 
-        .syntax--meta.syntax--link {
-            color: #d19a66;
+        .meta.link {
+            color: #986801;
         }
 
-        .syntax--meta.syntax--require {
-            color: #61afef;
+        .meta.require {
+            color: #4078f2;
         }
 
-        .syntax--meta.syntax--selector {
-            color: #c678dd;
+        .meta.selector {
+            color: #a626a4;
         }
 
-        .syntax--meta.syntax--separator {
+        .meta.separator {
             background-color: #373b41;
-            color: #abb2bf;
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--tag {
-            color: #abb2bf;
+        .meta.tag {
+            color: #383a42;
         }
 
-        .syntax--underline {
+        .underline {
             text-decoration: underline;
         }
 
-        .syntax--none {
-            color: #abb2bf;
+        .none {
+            color: #383a42;
         }
 
-        .syntax--invalid.syntax--deprecated {
-            color: #523d14 !important;
-            background-color: #e0c285 !important;
+        .invalid.deprecated {
+            color: #000000 !important;
+            background-color: #f2a60d !important;
         }
 
-        .syntax--invalid.syntax--illegal {
-            color: white !important;
-            background-color: #e05252 !important;
+        .invalid.illegal {
+            color: #ffffff !important;
+            background-color: #ff1414 !important;
         }
 
-        .syntax--markup.syntax--bold {
-            color: #d19a66;
+        .markup.bold {
+            color: #986801;
             font-weight: bold;
         }
 
-        .syntax--markup.syntax--changed {
-            color: #c678dd;
+        .markup.changed {
+            color: #a626a4;
         }
 
-        .syntax--markup.syntax--deleted {
-            color: #e06c75;
+        .markup.deleted {
+            color: #e45649;
         }
 
-        .syntax--markup.syntax--italic {
-            color: #c678dd;
+        .markup.italic {
+            color: #a626a4;
             font-style: italic;
         }
 
-        .syntax--markup.syntax--heading {
-            color: #e06c75;
+        .markup.heading {
+            color: #e45649;
         }
 
-        .syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-            color: #61afef;
+        .markup.heading .punctuation.definition.heading {
+            color: #4078f2;
         }
 
-        .syntax--markup.syntax--link {
-            color: #56b6c2;
+        .markup.link {
+            color: #a626a4;
         }
 
-        .syntax--markup.syntax--inserted {
-            color: #98c379;
+        .markup.inserted {
+            color: #50a14f;
         }
 
-        .syntax--markup.syntax--quote {
-            color: #d19a66;
+        .markup.quote {
+            color: #986801;
         }
 
-        .syntax--markup.syntax--raw {
-            color: #98c379;
+        .markup.raw {
+            color: #50a14f;
         }
 
-        .syntax--source.syntax--c .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.cs .keyword.operator {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.css .property-name,
+        .source.css .property-value {
+            color: #696c77;
         }
 
-        .syntax--source.syntax--cs .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.css .property-name.support,
+        .source.css .property-value.support {
+            color: #383a42;
         }
 
-        .syntax--source.syntax--css .syntax--property-name,
-        .syntax--source.syntax--css .syntax--property-value {
-            color: #828997;
-        }
-
-        .syntax--source.syntax--css .syntax--property-name.syntax--support,
-        .syntax--source.syntax--css .syntax--property-value.syntax--support {
-            color: #abb2bf;
-        }
-
-        .syntax--source.syntax--gfm .syntax--markup {
+        .source.gfm .markup {
             -webkit-font-smoothing: auto;
         }
 
-        .syntax--source.syntax--gfm .syntax--link .syntax--entity {
-            color: #61afef;
+        .source.gfm .link .entity {
+            color: #4078f2;
         }
 
-        .syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
-            color: #c678dd;
+        .source.go .storage.type.string {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
-            color: #e06c75;
+        .source.ini .keyword.other.definition.ini {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
-            color: #e5c07b;
+        .source.java .storage.modifier.import {
+            color: #c18401;
         }
 
-        .syntax--source.syntax--java .syntax--storage.syntax--type {
-            color: #e5c07b;
+        .source.java .storage.type {
+            color: #c18401;
         }
 
-        .syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
-            color: #c678dd;
+        .source.java .keyword.operator.instanceof {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
-            color: #e06c75;
+        .source.java-properties .meta.key-pair {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair>.syntax--punctuation {
-            color: #abb2bf;
+        .source.java-properties .meta.key-pair>.punctuation {
+            color: #383a42;
         }
 
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator {
-            color: #56b6c2;
+        .source.js .keyword.operator {
+            color: #0184bc;
         }
 
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
-            color: #c678dd;
+        .source.js .keyword.operator.delete,
+        .source.js .keyword.operator.in,
+        .source.js .keyword.operator.of,
+        .source.js .keyword.operator.instanceof,
+        .source.js .keyword.operator.new,
+        .source.js .keyword.operator.typeof,
+        .source.js .keyword.operator.void {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json {
-            color: #e06c75;
+        .source.json .meta.structure.dictionary.json>.string.quoted.json {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation.syntax--string {
-            color: #e06c75;
+        .source.json .meta.structure.dictionary.json>.string.quoted.json>.punctuation.string {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation {
-            color: #98c379;
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json>.punctuation,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json>.punctuation {
+            color: #50a14f;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--constant.syntax--language.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--constant.syntax--language.syntax--json {
-            color: #56b6c2;
+        .source.json .meta.structure.dictionary.json>.constant.language.json,
+        .source.json .meta.structure.array.json>.constant.language.json {
+            color: #0184bc;
         }
 
-        .syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol>.syntax--punctuation {
+        .source.ruby .constant.other.symbol>.punctuation {
             color: inherit;
         }
 
-        .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
-            color: #c678dd;
+        .source.python .keyword.operator.logical.python {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--python .syntax--variable.syntax--parameter {
-            color: #d19a66;
+        .source.python .variable.parameter {
+            color: #986801;
         }
     </style>
 </head>
 
 <body class='markdown-preview'>
-    <h1>UCLA-MGMT-109 Class Notes</h1>
-    <hr>
-    <p><strong>Author: <code>Melissa</code></strong></p>
-    <p><strong>Update Time: <code>8/5/2017</code></strong></p>
-    <h2>Introduction</h2>
-    <hr>
-    <p>This is the class notes of <code>MGMT-109</code>.</p>
-    <h2>Table of Content</h2>
-    <hr>
+    <h3>7/31/2017 class three</h3>
+    <h3>Chap 15 Commission of the European Communities v. Italian Republic</h3>
+    <h3>Chap 15 CASE National Farmers’ Union and Secrétariat</h3>
     <ul>
         <li>
-            <p><a href="MGMT-109-notes.md.html">MGMT-109 Notes - 1</a></p>
+            <p>Disease affected beef from UK are banned differently in different country(France and Portugee) EU stepped in to test the disease and</p>
         </li>
         <li>
-            <p><a href="MGMT-109-notes-3.md.html">MGMT-109 Notes - 3</a></p>
-        </li>
-        <li>
-            <p><a href="MGMT-109-notes-4.md.html">MGMT-109 Notes - 4</a></p>
+            <p>Issue: member state can go against the EU when they all member state, B/C harmonization says member states should follow when EU is involved in.</p>
         </li>
     </ul>
+    <h3>Jurisdiction and Venue</h3>
+    <ul>
+        <li>Jurisdiction: what circumstance they can court</li>
+        <li>Venue: if nothing in the agreement, what court we go to</li>
+    </ul>
+    <h4><strong>Federal vs. State</strong></h4>
+    <p>federal court hear if :</p>
+    <ol>
+        <li>federal law <strong>OR</strong></li>
+        <li>diversity of citizenship (plaintiff/defendant are from different places)</li>
+    </ol>
+    <h4><strong>Personal Jurisdiction</strong></h4>
+    <ul>
+        <li>check if it is legal and fair for the defendant to come all the way</li>
+        <li>if one of these three for defendant is satisfied, the plaintiffs can sue the defendant
+            <ol>
+                <li>Presence (physically present) <strong>OR</strong></li>
+                <li>Domicile (lives in the state) <strong>OR</strong></li>
+                <li>Consent (the defendant agrees to be sued)</li>
+            </ol>
+        </li>
+    </ul>
+    <h4><strong>Corporation Jurisdiction</strong></h4>
+    <ol>
+        <li>Domicile (where they incorporate in the state) <strong>OR</strong></li>
+        <li>Consent Principle Place of Business (usually headquarters, some time big factory/office)
+            <ul>
+                <li><strong>Express</strong>(words) <strong>OR</strong><br> ex. contract clause saying where they will result in XXX court</li>
+                <li><strong>Implied</strong> (nobody every agree, the through their behaviors, buy thing in market)
+                    <ul>
+                        <li>Due Process
+                            <ul>
+                                <li>notice <strong>AND</strong></li>
+                                <li>opportunity to be heard</li>
+                            </ul>
+                        </li>
+                        <li>Sufficient Minimum Contacts
+                            <ul>
+                                <li>business in state <strong>OR</strong></li>
+                                <li>injury in state</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p><code>Delaware is in fond of company management(majority)</code></p>
+    <h3>Consent but no connection</h3>
+    <p>despite there is an agreement in the contract, but the court can reject the case if there is no connection<br> (the plaintiff/ defendant/ transaction)</p>
+    <h4>example Chap 3 case Asahi Metal Industry, Co. v. Superior Court of California, Solano County</h4>
+    <p>Plaintiff Zuecher filed a law suit to Chen Shin (Taiwan). Chen Shin sell the tire to Zyecher caused Zyecher’s wife death. Chen Shin (Taiwan) then file the case to Asahi(Japanese Attocycles), chen shin bought the tire from Asahi</p>
+    <p>issue: Does the state court can posses personal jurisdiction over Asahi. decision: Asahi does not have the attention to sell things in California. Chen Shin sold the product and causes an injury so he is responsible for the death.</p>
+    <h3>Jurisdiction but no convenient</h3>
+    <h4>example Chap 3 case In re Union Carbide Corporation Gas Plant Disaster at Bhopal</h4>
+    <p>Indian government sued UCC, whose subsidiary in India called UCIL. In 1984, poisonous gas was released from the plant and blew into densely occupied parts of the city of Bhopal, cause 200 thousand ppl’s death. In April 1985, the Indian government
+        filed a complaint in the federal courts in New York on behalf of the victims. UCC contended that the action should properly be heard in the courts of India. The district court agreed and dismissed the action.</p>
+    <p>issue: should parent company take the responsibility to subsidiary company’s mistake. who has the jurisdiction</p>
+    <p>he district court’s dismissal of the actions against UCC was upheld.</p>
+    <p>The doctrine of forum non conveniens is a rule of law, stating that to further the administration of justice, where a case is properly heard in the courts of more than one country, it should be heard in the country with the greater interest in the
+        out- come of the case, and where it is most convenient. In this case that is India.</p>
+    <h4>Chap 3 Iragorri v. United Technologies Corp. &amp; Otis Elevator Co.</h4>
+    <p>Florida citizen Iragorri fell to his death through an open elevator in Cali, Colombia. His surviving wife and children brought this action in U.S. District Court in Connecticut for damages against two American companies, Otis Eleva- tor and its parent
+        corporation, United Technologies.</p>
+    <h3>Choice of law</h3>
+    <p>what law is going to be used</p>
+    <ol>
+        <li>where the contract is signed</li>
+        <li>where the contract is going to be performed</li>
+    </ol>
+    <h3>Chap 3 Finnish Fur Sales Co., Ltd. v. Juliette Shulof Furs, Inc.</h3>
+    <h3>Service of process in US</h3>
+    <ol>
+        <li><strong>Personal service</strong> <strong>OR</strong><br> (person independent from the plaintiff handing the case to defendant, face to face)</li>
+        <li><strong>Substituted service</strong> <strong>0R</strong><br> (after reasonable attempt to do the personal service, the independent person can leave the case to family member or the people in the company, and mail the case)</li>
+        <li><strong>Publication</strong><br> (on newspaper)</li>
+    </ol>
+    <ul>
+        <li>May not be efficient in other county.
+            <ul>
+                <li>If not: you can do the process in their way,</li>
+                <li>or follow the Treaty called <strong>Hague Convention</strong> on service abroad:<br> all countries agrees, send the document to the agent that process the Hague Convention, then they will send the case to the person(people/company))</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>when on court</h3>
+    <p>Discovery</p>
+    <ol>
+        <li>Interrogatories (give out the fact, the people’s name/phone/address, the name of document and all tengiable)</li>
+        <li>Deposition (call the person to the office of the lawyer to oath, sign the contract before they go to the court, then they reserve the rights to invoke the witness if they give a different version of the fact)</li>
+        <li>Request for Production</li>
+    </ol>
+    <h3>Chap 4</h3>
+    <p>Case: Harriscom Svenska, AB v. Harris Corp. Plaintiff New York corporation Harriscom sue the defendant RF system for RF’s withdraw from Iran market. District court is fond of the defendant and plaintiff appealed.</p>
+    <p>Defendant RF system was affirmed. because,
+    </p>
+    <blockquote>
+        <p>Discovery<br> Hague Convention on taking of evidences<br> (pre-set question unlike <code>deposition</code>)</p>
+    </blockquote>
+    <p>enforcing judgment, Full Faith and Credit Clause</p>
 </body>
 
 </html>

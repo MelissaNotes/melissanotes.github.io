@@ -3,19 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>MGMT-109-Home</title>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ jax: ["input/TeX","output/HTML-CSS"], extensions: [], TeX: { extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"] }, showMathMenu: false });
-    </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <title>4. MGMT-109-notes</title>
     <style>
         .markdown-preview:not([data-use-github-style]) {
             padding: 2em;
             font-size: 1.2em;
-            color: rgb(171, 178, 191);
+            color: rgb(56, 58, 66);
             overflow: auto;
-            background-color: rgb(40, 44, 52);
+            background-color: rgb(250, 250, 250);
         }
 
         .markdown-preview:not([data-use-github-style])> :first-child {
@@ -31,7 +26,7 @@
             line-height: 1.2;
             margin-top: 1.5em;
             margin-bottom: 0.5em;
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) h1 {
@@ -65,16 +60,16 @@
         }
 
         .markdown-preview:not([data-use-github-style]) strong {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) del {
-            color: rgb(124, 135, 156);
+            color: rgb(94, 97, 110);
         }
 
         .markdown-preview:not([data-use-github-style]) a,
         .markdown-preview:not([data-use-github-style]) a code {
-            color: rgb(82, 139, 255);
+            color: rgb(82, 111, 255);
         }
 
         .markdown-preview:not([data-use-github-style]) img {
@@ -94,14 +89,16 @@
         .markdown-preview:not([data-use-github-style]) blockquote {
             margin: 1.5em 0px;
             font-size: inherit;
-            color: rgb(124, 135, 156);
-            border-color: rgb(75, 83, 98);
+            color: rgb(94, 97, 110);
+            border-color: rgb(209, 209, 210);
             border-width: 4px;
         }
 
         .markdown-preview:not([data-use-github-style]) hr {
             margin: 3em 0px;
-            border-top: 2px dashed rgb(75, 83, 98);
+            border-top-width: 2px;
+            border-top-style: dashed;
+            border-top-color: rgb(209, 209, 210);
             background: none;
         }
 
@@ -110,19 +107,19 @@
         }
 
         .markdown-preview:not([data-use-github-style]) th {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
         }
 
         .markdown-preview:not([data-use-github-style]) th,
         .markdown-preview:not([data-use-github-style]) td {
             padding: 0.66em 1em;
-            border: 1px solid rgb(75, 83, 98);
+            border: 1px solid rgb(209, 209, 210);
         }
 
         .markdown-preview:not([data-use-github-style]) pre,
         .markdown-preview:not([data-use-github-style]) code {
-            color: rgb(255, 255, 255);
-            background-color: rgb(58, 63, 75);
+            color: rgb(0, 0, 0);
+            background-color: rgb(234, 234, 235);
         }
 
         .markdown-preview:not([data-use-github-style]) pre,
@@ -131,19 +128,19 @@
             padding: 1em;
             font-size: 0.92em;
             border-radius: 3px;
-            background-color: rgb(49, 54, 63);
+            background-color: rgb(240, 240, 240);
         }
 
         .markdown-preview:not([data-use-github-style]) kbd {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             border-width: 1px 1px 2px;
             border-style: solid;
-            border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81);
-            background-color: rgb(58, 63, 75);
+            border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194);
+            background-color: rgb(234, 234, 235);
         }
 
         .markdown-preview[data-use-github-style] {
-            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
             line-height: 1.6;
             word-wrap: break-word;
             padding: 30px;
@@ -247,7 +244,9 @@
             padding-bottom: 0.3em;
             font-size: 2.25em;
             line-height: 1.2;
-            border-bottom: 1px solid rgb(238, 238, 238);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
         }
 
         .markdown-preview[data-use-github-style] h1 .anchor {
@@ -258,7 +257,9 @@
             padding-bottom: 0.3em;
             font-size: 1.75em;
             line-height: 1.225;
-            border-bottom: 1px solid rgb(238, 238, 238);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
         }
 
         .markdown-preview[data-use-github-style] h2 .anchor {
@@ -361,7 +362,9 @@
         .markdown-preview[data-use-github-style] blockquote {
             padding: 0px 15px;
             color: rgb(119, 119, 119);
-            border-left: 4px solid rgb(221, 221, 221);
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-left-color: rgb(221, 221, 221);
         }
 
         .markdown-preview[data-use-github-style] blockquote> :first-child {
@@ -390,7 +393,9 @@
         }
 
         .markdown-preview[data-use-github-style] table tr {
-            border-top: 1px solid rgb(204, 204, 204);
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(204, 204, 204);
             background-color: rgb(255, 255, 255);
         }
 
@@ -581,8 +586,8 @@
             line-height: 10px;
             color: rgb(85, 85, 85);
             vertical-align: middle;
-            border-width: 1px;
             border-style: solid;
+            border-width: 1px;
             border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
             border-radius: 3px;
             box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
@@ -607,13 +612,13 @@
             overflow: auto;
         }
 
-        .scrollbars-visible-always .markdown-preview pre.editor-colors.editor .vertical-scrollbar,
-        .scrollbars-visible-always .markdown-preview pre.editor-colors.editor .horizontal-scrollbar {
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar {
             visibility: hidden;
         }
 
-        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover.editor .vertical-scrollbar,
-        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover.editor .horizontal-scrollbar {
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar {
             visibility: visible;
         }
 
@@ -623,7 +628,9 @@
         }
 
         .markdown-preview del::after {
-            border-bottom: 1px solid black;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: black;
             content: "";
             left: 0px;
             position: absolute;
@@ -653,505 +660,644 @@
             width: 25em !important;
         }
 
-        pre.editor-colors {
-            background-color: #282c34;
-            color: #abb2bf;
+        pre.editor-colors,
+        .host {
+            background-color: #fafafa;
+            color: #383a42;
         }
 
-        pre.editor-colors .line.cursor-line {
-            background-color: rgba(153, 187, 255, 0.04);
+        pre.editor-colors .line.cursor-line,
+        .host .line.cursor-line {
+            background-color: rgba(56, 58, 66, 0.05);
         }
 
-        pre.editor-colors .invisible {
-            color: #abb2bf;
+        pre.editor-colors .invisible,
+        .host .invisible {
+            color: #383a42;
         }
 
-        pre.editor-colors .cursor {
-            border-left: 2px solid #528bff;
+        pre.editor-colors .cursor,
+        .host .cursor {
+            border-left: 2px solid #526fff;
         }
 
-        pre.editor-colors .selection .region {
-            background-color: #3e4451;
+        pre.editor-colors .selection .region,
+        .host .selection .region {
+            background-color: #e5e5e6;
         }
 
-        pre.editor-colors .bracket-matcher .region {
-            border-bottom: 1px solid #528bff;
+        pre.editor-colors .bracket-matcher .region,
+        .host .bracket-matcher .region {
+            border-bottom: 1px solid #526fff;
             box-sizing: border-box;
         }
 
-        pre.editor-colors .invisible-character {
-            color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .invisible-character,
+        .host .invisible-character {
+            color: rgba(56, 58, 66, 0.2);
         }
 
-        pre.editor-colors .indent-guide {
-            color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .indent-guide,
+        .host .indent-guide {
+            color: rgba(56, 58, 66, 0.2);
         }
 
-        pre.editor-colors .wrap-guide {
-            background-color: rgba(171, 178, 191, 0.15);
+        pre.editor-colors .wrap-guide,
+        .host .wrap-guide {
+            background-color: rgba(56, 58, 66, 0.2);
         }
 
         pre.editor-colors .find-result .region.region.region,
-        pre.editor-colors .current-result .region.region.region {
-            border-radius: 2px;
-            background-color: rgba(82, 139, 255, 0.24);
+        .host .find-result .region.region.region,
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border-radius: 0px;
+            background-color: rgba(82, 111, 255, 0.2);
             transition: border-color 0.4s;
         }
 
-        pre.editor-colors .find-result .region.region.region {
+        pre.editor-colors .find-result .region.region.region,
+        .host .find-result .region.region.region {
             border: 2px solid transparent;
         }
 
-        pre.editor-colors .current-result .region.region.region {
-            border: 2px solid #528bff;
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border: 2px solid #526fff;
             transition-duration: .1s;
         }
 
-        pre.editor-colors .gutter .line-number {
-            color: #636d83;
+        pre.editor-colors .gutter .line-number,
+        .host .gutter .line-number {
+            color: #9d9d9f;
             -webkit-font-smoothing: antialiased;
         }
 
-        pre.editor-colors .gutter .line-number.cursor-line {
-            color: #abb2bf;
-            background-color: #2c313a;
+        pre.editor-colors .gutter .line-number.cursor-line,
+        .host .gutter .line-number.cursor-line {
+            color: #383a42;
+            background-color: #f2f2f2;
         }
 
-        pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+        pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+        .host .gutter .line-number.cursor-line-no-selection {
             background-color: transparent;
         }
 
-        pre.editor-colors .gutter .line-number .icon-right {
-            color: #abb2bf;
+        pre.editor-colors .gutter .line-number .icon-right,
+        .host .gutter .line-number .icon-right {
+            color: #383a42;
         }
 
-        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
             bottom: -3px;
         }
 
-        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
             content: "";
             position: absolute;
             left: 0px;
             bottom: 0px;
             width: 25px;
-            border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+            border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
             pointer-events: none;
         }
 
         pre.editor-colors .gutter .line-number.folded,
+        .host .gutter .line-number.folded,
         pre.editor-colors .gutter .line-number:after,
-        pre.editor-colors .fold-marker:after {
-            color: #abb2bf;
+        .host .gutter .line-number:after,
+        pre.editor-colors .fold-marker:after,
+        .host .fold-marker:after {
+            color: #383a42;
         }
 
-        .syntax--comment {
-            color: #5c6370;
+        .comment {
+            color: #a0a1a7;
             font-style: italic;
         }
 
-        .syntax--comment .syntax--markup.syntax--link {
-            color: #5c6370;
+        .comment .markup.link {
+            color: #a0a1a7;
         }
 
-        .syntax--entity.syntax--name.syntax--type {
-            color: #e5c07b;
+        .entity.name.type {
+            color: #c18401;
         }
 
-        .syntax--entity.syntax--other.syntax--inherited-class {
-            color: #98c379;
+        .entity.other.inherited-class {
+            color: #50a14f;
         }
 
-        .syntax--keyword {
-            color: #c678dd;
+        .keyword {
+            color: #a626a4;
         }
 
-        .syntax--keyword.syntax--control {
-            color: #c678dd;
+        .keyword.control {
+            color: #a626a4;
         }
 
-        .syntax--keyword.syntax--operator {
-            color: #abb2bf;
+        .keyword.operator {
+            color: #383a42;
         }
 
-        .syntax--keyword.syntax--other.syntax--special-method {
-            color: #61afef;
+        .keyword.other.special-method {
+            color: #4078f2;
         }
 
-        .syntax--keyword.syntax--other.syntax--unit {
-            color: #d19a66;
+        .keyword.other.unit {
+            color: #986801;
         }
 
-        .syntax--storage {
-            color: #c678dd;
+        .storage {
+            color: #a626a4;
         }
 
-        .syntax--storage.syntax--type.syntax--annotation,
-        .syntax--storage.syntax--type.syntax--primitive {
-            color: #c678dd;
+        .storage.type.annotation,
+        .storage.type.primitive {
+            color: #a626a4;
         }
 
-        .syntax--storage.syntax--modifier.syntax--package,
-        .syntax--storage.syntax--modifier.syntax--import {
-            color: #abb2bf;
+        .storage.modifier.package,
+        .storage.modifier.import {
+            color: #383a42;
         }
 
-        .syntax--constant {
-            color: #d19a66;
+        .constant {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--variable {
-            color: #d19a66;
+        .constant.variable {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--character.syntax--escape {
-            color: #56b6c2;
+        .constant.character.escape {
+            color: #0184bc;
         }
 
-        .syntax--constant.syntax--numeric {
-            color: #d19a66;
+        .constant.numeric {
+            color: #986801;
         }
 
-        .syntax--constant.syntax--other.syntax--color {
-            color: #56b6c2;
+        .constant.other.color {
+            color: #0184bc;
         }
 
-        .syntax--constant.syntax--other.syntax--symbol {
-            color: #56b6c2;
+        .constant.other.symbol {
+            color: #0184bc;
         }
 
-        .syntax--variable {
-            color: #e06c75;
+        .variable {
+            color: #e45649;
         }
 
-        .syntax--variable.syntax--interpolation {
-            color: #be5046;
+        .variable.interpolation {
+            color: #ca1243;
         }
 
-        .syntax--variable.syntax--parameter {
-            color: #abb2bf;
+        .variable.parameter {
+            color: #383a42;
         }
 
-        .syntax--string {
-            color: #98c379;
+        .string {
+            color: #50a14f;
         }
 
-        .syntax--string.syntax--regexp {
-            color: #56b6c2;
+        .string.regexp {
+            color: #0184bc;
         }
 
-        .syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
-            color: #e5c07b;
+        .string.regexp .source.ruby.embedded {
+            color: #c18401;
         }
 
-        .syntax--string.syntax--other.syntax--link {
-            color: #e06c75;
+        .string.other.link {
+            color: #e45649;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--comment {
-            color: #5c6370;
+        .punctuation.definition.comment {
+            color: #a0a1a7;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--method-parameters,
-        .syntax--punctuation.syntax--definition.syntax--function-parameters,
-        .syntax--punctuation.syntax--definition.syntax--parameters,
-        .syntax--punctuation.syntax--definition.syntax--separator,
-        .syntax--punctuation.syntax--definition.syntax--seperator,
-        .syntax--punctuation.syntax--definition.syntax--array {
-            color: #abb2bf;
+        .punctuation.definition.method-parameters,
+        .punctuation.definition.function-parameters,
+        .punctuation.definition.parameters,
+        .punctuation.definition.separator,
+        .punctuation.definition.seperator,
+        .punctuation.definition.array {
+            color: #383a42;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--heading,
-        .syntax--punctuation.syntax--definition.syntax--identity {
-            color: #61afef;
+        .punctuation.definition.heading,
+        .punctuation.definition.identity {
+            color: #4078f2;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--bold {
-            color: #e5c07b;
+        .punctuation.definition.bold {
+            color: #c18401;
             font-weight: bold;
         }
 
-        .syntax--punctuation.syntax--definition.syntax--italic {
-            color: #c678dd;
+        .punctuation.definition.italic {
+            color: #a626a4;
             font-style: italic;
         }
 
-        .syntax--punctuation.syntax--section.syntax--embedded {
-            color: #be5046;
+        .punctuation.section.embedded {
+            color: #ca1243;
         }
 
-        .syntax--punctuation.syntax--section.syntax--method,
-        .syntax--punctuation.syntax--section.syntax--class,
-        .syntax--punctuation.syntax--section.syntax--inner-class {
-            color: #abb2bf;
+        .punctuation.section.method,
+        .punctuation.section.class,
+        .punctuation.section.inner-class {
+            color: #383a42;
         }
 
-        .syntax--support.syntax--class {
-            color: #e5c07b;
+        .support.class {
+            color: #c18401;
         }
 
-        .syntax--support.syntax--type {
-            color: #56b6c2;
+        .support.type {
+            color: #0184bc;
         }
 
-        .syntax--support.syntax--function {
-            color: #56b6c2;
+        .support.function {
+            color: #0184bc;
         }
 
-        .syntax--support.syntax--function.syntax--any-method {
-            color: #61afef;
+        .support.function.any-method {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--function {
-            color: #61afef;
+        .entity.name.function {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--class,
-        .syntax--entity.syntax--name.syntax--type.syntax--class {
-            color: #e5c07b;
+        .entity.name.class,
+        .entity.name.type.class {
+            color: #c18401;
         }
 
-        .syntax--entity.syntax--name.syntax--section {
-            color: #61afef;
+        .entity.name.section {
+            color: #4078f2;
         }
 
-        .syntax--entity.syntax--name.syntax--tag {
-            color: #e06c75;
+        .entity.name.tag {
+            color: #e45649;
         }
 
-        .syntax--entity.syntax--other.syntax--attribute-name {
-            color: #d19a66;
+        .entity.other.attribute-name {
+            color: #986801;
         }
 
-        .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
-            color: #61afef;
+        .entity.other.attribute-name.id {
+            color: #4078f2;
         }
 
-        .syntax--meta.syntax--class {
-            color: #e5c07b;
+        .meta.class {
+            color: #c18401;
         }
 
-        .syntax--meta.syntax--class.syntax--body {
-            color: #abb2bf;
+        .meta.class.body {
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--method-call,
-        .syntax--meta.syntax--method {
-            color: #abb2bf;
+        .meta.method-call,
+        .meta.method {
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--definition.syntax--variable {
-            color: #e06c75;
+        .meta.definition.variable {
+            color: #e45649;
         }
 
-        .syntax--meta.syntax--link {
-            color: #d19a66;
+        .meta.link {
+            color: #986801;
         }
 
-        .syntax--meta.syntax--require {
-            color: #61afef;
+        .meta.require {
+            color: #4078f2;
         }
 
-        .syntax--meta.syntax--selector {
-            color: #c678dd;
+        .meta.selector {
+            color: #a626a4;
         }
 
-        .syntax--meta.syntax--separator {
+        .meta.separator {
             background-color: #373b41;
-            color: #abb2bf;
+            color: #383a42;
         }
 
-        .syntax--meta.syntax--tag {
-            color: #abb2bf;
+        .meta.tag {
+            color: #383a42;
         }
 
-        .syntax--underline {
+        .underline {
             text-decoration: underline;
         }
 
-        .syntax--none {
-            color: #abb2bf;
+        .none {
+            color: #383a42;
         }
 
-        .syntax--invalid.syntax--deprecated {
-            color: #523d14 !important;
-            background-color: #e0c285 !important;
+        .invalid.deprecated {
+            color: #000000 !important;
+            background-color: #f2a60d !important;
         }
 
-        .syntax--invalid.syntax--illegal {
-            color: white !important;
-            background-color: #e05252 !important;
+        .invalid.illegal {
+            color: #ffffff !important;
+            background-color: #ff1414 !important;
         }
 
-        .syntax--markup.syntax--bold {
-            color: #d19a66;
+        .markup.bold {
+            color: #986801;
             font-weight: bold;
         }
 
-        .syntax--markup.syntax--changed {
-            color: #c678dd;
+        .markup.changed {
+            color: #a626a4;
         }
 
-        .syntax--markup.syntax--deleted {
-            color: #e06c75;
+        .markup.deleted {
+            color: #e45649;
         }
 
-        .syntax--markup.syntax--italic {
-            color: #c678dd;
+        .markup.italic {
+            color: #a626a4;
             font-style: italic;
         }
 
-        .syntax--markup.syntax--heading {
-            color: #e06c75;
+        .markup.heading {
+            color: #e45649;
         }
 
-        .syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-            color: #61afef;
+        .markup.heading .punctuation.definition.heading {
+            color: #4078f2;
         }
 
-        .syntax--markup.syntax--link {
-            color: #56b6c2;
+        .markup.link {
+            color: #a626a4;
         }
 
-        .syntax--markup.syntax--inserted {
-            color: #98c379;
+        .markup.inserted {
+            color: #50a14f;
         }
 
-        .syntax--markup.syntax--quote {
-            color: #d19a66;
+        .markup.quote {
+            color: #986801;
         }
 
-        .syntax--markup.syntax--raw {
-            color: #98c379;
+        .markup.raw {
+            color: #50a14f;
         }
 
-        .syntax--source.syntax--c .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.cs .keyword.operator {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.css .property-name,
+        .source.css .property-value {
+            color: #696c77;
         }
 
-        .syntax--source.syntax--cs .syntax--keyword.syntax--operator {
-            color: #c678dd;
+        .source.css .property-name.support,
+        .source.css .property-value.support {
+            color: #383a42;
         }
 
-        .syntax--source.syntax--css .syntax--property-name,
-        .syntax--source.syntax--css .syntax--property-value {
-            color: #828997;
-        }
-
-        .syntax--source.syntax--css .syntax--property-name.syntax--support,
-        .syntax--source.syntax--css .syntax--property-value.syntax--support {
-            color: #abb2bf;
-        }
-
-        .syntax--source.syntax--gfm .syntax--markup {
+        .source.gfm .markup {
             -webkit-font-smoothing: auto;
         }
 
-        .syntax--source.syntax--gfm .syntax--link .syntax--entity {
-            color: #61afef;
+        .source.gfm .link .entity {
+            color: #4078f2;
         }
 
-        .syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
-            color: #c678dd;
+        .source.go .storage.type.string {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
-            color: #e06c75;
+        .source.ini .keyword.other.definition.ini {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
-            color: #e5c07b;
+        .source.java .storage.modifier.import {
+            color: #c18401;
         }
 
-        .syntax--source.syntax--java .syntax--storage.syntax--type {
-            color: #e5c07b;
+        .source.java .storage.type {
+            color: #c18401;
         }
 
-        .syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
-            color: #c678dd;
+        .source.java .keyword.operator.instanceof {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
-            color: #e06c75;
+        .source.java-properties .meta.key-pair {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair>.syntax--punctuation {
-            color: #abb2bf;
+        .source.java-properties .meta.key-pair>.punctuation {
+            color: #383a42;
         }
 
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator {
-            color: #56b6c2;
+        .source.js .keyword.operator {
+            color: #0184bc;
         }
 
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
-        .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
-            color: #c678dd;
+        .source.js .keyword.operator.delete,
+        .source.js .keyword.operator.in,
+        .source.js .keyword.operator.of,
+        .source.js .keyword.operator.instanceof,
+        .source.js .keyword.operator.new,
+        .source.js .keyword.operator.typeof,
+        .source.js .keyword.operator.void {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json {
-            color: #e06c75;
+        .source.json .meta.structure.dictionary.json>.string.quoted.json {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation.syntax--string {
-            color: #e06c75;
+        .source.json .meta.structure.dictionary.json>.string.quoted.json>.punctuation.string {
+            color: #e45649;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation {
-            color: #98c379;
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json>.punctuation,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json>.punctuation {
+            color: #50a14f;
         }
 
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--constant.syntax--language.syntax--json,
-        .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--constant.syntax--language.syntax--json {
-            color: #56b6c2;
+        .source.json .meta.structure.dictionary.json>.constant.language.json,
+        .source.json .meta.structure.array.json>.constant.language.json {
+            color: #0184bc;
         }
 
-        .syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol>.syntax--punctuation {
+        .source.ruby .constant.other.symbol>.punctuation {
             color: inherit;
         }
 
-        .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
-            color: #c678dd;
+        .source.python .keyword.operator.logical.python {
+            color: #a626a4;
         }
 
-        .syntax--source.syntax--python .syntax--variable.syntax--parameter {
-            color: #d19a66;
+        .source.python .variable.parameter {
+            color: #986801;
         }
     </style>
 </head>
 
 <body class='markdown-preview'>
-    <h1>UCLA-MGMT-109 Class Notes</h1>
-    <hr>
-    <p><strong>Author: <code>Melissa</code></strong></p>
-    <p><strong>Update Time: <code>8/5/2017</code></strong></p>
-    <h2>Introduction</h2>
-    <hr>
-    <p>This is the class notes of <code>MGMT-109</code>.</p>
-    <h2>Table of Content</h2>
-    <hr>
+    <h1>Chapter 4 Contracts</h1>
+    <h2>US Law</h2>
+    <h3>Terms</h3>
+    <ol>
+        <li>
+            <p><code>express/implied</code>, written down document will always better but not necessary</p>
+        </li>
+        <li>
+            <p><code>Type of LAW</code></p>
+            <ul>
+                <li>common law</li>
+                <li>Uniform Commercial Code(90% same as common law, only 4 different) - for the sale of goods.<br> NOTE: only two things are not governed by the UCC: <strong>real estate</strong> (light and dest attached to the building are not good), AND
+                    <strong>services</strong>.</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Contract elements:</h3>
+    <ol>
+        <li>
+            <p>Agreement (offer + acceptance)AND</p>
+        </li>
+        <li>
+            <p>Consideration AND</p>
+            <ul>
+                <li>each side needs to get benefits, does not need to be equal nor fair</li>
+                <li>one side get benefit and suffers burden asked by the other side</li>
+            </ul>
+        </li>
+        <li>
+            <p>No defenses (defenses are gun threaten, A claims there is no written document, kid/animal lack of capacity)</p>
+        </li>
+    </ol>
+    <h3>Offer</h3>
     <ul>
         <li>
-            <p><a href="MGMT-109-notes.md.html">MGMT-109 Notes - 1</a></p>
+            <p>elements</p>
+            <ul>
+                <li>intent to offer</li>
+                <li>commonicated</li>
+                <li>certain
+                    <ol>
+                        <li>party (who buy/sell),</li>
+                        <li>subject (car, painting house),</li>
+                        <li>price/value need to be in the contract</li>
+                    </ol>
+                </li>
+            </ul>
         </li>
         <li>
-            <p><a href="MGMT-109-notes-3.md.html">MGMT-109 Notes - 3</a></p>
+            <p>Revocable unless option</p>
+            <ol>
+                <li>“the contract is open until 8/15” is revocable</li>
+                <li>“i will keep the contract if you buy me crepe” is not revocable.<br> NOTES: mailed on the 15th and i received on 16th counts.</li>
+            </ol>
         </li>
         <li>
-            <p><a href="MGMT-109-notes-4.md.html">MGMT-109 Notes - 4</a></p>
+            <p>Termination</p>
+            <ul>
+                <li>Revocation(offerer change his mind)</li>
+                <li>Rejection</li>
+                <li>counter-offer (if offeree change the term, now he is the offerer)</li>
+                <li>Death or destinction</li>
+                <li>contract become illegal - government change</li>
+            </ul>
+        </li>
+        <li>
+            <p>Acceptance</p>
+            <ol>
+                <li>
+                    <p>elements</p>
+                    <ul>
+                        <li>mirror image</li>
+                        <li>timely</li>
+                        <li>intent</li>
+                        <li>offer still exists</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Timing</p>
+                    <ul>
+                        <li>
+                            <p>on receipt (the receive of offer/revocation/rejection/counter-offer)
+                                <code>mail box rule, the contract takes place when you drop of the acceptance letter in the outgoing mail box</code></p>
+                        </li>
+                        <li>
+                            <p>on dispatch (acceptance)</p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <p>Consideration:</p>
+            <ol>
+                <li>cannot be based on pre-existing duty / past act</li>
+                <li>modifications: each side must have new Consideration.</li>
+            </ol>
+        </li>
+        <li>
+            <p>Defenses legal excuse</p>
+            <ul>
+                <li>illegal</li>
+                <li>No capacity (lack of mental capacity, kid, drunk)</li>
+                <li>Invalid consent
+                    <ol>
+                        <li>fraud(lie about the truth)</li>
+                        <li>Undue influence (unfair by a trusted person)</li>
+                        <li>Mistake</li>
+                        <li>Duress</li>
+                    </ol>
+                </li>
+                <li>statute of Frauds:
+                    <ol>
+                        <li>M - marriage</li>
+                        <li>Y - year</li>
+                        <li>R - real estate</li>
+                        <li>E - estate debits</li>
+                        <li>D - debit of another</li>
+                        <li>S - sale of goods</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>UCC - sale of goods 4 different rules</p>
         </li>
     </ul>
+    <ol>
+        <li>revocable unless firm offer writing merchant(regular seller of book-</li>
+        <li>certainly = no price needed</li>
+        <li>accept, variances in acceptance unless unless (OR) M - material, O - offeror objects, P - Prohibited() put in the contract</li>
+    </ol>
+    <ul>
+        <li>Remedies (what can you sue for, money or )</li>
+        <li>damaged special performance compensatory always conspquantial</li>
+    </ul>
+    <p>punish = never deries</p>
+    <h1>CISG</h1>
+    <p>A1. &quot;REQUIRES: parties form different countries , both countine sign CISG goods</p>
+    <p>B2. Not apllicapale,domestic consumer, seruces/RE</p>
+    <p>CASE: Asante Technologies, Inc. v. PMC-Sierra, Inc.CISG canada/u.s sigend the CISG, inadeque since they need to opt out CISG</p>
+    <p>performed/ negotiated /</p>
+    <p>C. Formation CISG silent on capacity/consld/legality</p>
+    <p>D. Writing never required as long as you can prove it.</p>
+    <p>parol evidence rule verbal statement contradicting the contract is not admissible before signing of the written contract. vague contract + prior subsequent statement</p>
 </body>
 
 </html>
