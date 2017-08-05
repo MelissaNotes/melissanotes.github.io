@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>1. MGMT-109-notes</title>
+    <style>
+        .markdown-preview:not([data-use-github-style]) {
+            padding: 2em;
+            font-size: 1.2em;
+            color: rgb(56, 58, 66);
+            overflow: auto;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .markdown-preview:not([data-use-github-style])> :first-child {
+            margin-top: 0px;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h1,
+        .markdown-preview:not([data-use-github-style]) h2,
+        .markdown-preview:not([data-use-github-style]) h3,
+        .markdown-preview:not([data-use-github-style]) h4,
+        .markdown-preview:not([data-use-github-style]) h5,
+        .markdown-preview:not([data-use-github-style]) h6 {
+            line-height: 1.2;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: rgb(0, 0, 0);
+        }
+
+        .markdown-preview:not([data-use-github-style]) h1 {
+            font-size: 2.4em;
+            font-weight: 300;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h2 {
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h3 {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h4 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h5 {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .markdown-preview:not([data-use-github-style]) h6 {
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .markdown-preview:not([data-use-github-style]) strong {
+            color: rgb(0, 0, 0);
+        }
+
+        .markdown-preview:not([data-use-github-style]) del {
+            color: rgb(94, 97, 110);
+        }
+
+        .markdown-preview:not([data-use-github-style]) a,
+        .markdown-preview:not([data-use-github-style]) a code {
+            color: rgb(82, 111, 255);
+        }
+
+        .markdown-preview:not([data-use-github-style]) img {
+            max-width: 100%;
+        }
+
+        .markdown-preview:not([data-use-github-style])>p {
+            margin-top: 0px;
+            margin-bottom: 1.5em;
+        }
+
+        .markdown-preview:not([data-use-github-style])>ul,
+        .markdown-preview:not([data-use-github-style])>ol {
+            margin-bottom: 1.5em;
+        }
+
+        .markdown-preview:not([data-use-github-style]) blockquote {
+            margin: 1.5em 0px;
+            font-size: inherit;
+            color: rgb(94, 97, 110);
+            border-color: rgb(209, 209, 210);
+            border-width: 4px;
+        }
+
+        .markdown-preview:not([data-use-github-style]) hr {
+            margin: 3em 0px;
+            border-top-width: 2px;
+            border-top-style: dashed;
+            border-top-color: rgb(209, 209, 210);
+            background: none;
+        }
+
+        .markdown-preview:not([data-use-github-style]) table {
+            margin: 1.5em 0px;
+        }
+
+        .markdown-preview:not([data-use-github-style]) th {
+            color: rgb(0, 0, 0);
+        }
+
+        .markdown-preview:not([data-use-github-style]) th,
+        .markdown-preview:not([data-use-github-style]) td {
+            padding: 0.66em 1em;
+            border: 1px solid rgb(209, 209, 210);
+        }
+
+        .markdown-preview:not([data-use-github-style]) pre,
+        .markdown-preview:not([data-use-github-style]) code {
+            color: rgb(0, 0, 0);
+            background-color: rgb(234, 234, 235);
+        }
+
+        .markdown-preview:not([data-use-github-style]) pre,
+        .markdown-preview:not([data-use-github-style]) pre.editor-colors {
+            margin: 1.5em 0px;
+            padding: 1em;
+            font-size: 0.92em;
+            border-radius: 3px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .markdown-preview:not([data-use-github-style]) kbd {
+            color: rgb(0, 0, 0);
+            border-width: 1px 1px 2px;
+            border-style: solid;
+            border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194);
+            background-color: rgb(234, 234, 235);
+        }
+
+        .markdown-preview[data-use-github-style] {
+            font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+            line-height: 1.6;
+            word-wrap: break-word;
+            padding: 30px;
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+            overflow: scroll;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .markdown-preview[data-use-github-style]> :first-child {
+            margin-top: 0px !important;
+        }
+
+        .markdown-preview[data-use-github-style]> :last-child {
+            margin-bottom: 0px !important;
+        }
+
+        .markdown-preview[data-use-github-style] a:not([href]) {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .markdown-preview[data-use-github-style] .absent {
+            color: rgb(204, 0, 0);
+        }
+
+        .markdown-preview[data-use-github-style] .anchor {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            padding-right: 6px;
+            padding-left: 30px;
+            margin-left: -30px;
+        }
+
+        .markdown-preview[data-use-github-style] .anchor:focus {
+            outline: none;
+        }
+
+        .markdown-preview[data-use-github-style] h1,
+        .markdown-preview[data-use-github-style] h2,
+        .markdown-preview[data-use-github-style] h3,
+        .markdown-preview[data-use-github-style] h4,
+        .markdown-preview[data-use-github-style] h5,
+        .markdown-preview[data-use-github-style] h6 {
+            position: relative;
+            margin-top: 1em;
+            margin-bottom: 16px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .markdown-preview[data-use-github-style] h1 .octicon-link,
+        .markdown-preview[data-use-github-style] h2 .octicon-link,
+        .markdown-preview[data-use-github-style] h3 .octicon-link,
+        .markdown-preview[data-use-github-style] h4 .octicon-link,
+        .markdown-preview[data-use-github-style] h5 .octicon-link,
+        .markdown-preview[data-use-github-style] h6 .octicon-link {
+            display: none;
+            color: rgb(0, 0, 0);
+            vertical-align: middle;
+        }
+
+        .markdown-preview[data-use-github-style] h1:hover .anchor,
+        .markdown-preview[data-use-github-style] h2:hover .anchor,
+        .markdown-preview[data-use-github-style] h3:hover .anchor,
+        .markdown-preview[data-use-github-style] h4:hover .anchor,
+        .markdown-preview[data-use-github-style] h5:hover .anchor,
+        .markdown-preview[data-use-github-style] h6:hover .anchor {
+            padding-left: 8px;
+            margin-left: -30px;
+            text-decoration: none;
+        }
+
+        .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link,
+        .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link,
+        .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link,
+        .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link,
+        .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link,
+        .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link {
+            display: inline-block;
+        }
+
+        .markdown-preview[data-use-github-style] h1 tt,
+        .markdown-preview[data-use-github-style] h2 tt,
+        .markdown-preview[data-use-github-style] h3 tt,
+        .markdown-preview[data-use-github-style] h4 tt,
+        .markdown-preview[data-use-github-style] h5 tt,
+        .markdown-preview[data-use-github-style] h6 tt,
+        .markdown-preview[data-use-github-style] h1 code,
+        .markdown-preview[data-use-github-style] h2 code,
+        .markdown-preview[data-use-github-style] h3 code,
+        .markdown-preview[data-use-github-style] h4 code,
+        .markdown-preview[data-use-github-style] h5 code,
+        .markdown-preview[data-use-github-style] h6 code {
+            font-size: inherit;
+        }
+
+        .markdown-preview[data-use-github-style] h1 {
+            padding-bottom: 0.3em;
+            font-size: 2.25em;
+            line-height: 1.2;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
+        }
+
+        .markdown-preview[data-use-github-style] h1 .anchor {
+            line-height: 1;
+        }
+
+        .markdown-preview[data-use-github-style] h2 {
+            padding-bottom: 0.3em;
+            font-size: 1.75em;
+            line-height: 1.225;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(238, 238, 238);
+        }
+
+        .markdown-preview[data-use-github-style] h2 .anchor {
+            line-height: 1;
+        }
+
+        .markdown-preview[data-use-github-style] h3 {
+            font-size: 1.5em;
+            line-height: 1.43;
+        }
+
+        .markdown-preview[data-use-github-style] h3 .anchor {
+            line-height: 1.2;
+        }
+
+        .markdown-preview[data-use-github-style] h4 {
+            font-size: 1.25em;
+        }
+
+        .markdown-preview[data-use-github-style] h4 .anchor {
+            line-height: 1.2;
+        }
+
+        .markdown-preview[data-use-github-style] h5 {
+            font-size: 1em;
+        }
+
+        .markdown-preview[data-use-github-style] h5 .anchor {
+            line-height: 1.1;
+        }
+
+        .markdown-preview[data-use-github-style] h6 {
+            font-size: 1em;
+            color: rgb(119, 119, 119);
+        }
+
+        .markdown-preview[data-use-github-style] h6 .anchor {
+            line-height: 1.1;
+        }
+
+        .markdown-preview[data-use-github-style] p,
+        .markdown-preview[data-use-github-style] blockquote,
+        .markdown-preview[data-use-github-style] ul,
+        .markdown-preview[data-use-github-style] ol,
+        .markdown-preview[data-use-github-style] dl,
+        .markdown-preview[data-use-github-style] table,
+        .markdown-preview[data-use-github-style] pre {
+            margin-top: 0px;
+            margin-bottom: 16px;
+        }
+
+        .markdown-preview[data-use-github-style] hr {
+            height: 4px;
+            padding: 0px;
+            margin: 16px 0px;
+            border: 0px none;
+            background-color: rgb(231, 231, 231);
+        }
+
+        .markdown-preview[data-use-github-style] ul,
+        .markdown-preview[data-use-github-style] ol {
+            padding-left: 2em;
+        }
+
+        .markdown-preview[data-use-github-style] ul.no-list,
+        .markdown-preview[data-use-github-style] ol.no-list {
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        .markdown-preview[data-use-github-style] ul ul,
+        .markdown-preview[data-use-github-style] ul ol,
+        .markdown-preview[data-use-github-style] ol ol,
+        .markdown-preview[data-use-github-style] ol ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .markdown-preview[data-use-github-style] li>p {
+            margin-top: 16px;
+        }
+
+        .markdown-preview[data-use-github-style] dl {
+            padding: 0px;
+        }
+
+        .markdown-preview[data-use-github-style] dl dt {
+            padding: 0px;
+            margin-top: 16px;
+            font-size: 1em;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .markdown-preview[data-use-github-style] dl dd {
+            padding: 0px 16px;
+            margin-bottom: 16px;
+        }
+
+        .markdown-preview[data-use-github-style] blockquote {
+            padding: 0px 15px;
+            color: rgb(119, 119, 119);
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-left-color: rgb(221, 221, 221);
+        }
+
+        .markdown-preview[data-use-github-style] blockquote> :first-child {
+            margin-top: 0px;
+        }
+
+        .markdown-preview[data-use-github-style] blockquote> :last-child {
+            margin-bottom: 0px;
+        }
+
+        .markdown-preview[data-use-github-style] table {
+            display: block;
+            width: 100%;
+            overflow: auto;
+            word-break: keep-all;
+        }
+
+        .markdown-preview[data-use-github-style] table th {
+            font-weight: bold;
+        }
+
+        .markdown-preview[data-use-github-style] table th,
+        .markdown-preview[data-use-github-style] table td {
+            padding: 6px 13px;
+            border: 1px solid rgb(221, 221, 221);
+        }
+
+        .markdown-preview[data-use-github-style] table tr {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(204, 204, 204);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .markdown-preview[data-use-github-style] table tr:nth-child(2n) {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .markdown-preview[data-use-github-style] img {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .markdown-preview[data-use-github-style] .emoji {
+            max-width: none;
+        }
+
+        .markdown-preview[data-use-github-style] span.frame {
+            display: block;
+            overflow: hidden;
+        }
+
+        .markdown-preview[data-use-github-style] span.frame>span {
+            display: block;
+            float: left;
+            width: auto;
+            padding: 7px;
+            margin: 13px 0px 0px;
+            overflow: hidden;
+            border: 1px solid rgb(221, 221, 221);
+        }
+
+        .markdown-preview[data-use-github-style] span.frame span img {
+            display: block;
+            float: left;
+        }
+
+        .markdown-preview[data-use-github-style] span.frame span span {
+            display: block;
+            padding: 5px 0px 0px;
+            clear: both;
+            color: rgb(51, 51, 51);
+        }
+
+        .markdown-preview[data-use-github-style] span.align-center {
+            display: block;
+            overflow: hidden;
+            clear: both;
+        }
+
+        .markdown-preview[data-use-github-style] span.align-center>span {
+            display: block;
+            margin: 13px auto 0px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .markdown-preview[data-use-github-style] span.align-center span img {
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .markdown-preview[data-use-github-style] span.align-right {
+            display: block;
+            overflow: hidden;
+            clear: both;
+        }
+
+        .markdown-preview[data-use-github-style] span.align-right>span {
+            display: block;
+            margin: 13px 0px 0px;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        .markdown-preview[data-use-github-style] span.align-right span img {
+            margin: 0px;
+            text-align: right;
+        }
+
+        .markdown-preview[data-use-github-style] span.float-left {
+            display: block;
+            float: left;
+            margin-right: 13px;
+            overflow: hidden;
+        }
+
+        .markdown-preview[data-use-github-style] span.float-left span {
+            margin: 13px 0px 0px;
+        }
+
+        .markdown-preview[data-use-github-style] span.float-right {
+            display: block;
+            float: right;
+            margin-left: 13px;
+            overflow: hidden;
+        }
+
+        .markdown-preview[data-use-github-style] span.float-right>span {
+            display: block;
+            margin: 13px auto 0px;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        .markdown-preview[data-use-github-style] code,
+        .markdown-preview[data-use-github-style] tt {
+            padding: 0.2em 0px;
+            margin: 0px;
+            font-size: 85%;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.0392157);
+        }
+
+        .markdown-preview[data-use-github-style] code::before,
+        .markdown-preview[data-use-github-style] tt::before,
+        .markdown-preview[data-use-github-style] code::after,
+        .markdown-preview[data-use-github-style] tt::after {
+            letter-spacing: -0.2em;
+            content: " ";
+        }
+
+        .markdown-preview[data-use-github-style] code br,
+        .markdown-preview[data-use-github-style] tt br {
+            display: none;
+        }
+
+        .markdown-preview[data-use-github-style] del code {
+            text-decoration: inherit;
+        }
+
+        .markdown-preview[data-use-github-style] pre>code {
+            padding: 0px;
+            margin: 0px;
+            font-size: 100%;
+            word-break: normal;
+            white-space: pre;
+            border: 0px;
+            background: transparent;
+        }
+
+        .markdown-preview[data-use-github-style] .highlight {
+            margin-bottom: 16px;
+        }
+
+        .markdown-preview[data-use-github-style] .highlight pre,
+        .markdown-preview[data-use-github-style] pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            border-radius: 3px;
+            background-color: rgb(247, 247, 247);
+        }
+
+        .markdown-preview[data-use-github-style] .highlight pre {
+            margin-bottom: 0px;
+            word-break: normal;
+        }
+
+        .markdown-preview[data-use-github-style] pre {
+            word-wrap: normal;
+        }
+
+        .markdown-preview[data-use-github-style] pre code,
+        .markdown-preview[data-use-github-style] pre tt {
+            display: inline;
+            max-width: initial;
+            padding: 0px;
+            margin: 0px;
+            overflow: initial;
+            line-height: inherit;
+            word-wrap: normal;
+            border: 0px;
+            background-color: transparent;
+        }
+
+        .markdown-preview[data-use-github-style] pre code::before,
+        .markdown-preview[data-use-github-style] pre tt::before,
+        .markdown-preview[data-use-github-style] pre code::after,
+        .markdown-preview[data-use-github-style] pre tt::after {
+            content: normal;
+        }
+
+        .markdown-preview[data-use-github-style] kbd {
+            display: inline-block;
+            padding: 3px 5px;
+            font-size: 11px;
+            line-height: 10px;
+            color: rgb(85, 85, 85);
+            vertical-align: middle;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
+            border-radius: 3px;
+            box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
+            background-color: rgb(252, 252, 252);
+        }
+
+        .markdown-preview[data-use-github-style] a {
+            color: rgb(51, 122, 183);
+        }
+
+        .markdown-preview[data-use-github-style] pre,
+        .markdown-preview[data-use-github-style] code {
+            color: inherit;
+        }
+
+        .markdown-preview[data-use-github-style] pre,
+        .markdown-preview[data-use-github-style] pre.editor-colors {
+            padding: 0.8em 1em;
+            margin-bottom: 1em;
+            font-size: 0.85em;
+            border-radius: 4px;
+            overflow: auto;
+        }
+
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar {
+            visibility: hidden;
+        }
+
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar,
+        .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar {
+            visibility: visible;
+        }
+
+        .markdown-preview del {
+            text-decoration: none;
+            position: relative;
+        }
+
+        .markdown-preview del::after {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: black;
+            content: "";
+            left: 0px;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+        }
+
+        .markdown-preview .flash {
+            animation: flash 1s ease-out 1;
+            outline: rgba(255, 0, 0, 0) solid 1px;
+        }
+
+        .markdown-preview .flash:not(li) {
+            display: block;
+        }
+
+        .bracket-matcher .region {
+            border-bottom: 1px dotted lime;
+            position: absolute;
+        }
+
+        .spell-check-misspelling .region {
+            border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+        }
+
+        .spell-check-corrections {
+            width: 25em !important;
+        }
+
+        pre.editor-colors,
+        .host {
+            background-color: #fafafa;
+            color: #383a42;
+        }
+
+        pre.editor-colors .line.cursor-line,
+        .host .line.cursor-line {
+            background-color: rgba(56, 58, 66, 0.05);
+        }
+
+        pre.editor-colors .invisible,
+        .host .invisible {
+            color: #383a42;
+        }
+
+        pre.editor-colors .cursor,
+        .host .cursor {
+            border-left: 2px solid #526fff;
+        }
+
+        pre.editor-colors .selection .region,
+        .host .selection .region {
+            background-color: #e5e5e6;
+        }
+
+        pre.editor-colors .bracket-matcher .region,
+        .host .bracket-matcher .region {
+            border-bottom: 1px solid #526fff;
+            box-sizing: border-box;
+        }
+
+        pre.editor-colors .invisible-character,
+        .host .invisible-character {
+            color: rgba(56, 58, 66, 0.2);
+        }
+
+        pre.editor-colors .indent-guide,
+        .host .indent-guide {
+            color: rgba(56, 58, 66, 0.2);
+        }
+
+        pre.editor-colors .wrap-guide,
+        .host .wrap-guide {
+            background-color: rgba(56, 58, 66, 0.2);
+        }
+
+        pre.editor-colors .find-result .region.region.region,
+        .host .find-result .region.region.region,
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border-radius: 0px;
+            background-color: rgba(82, 111, 255, 0.2);
+            transition: border-color 0.4s;
+        }
+
+        pre.editor-colors .find-result .region.region.region,
+        .host .find-result .region.region.region {
+            border: 2px solid transparent;
+        }
+
+        pre.editor-colors .current-result .region.region.region,
+        .host .current-result .region.region.region {
+            border: 2px solid #526fff;
+            transition-duration: .1s;
+        }
+
+        pre.editor-colors .gutter .line-number,
+        .host .gutter .line-number {
+            color: #9d9d9f;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        pre.editor-colors .gutter .line-number.cursor-line,
+        .host .gutter .line-number.cursor-line {
+            color: #383a42;
+            background-color: #f2f2f2;
+        }
+
+        pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+        .host .gutter .line-number.cursor-line-no-selection {
+            background-color: transparent;
+        }
+
+        pre.editor-colors .gutter .line-number .icon-right,
+        .host .gutter .line-number .icon-right {
+            color: #383a42;
+        }
+
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+            bottom: -3px;
+        }
+
+        pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+        .host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 25px;
+            border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+            pointer-events: none;
+        }
+
+        pre.editor-colors .gutter .line-number.folded,
+        .host .gutter .line-number.folded,
+        pre.editor-colors .gutter .line-number:after,
+        .host .gutter .line-number:after,
+        pre.editor-colors .fold-marker:after,
+        .host .fold-marker:after {
+            color: #383a42;
+        }
+
+        .comment {
+            color: #a0a1a7;
+            font-style: italic;
+        }
+
+        .comment .markup.link {
+            color: #a0a1a7;
+        }
+
+        .entity.name.type {
+            color: #c18401;
+        }
+
+        .entity.other.inherited-class {
+            color: #50a14f;
+        }
+
+        .keyword {
+            color: #a626a4;
+        }
+
+        .keyword.control {
+            color: #a626a4;
+        }
+
+        .keyword.operator {
+            color: #383a42;
+        }
+
+        .keyword.other.special-method {
+            color: #4078f2;
+        }
+
+        .keyword.other.unit {
+            color: #986801;
+        }
+
+        .storage {
+            color: #a626a4;
+        }
+
+        .storage.type.annotation,
+        .storage.type.primitive {
+            color: #a626a4;
+        }
+
+        .storage.modifier.package,
+        .storage.modifier.import {
+            color: #383a42;
+        }
+
+        .constant {
+            color: #986801;
+        }
+
+        .constant.variable {
+            color: #986801;
+        }
+
+        .constant.character.escape {
+            color: #0184bc;
+        }
+
+        .constant.numeric {
+            color: #986801;
+        }
+
+        .constant.other.color {
+            color: #0184bc;
+        }
+
+        .constant.other.symbol {
+            color: #0184bc;
+        }
+
+        .variable {
+            color: #e45649;
+        }
+
+        .variable.interpolation {
+            color: #ca1243;
+        }
+
+        .variable.parameter {
+            color: #383a42;
+        }
+
+        .string {
+            color: #50a14f;
+        }
+
+        .string.regexp {
+            color: #0184bc;
+        }
+
+        .string.regexp .source.ruby.embedded {
+            color: #c18401;
+        }
+
+        .string.other.link {
+            color: #e45649;
+        }
+
+        .punctuation.definition.comment {
+            color: #a0a1a7;
+        }
+
+        .punctuation.definition.method-parameters,
+        .punctuation.definition.function-parameters,
+        .punctuation.definition.parameters,
+        .punctuation.definition.separator,
+        .punctuation.definition.seperator,
+        .punctuation.definition.array {
+            color: #383a42;
+        }
+
+        .punctuation.definition.heading,
+        .punctuation.definition.identity {
+            color: #4078f2;
+        }
+
+        .punctuation.definition.bold {
+            color: #c18401;
+            font-weight: bold;
+        }
+
+        .punctuation.definition.italic {
+            color: #a626a4;
+            font-style: italic;
+        }
+
+        .punctuation.section.embedded {
+            color: #ca1243;
+        }
+
+        .punctuation.section.method,
+        .punctuation.section.class,
+        .punctuation.section.inner-class {
+            color: #383a42;
+        }
+
+        .support.class {
+            color: #c18401;
+        }
+
+        .support.type {
+            color: #0184bc;
+        }
+
+        .support.function {
+            color: #0184bc;
+        }
+
+        .support.function.any-method {
+            color: #4078f2;
+        }
+
+        .entity.name.function {
+            color: #4078f2;
+        }
+
+        .entity.name.class,
+        .entity.name.type.class {
+            color: #c18401;
+        }
+
+        .entity.name.section {
+            color: #4078f2;
+        }
+
+        .entity.name.tag {
+            color: #e45649;
+        }
+
+        .entity.other.attribute-name {
+            color: #986801;
+        }
+
+        .entity.other.attribute-name.id {
+            color: #4078f2;
+        }
+
+        .meta.class {
+            color: #c18401;
+        }
+
+        .meta.class.body {
+            color: #383a42;
+        }
+
+        .meta.method-call,
+        .meta.method {
+            color: #383a42;
+        }
+
+        .meta.definition.variable {
+            color: #e45649;
+        }
+
+        .meta.link {
+            color: #986801;
+        }
+
+        .meta.require {
+            color: #4078f2;
+        }
+
+        .meta.selector {
+            color: #a626a4;
+        }
+
+        .meta.separator {
+            background-color: #373b41;
+            color: #383a42;
+        }
+
+        .meta.tag {
+            color: #383a42;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .none {
+            color: #383a42;
+        }
+
+        .invalid.deprecated {
+            color: #000000 !important;
+            background-color: #f2a60d !important;
+        }
+
+        .invalid.illegal {
+            color: #ffffff !important;
+            background-color: #ff1414 !important;
+        }
+
+        .markup.bold {
+            color: #986801;
+            font-weight: bold;
+        }
+
+        .markup.changed {
+            color: #a626a4;
+        }
+
+        .markup.deleted {
+            color: #e45649;
+        }
+
+        .markup.italic {
+            color: #a626a4;
+            font-style: italic;
+        }
+
+        .markup.heading {
+            color: #e45649;
+        }
+
+        .markup.heading .punctuation.definition.heading {
+            color: #4078f2;
+        }
+
+        .markup.link {
+            color: #a626a4;
+        }
+
+        .markup.inserted {
+            color: #50a14f;
+        }
+
+        .markup.quote {
+            color: #986801;
+        }
+
+        .markup.raw {
+            color: #50a14f;
+        }
+
+        .source.cs .keyword.operator {
+            color: #a626a4;
+        }
+
+        .source.css .property-name,
+        .source.css .property-value {
+            color: #696c77;
+        }
+
+        .source.css .property-name.support,
+        .source.css .property-value.support {
+            color: #383a42;
+        }
+
+        .source.gfm .markup {
+            -webkit-font-smoothing: auto;
+        }
+
+        .source.gfm .link .entity {
+            color: #4078f2;
+        }
+
+        .source.go .storage.type.string {
+            color: #a626a4;
+        }
+
+        .source.ini .keyword.other.definition.ini {
+            color: #e45649;
+        }
+
+        .source.java .storage.modifier.import {
+            color: #c18401;
+        }
+
+        .source.java .storage.type {
+            color: #c18401;
+        }
+
+        .source.java .keyword.operator.instanceof {
+            color: #a626a4;
+        }
+
+        .source.java-properties .meta.key-pair {
+            color: #e45649;
+        }
+
+        .source.java-properties .meta.key-pair>.punctuation {
+            color: #383a42;
+        }
+
+        .source.js .keyword.operator {
+            color: #0184bc;
+        }
+
+        .source.js .keyword.operator.delete,
+        .source.js .keyword.operator.in,
+        .source.js .keyword.operator.of,
+        .source.js .keyword.operator.instanceof,
+        .source.js .keyword.operator.new,
+        .source.js .keyword.operator.typeof,
+        .source.js .keyword.operator.void {
+            color: #a626a4;
+        }
+
+        .source.json .meta.structure.dictionary.json>.string.quoted.json {
+            color: #e45649;
+        }
+
+        .source.json .meta.structure.dictionary.json>.string.quoted.json>.punctuation.string {
+            color: #e45649;
+        }
+
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json,
+        .source.json .meta.structure.dictionary.json>.value.json>.string.quoted.json>.punctuation,
+        .source.json .meta.structure.array.json>.value.json>.string.quoted.json>.punctuation {
+            color: #50a14f;
+        }
+
+        .source.json .meta.structure.dictionary.json>.constant.language.json,
+        .source.json .meta.structure.array.json>.constant.language.json {
+            color: #0184bc;
+        }
+
+        .source.ruby .constant.other.symbol>.punctuation {
+            color: inherit;
+        }
+
+        .source.python .keyword.operator.logical.python {
+            color: #a626a4;
+        }
+
+        .source.python .variable.parameter {
+            color: #986801;
+        }
+    </style>
+</head>
+
+<body class='markdown-preview'>
+    <p>INTERNATIONAL BUSINESS LAW MGMT 109<br> Summer 2017 CLASS ONE – UCLA LIVE CLASS</p>
+    <h3>I. INTRODUCTION / SYLLABUS / VIDEO – Questions?</h3>
+    <h3>II. BRIEFING CASES – Review Format</h3>
+    <p>A. Parties(plaintiff - defendant)<br> B. Facts (what did they do)<br> C. Procedure (lower court decision/appealed)<br> D. Issue (social problem)<br> E. Decision (final decision)<br> F. Reasoning (Rule, Application, Conclusion)</p>
+    <h3>III. Subjects we will be studying:</h3>
+    <p>A. International Law &amp; Organizations<br> B. European Union<br> C. International Litigation<br> D. Intellectual Property<br> E. Labor &amp; Employment<br> F. Commercial Transactions &amp; Contracts<br> G. Taxation of Inbound &amp; Outbound Transaction
+        (127C)</p>
+    <h3>IV. TRADE</h3>
+    <h4>A.	Exporting – shipment of goods to foreign buyer in their country</h4>
+    <ol>
+        <li>TYPES: Direct &amp; Indirect
+            <ul>
+                <li>Direct: Sell directly to foreign buyer or agent.<br> Eg. Apple sells Iphone to people in Beijing</li>
+                <li>Indirect: Sell to 3rd party broker, who in turn sells to foreign buyer.<br> Eg. Apple sells Iphone to distributors in Beijing who will sell phones to people later</li>
+                <li><strong>GLOBAL SOURCING</strong>: (locate &amp; purchase goods in foreign markets)</li>
+            </ul>
+        </li>
+    </ol>
+    <h4>B. Importing – buying goods from foreign buyer &amp; entering them into another country (including US)</h4>
+    <h4>C.	GOVERNMENT CONTROLS ON TRADE: How regulated/controlled?</h4>
+    <ol>
+        <li>
+            <p>Tariffs: Taxes/duties on imported items — Raises revenue -Protects local markets</p>
+        </li>
+        <li>
+            <p>Non-Tariff Barriers:</p>
+            <ul>
+                <li>Technical Barrier<br> Eg. Spanish Ham use different way to cut, so they comply the way FDA need, in order to import in US</li>
+                <li>Quota (limiting the number of a particular products)</li>
+                <li>Embargo (禁令) US embargo Cuba, embargo usually done by the president. Now becomes a law (now the congress need to approve to )</li>
+                <li>Boycott (联合抵制)</li>
+            </ul>
+        </li>
+        <li>
+            <p>Question: Can a U.S. state impose tariffs on goods from another US State?</p>
+        </li>
+    </ol>
+    <h3>V. INTELLECTUAL PROPERTY: (licensing)</h3>
+    <p>Revenue stream to get the % every time local company make.<br> They have better understanding in culture etc to sell/ to translate the contents.</p>
+    <ol>
+        <li>Deals with
+            <ul>
+                <li>Trademarks,<br> unique name and logo of a company, eg. Nike the name, the swoosh, colors</li>
+                <li>Copyrights,<br> create works, song/movie/novel</li>
+                <li>Patents,<br> drug to cure cancer</li>
+            </ul>
+        </li>
+        <li>What are International Licensing Agreements?</li>
+        <li>How does Franchising Work:<br> Franchise is the agreement include licensing. Agree to sell the usually in geographic area. Franchisee pay 3-5% growth revenues (not net rev).</li>
+    </ol>
+    <p></p>
+    <h3>case: RAYMOND DAYAN case page 9</h3>
+    <p>The fact: Dayan formed a law sue, asked for the injunction for the termination from McDonald. McDonald end up winning in the lower court and Dayan appeal.</p>
+    <p>Issue: Can a company terminate the franchise agreement when the franchisee does not follow certain agreement? Do franchise need to</p>
+    <blockquote>
+        <p>When Appeals, 3 results:</p>
+        <ol>
+            <li>Affirm (upper court agree with lower courts, McDonald win )</li>
+            <li>Reverse ( does not agree lower court, Dayan win ) Reverse + remand ( disagree, but let lower court make new decision)</li>
+            <li>Modify (accept part, reverse part)</li>
+        </ol>
+    </blockquote>
+    <h3>VI. FOREIGN DIRECT INVESTMENT: (FDI)</h3>
+    <ol>
+        <li>
+            <p>How does that differ from Trade?<br> (investment in a business in a foreign country as opposed to just selling/buying their products)</p>
+        </li>
+        <li>
+            <p>How is this accomplished by many large corporations?</p>
+            <ul>
+                <li><strong>Susidiaries</strong><br> US co. want to do business in china, so they own a company called CHINA co., the stockholder of CHINA co. is US co. CHINA co. is wholely foreign owned enterprise WFOE</li>
+                <li><strong>Branch</strong><br> US co. go to china and register as US co. in china.</li>
+                <li><strong>Joint Ventures</strong>,<br> Partnership with local company<br> successful case: japan Disney is owend by a local company</li>
+                <li><strong>Acquisitions</strong> 兼并, 购并,<br> Uber buy part of Didi in China</li>
+            </ul>
+        </li>
+        <li>
+            <p>How do we feel about foreign firms investing in the US?</p>
+        </li>
+    </ol>
+    <blockquote>
+        <p>Biggest taxi company: Uber<br> Biggest retailer: Amazon<br> Biggest hotel owner: Airbnb</p>
+    </blockquote>
+    <ul>
+        <li>Government control of FDI:</li>
+        <li>What is “<strong>local participation</strong>”?<br> (foreign country insists on % ownership by their citizens)
+            <ol>
+                <li>
+                    <p>25%-50% of the company has to be owned local<br> (local has not incentive to own local business any more, they just want to collect money, things happens when foreign company pulls out)</p>
+                </li>
+                <li>
+                    <p>repatriation (profits): cannot take the profit out when make profit. (Pepsi in Russia can only buy vodka to sell, no profit can be taken out)</p>
+                </li>
+                <li>
+                    <p>Nationalization</p>
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <h3>VII. DEVELOPING ECONOMIES</h3>
+    <p></p>
+    <ol>
+        <li>
+            <p>What are these countries? (Brazil, Mexico, China, India, etc.)</p>
+        </li>
+        <li>
+            <p>Special Problem: Controls on Investment in these Countries…</p>
+        </li>
+    </ol>
+    <ul>
+        <li>What kinds of things do they do?
+            <ul>
+                <li>Local Participation: What is that?</li>
+                <li>Repatriation of Profits</li>
+                <li>Nationalization/Expropriation</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>VIII. MANAGING RISKS OF FOREIGN INVESTMENT</h3>
+    <ol>
+        <li>
+            <p>How can American firms minimize risks inherent in foreign investment?</p>
+            <ul>
+                <li>Advance Planning: (check out laws, requirements of foreign country)</li>
+                <li>Shift the Risk: How is this accomplished? (contract negotiation.)</li>
+                <li>Insurance: Like risk of damage of goods at sea.</li>
+            </ul>
+        </li>
+        <li>
+            <p>Language &amp; cultural barriers – another roadblock:<br>
+                <strong>Let’s look at the GASKIN case on p. 18</strong><br> the fact: issue: are we bound to contract when we don’t understand that language when signing. people’s responsibility to understand the content</p>
+        </li>
+        <li>
+            <p>Currency Risks: Exchange problems &amp; currency controls</p>
+        </li>
+    </ol>
+    <h3>IX. PUBLIC INTERNATIONAL LAW</h3>
+    <ol>
+        <li>
+            <p>Definition – How do we define?<br> Rule that has been accepted by the international community</p>
+        </li>
+        <li>
+            <p>How do we determine what international laws apply?(sources)</p>
+            <ul>
+                <li>Customary International Law</li>
+                <li>International Agreements, Agreement is not a law</li>
+                <li>Treaties(条约, a law)<br> treaty can be bilateral(2 countries) or multilateral(more than 2 countries).</li>
+                <li>a conventions(协定) is open treaty, a type of Treaties that countries can join anytime.</li>
+                <li>Protocol: amendment to a treaty</li>
+                <li>Common Principles of the world’s major legal systems<br> murder etc.</li>
+            </ul>
+        </li>
+    </ol>
+    <p><code>a treaty is equal to a statute/law</code><br>
+        <code>the most recent law wins when two treaty and law are against each other</code></p>
+    <ol start="3">
+        <li>
+            <p>What is Public (as opposed to private) International Law?<br> Governs relationships between countries</p>
+        </li>
+        <li>
+            <p>Interpretations: How is International Law usually interpreted – by the high courts of individual nations.</p>
+        </li>
+    </ol>
+    <h3>case PAQUETTE HABANA</h3>
+    <h3>X. THE LAW OF TREATIES</h3>
+    <ol>
+        <li>
+            <p>International law has been “codified” in the Vienna Convention:<br> Treaties must be followed by its signatories</p>
+        </li>
+        <li>
+            <p>What is “multilateral” vs. “bilateral” treaty (examples?)</p>
+        </li>
+        <li>
+            <p>Treaties Impact on Business:</p>
+            <ul>
+                <li>Tax issues</li>
+                <li>Free Trade</li>
+                <li>Global Warming</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>
