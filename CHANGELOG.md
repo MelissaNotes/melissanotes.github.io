@@ -1,6 +1,12 @@
 # CHANGE LOG
 ---
 
+## 0.9.0 (Aug 7, 2017)
+
+### Notes
+
+* Add `MGMT-109` Notes.
+
 ## 0.8.0 (Oct 12, 2016)
 
 ### Notes
