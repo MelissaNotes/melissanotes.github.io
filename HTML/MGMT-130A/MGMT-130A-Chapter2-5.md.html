@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>chapter2-5 copy</title>
+  <script language="JavaScript">
+    var password="";password=prompt('Please Enter 4-digit Password:','');
+    if (password != '0214')   {
+      alert("Wrong Password!");
+      window.opener=null; window.close();
+  }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ jax: ["input/TeX","output/HTML-CSS"], extensions: [], TeX: { extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"] }, showMathMenu: false });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+  </script>
+  <style>
+    .markdown-preview:not([data-use-github-style]) {
+      padding: 2em;
+      font-size: 1.2em;
+      color: rgb(171, 178, 191);
+      background-color: rgb(40, 44, 52);
+      overflow: auto;
+    }
+
+    .markdown-preview:not([data-use-github-style])> :first-child {
+      margin-top: 0px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h1,
+    .markdown-preview:not([data-use-github-style]) h2,
+    .markdown-preview:not([data-use-github-style]) h3,
+    .markdown-preview:not([data-use-github-style]) h4,
+    .markdown-preview:not([data-use-github-style]) h5,
+    .markdown-preview:not([data-use-github-style]) h6 {
+      line-height: 1.2;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) h1 {
+      font-size: 2.4em;
+      font-weight: 300;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h2 {
+      font-size: 1.8em;
+      font-weight: 400;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h3 {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h4 {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h5 {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h6 {
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) strong {
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) del {
+      color: rgb(124, 135, 156);
+    }
+
+    .markdown-preview:not([data-use-github-style]) a,
+    .markdown-preview:not([data-use-github-style]) a code {
+      color: rgb(82, 139, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) img {
+      max-width: 100%;
+    }
+
+    .markdown-preview:not([data-use-github-style])>p {
+      margin-top: 0px;
+      margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style])>ul,
+    .markdown-preview:not([data-use-github-style])>ol {
+      margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style]) blockquote {
+      margin: 1.5em 0px;
+      font-size: inherit;
+      color: rgb(124, 135, 156);
+      border-color: rgb(75, 83, 98);
+      border-width: 4px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) hr {
+      margin: 3em 0px;
+      border-top: 2px dashed rgb(75, 83, 98);
+      background: none;
+    }
+
+    .markdown-preview:not([data-use-github-style]) table {
+      margin: 1.5em 0px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) th {
+      color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) th,
+    .markdown-preview:not([data-use-github-style]) td {
+      padding: 0.66em 1em;
+      border: 1px solid rgb(75, 83, 98);
+    }
+
+    .markdown-preview:not([data-use-github-style]) pre,
+    .markdown-preview:not([data-use-github-style]) code {
+      color: rgb(255, 255, 255);
+      background-color: rgb(58, 63, 75);
+    }
+
+    .markdown-preview:not([data-use-github-style]) pre,
+    .markdown-preview:not([data-use-github-style]) pre.editor-colors {
+      margin: 1.5em 0px;
+      padding: 1em;
+      font-size: 0.92em;
+      border-radius: 3px;
+      background-color: rgb(49, 54, 63);
+    }
+
+    .markdown-preview:not([data-use-github-style]) kbd {
+      color: rgb(255, 255, 255);
+      border-width: 1px 1px 2px;
+      border-style: solid;
+      border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81);
+      border-image: initial;
+      background-color: rgb(58, 63, 75);
+    }
+
+    .markdown-preview[data-use-github-style] {
+      font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+      line-height: 1.6;
+      word-wrap: break-word;
+      padding: 30px;
+      font-size: 16px;
+      color: rgb(51, 51, 51);
+      background-color: rgb(255, 255, 255);
+      overflow: scroll;
+    }
+
+    .markdown-preview[data-use-github-style]> :first-child {
+      margin-top: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style]> :last-child {
+      margin-bottom: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style] a:not([href]) {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] .absent {
+      color: rgb(204, 0, 0);
+    }
+
+    .markdown-preview[data-use-github-style] .anchor {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+      padding-right: 6px;
+      padding-left: 30px;
+      margin-left: -30px;
+    }
+
+    .markdown-preview[data-use-github-style] .anchor:focus {
+      outline: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1,
+    .markdown-preview[data-use-github-style] h2,
+    .markdown-preview[data-use-github-style] h3,
+    .markdown-preview[data-use-github-style] h4,
+    .markdown-preview[data-use-github-style] h5,
+    .markdown-preview[data-use-github-style] h6 {
+      position: relative;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .markdown-preview[data-use-github-style] h1 .octicon-link,
+    .markdown-preview[data-use-github-style] h2 .octicon-link,
+    .markdown-preview[data-use-github-style] h3 .octicon-link,
+    .markdown-preview[data-use-github-style] h4 .octicon-link,
+    .markdown-preview[data-use-github-style] h5 .octicon-link,
+    .markdown-preview[data-use-github-style] h6 .octicon-link {
+      display: none;
+      color: rgb(0, 0, 0);
+      vertical-align: middle;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor,
+    .markdown-preview[data-use-github-style] h2:hover .anchor,
+    .markdown-preview[data-use-github-style] h3:hover .anchor,
+    .markdown-preview[data-use-github-style] h4:hover .anchor,
+    .markdown-preview[data-use-github-style] h5:hover .anchor,
+    .markdown-preview[data-use-github-style] h6:hover .anchor {
+      padding-left: 8px;
+      margin-left: -30px;
+      text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link,
+    .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link {
+      display: inline-block;
+    }
+
+    .markdown-preview[data-use-github-style] h1 tt,
+    .markdown-preview[data-use-github-style] h2 tt,
+    .markdown-preview[data-use-github-style] h3 tt,
+    .markdown-preview[data-use-github-style] h4 tt,
+    .markdown-preview[data-use-github-style] h5 tt,
+    .markdown-preview[data-use-github-style] h6 tt,
+    .markdown-preview[data-use-github-style] h1 code,
+    .markdown-preview[data-use-github-style] h2 code,
+    .markdown-preview[data-use-github-style] h3 code,
+    .markdown-preview[data-use-github-style] h4 code,
+    .markdown-preview[data-use-github-style] h5 code,
+    .markdown-preview[data-use-github-style] h6 code {
+      font-size: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] h1 {
+      padding-bottom: 0.3em;
+      font-size: 2.25em;
+      line-height: 1.2;
+      border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h1 .anchor {
+      line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.75em;
+      line-height: 1.225;
+      border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h2 .anchor {
+      line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h3 {
+      font-size: 1.5em;
+      line-height: 1.43;
+    }
+
+    .markdown-preview[data-use-github-style] h3 .anchor {
+      line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h4 {
+      font-size: 1.25em;
+    }
+
+    .markdown-preview[data-use-github-style] h4 .anchor {
+      line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h5 {
+      font-size: 1em;
+    }
+
+    .markdown-preview[data-use-github-style] h5 .anchor {
+      line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] h6 {
+      font-size: 1em;
+      color: rgb(119, 119, 119);
+    }
+
+    .markdown-preview[data-use-github-style] h6 .anchor {
+      line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] p,
+    .markdown-preview[data-use-github-style] blockquote,
+    .markdown-preview[data-use-github-style] ul,
+    .markdown-preview[data-use-github-style] ol,
+    .markdown-preview[data-use-github-style] dl,
+    .markdown-preview[data-use-github-style] table,
+    .markdown-preview[data-use-github-style] pre {
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] hr {
+      height: 4px;
+      padding: 0px;
+      margin: 16px 0px;
+      background-color: rgb(231, 231, 231);
+      border: 0px none;
+    }
+
+    .markdown-preview[data-use-github-style] ul,
+    .markdown-preview[data-use-github-style] ol {
+      padding-left: 2em;
+    }
+
+    .markdown-preview[data-use-github-style] ul.no-list,
+    .markdown-preview[data-use-github-style] ol.no-list {
+      padding: 0px;
+      list-style-type: none;
+    }
+
+    .markdown-preview[data-use-github-style] ul ul,
+    .markdown-preview[data-use-github-style] ul ol,
+    .markdown-preview[data-use-github-style] ol ol,
+    .markdown-preview[data-use-github-style] ol ul {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] li>p {
+      margin-top: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] dl {
+      padding: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] dl dt {
+      padding: 0px;
+      margin-top: 16px;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] dl dd {
+      padding: 0px 16px;
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote {
+      padding: 0px 15px;
+      color: rgb(119, 119, 119);
+      border-left: 4px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] blockquote> :first-child {
+      margin-top: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote> :last-child {
+      margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] table {
+      display: block;
+      width: 100%;
+      overflow: auto;
+      word-break: keep-all;
+    }
+
+    .markdown-preview[data-use-github-style] table th {
+      font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] table th,
+    .markdown-preview[data-use-github-style] table td {
+      padding: 6px 13px;
+      border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] table tr {
+      background-color: rgb(255, 255, 255);
+      border-top: 1px solid rgb(204, 204, 204);
+    }
+
+    .markdown-preview[data-use-github-style] table tr:nth-child(2n) {
+      background-color: rgb(248, 248, 248);
+    }
+
+    .markdown-preview[data-use-github-style] img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .markdown-preview[data-use-github-style] .emoji {
+      max-width: none;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame {
+      display: block;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame>span {
+      display: block;
+      float: left;
+      width: auto;
+      padding: 7px;
+      margin: 13px 0px 0px;
+      overflow: hidden;
+      border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span img {
+      display: block;
+      float: left;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span span {
+      display: block;
+      padding: 5px 0px 0px;
+      clear: both;
+      color: rgb(51, 51, 51);
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center {
+      display: block;
+      overflow: hidden;
+      clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center>span {
+      display: block;
+      margin: 13px auto 0px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center span img {
+      margin: 0px auto;
+      text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right {
+      display: block;
+      overflow: hidden;
+      clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right>span {
+      display: block;
+      margin: 13px 0px 0px;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right span img {
+      margin: 0px;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left {
+      display: block;
+      float: left;
+      margin-right: 13px;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left span {
+      margin: 13px 0px 0px;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right {
+      display: block;
+      float: right;
+      margin-left: 13px;
+      overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right>span {
+      display: block;
+      margin: 13px auto 0px;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] code,
+    .markdown-preview[data-use-github-style] tt {
+      padding: 0.2em 0px;
+      margin: 0px;
+      font-size: 85%;
+      background-color: rgba(0, 0, 0, 0.0392157);
+      border-radius: 3px;
+    }
+
+    .markdown-preview[data-use-github-style] code::before,
+    .markdown-preview[data-use-github-style] tt::before,
+    .markdown-preview[data-use-github-style] code::after,
+    .markdown-preview[data-use-github-style] tt::after {
+      letter-spacing: -0.2em;
+      content: " ";
+    }
+
+    .markdown-preview[data-use-github-style] code br,
+    .markdown-preview[data-use-github-style] tt br {
+      display: none;
+    }
+
+    .markdown-preview[data-use-github-style] del code {
+      text-decoration: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre>code {
+      padding: 0px;
+      margin: 0px;
+      font-size: 100%;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight {
+      margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre,
+    .markdown-preview[data-use-github-style] pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: rgb(247, 247, 247);
+      border-radius: 3px;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre {
+      margin-bottom: 0px;
+      word-break: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre {
+      word-wrap: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre code,
+    .markdown-preview[data-use-github-style] pre tt {
+      display: inline;
+      max-width: initial;
+      padding: 0px;
+      margin: 0px;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] pre code::before,
+    .markdown-preview[data-use-github-style] pre tt::before,
+    .markdown-preview[data-use-github-style] pre code::after,
+    .markdown-preview[data-use-github-style] pre tt::after {
+      content: normal;
+    }
+
+    .markdown-preview[data-use-github-style] kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      font-size: 11px;
+      line-height: 10px;
+      color: rgb(85, 85, 85);
+      vertical-align: middle;
+      background-color: rgb(252, 252, 252);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
+      border-image: initial;
+      border-radius: 3px;
+      box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
+    }
+
+    .markdown-preview[data-use-github-style] a {
+      color: rgb(51, 122, 183);
+    }
+
+    .markdown-preview[data-use-github-style] pre,
+    .markdown-preview[data-use-github-style] code {
+      color: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre,
+    .markdown-preview[data-use-github-style] pre.editor-colors {
+      padding: 0.8em 1em;
+      margin-bottom: 1em;
+      font-size: 0.85em;
+      border-radius: 4px;
+      overflow: auto;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar,
+    .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar {
+      visibility: hidden;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar,
+    .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar {
+      visibility: visible;
+    }
+
+    .markdown-preview del {
+      text-decoration: none;
+      position: relative;
+    }
+
+    .markdown-preview del::after {
+      border-bottom: 1px solid black;
+      content: "";
+      left: 0px;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+    }
+
+    .markdown-preview .flash {
+      animation: flash 1s ease-out 1;
+      outline: rgba(255, 0, 0, 0) solid 1px;
+    }
+
+    .markdown-preview .flash:not(li) {
+      display: block;
+    }
+
+    .bracket-matcher .region {
+      border-bottom: 1px dotted lime;
+      position: absolute;
+    }
+
+    .line-number.bracket-matcher {
+      background-color: #777;
+    }
+
+    .spell-check-misspelling .region {
+      border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+    }
+
+    .spell-check-corrections {
+      width: 25em !important;
+    }
+
+    pre.editor-colors {
+      background-color: #282c34;
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .line.cursor-line {
+      background-color: rgba(153, 187, 255, 0.04);
+    }
+
+    pre.editor-colors .invisible {
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .cursor {
+      border-left: 2px solid #528bff;
+    }
+
+    pre.editor-colors .selection .region {
+      background-color: #3e4451;
+    }
+
+    pre.editor-colors .bracket-matcher .region {
+      border-bottom: 1px solid #528bff;
+      box-sizing: border-box;
+    }
+
+    pre.editor-colors .invisible-character {
+      color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .indent-guide {
+      color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .wrap-guide {
+      background-color: rgba(171, 178, 191, 0.15);
+    }
+
+    pre.editor-colors .find-result .region.region.region,
+    pre.editor-colors .current-result .region.region.region {
+      border-radius: 2px;
+      background-color: rgba(82, 139, 255, 0.24);
+      transition: border-color 0.4s;
+    }
+
+    pre.editor-colors .find-result .region.region.region {
+      border: 2px solid transparent;
+    }
+
+    pre.editor-colors .current-result .region.region.region {
+      border: 2px solid #528bff;
+      transition-duration: .1s;
+    }
+
+    pre.editor-colors .gutter .line-number {
+      color: #636d83;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    pre.editor-colors .gutter .line-number.cursor-line {
+      color: #abb2bf;
+      background-color: #2c313a;
+    }
+
+    pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+      background-color: transparent;
+    }
+
+    pre.editor-colors .gutter .line-number .icon-right {
+      color: #abb2bf;
+    }
+
+    pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+      bottom: -3px;
+    }
+
+    pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 25px;
+      border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+      pointer-events: none;
+    }
+
+    pre.editor-colors .gutter .line-number.folded,
+    pre.editor-colors .gutter .line-number:after,
+    pre.editor-colors .fold-marker:after {
+      color: #abb2bf;
+    }
+
+    .syntax--comment {
+      color: #5c6370;
+      font-style: italic;
+    }
+
+    .syntax--comment .syntax--markup.syntax--link {
+      color: #5c6370;
+    }
+
+    .syntax--entity.syntax--name.syntax--type {
+      color: #e5c07b;
+    }
+
+    .syntax--entity.syntax--other.syntax--inherited-class {
+      color: #98c379;
+    }
+
+    .syntax--keyword {
+      color: #c678dd;
+    }
+
+    .syntax--keyword.syntax--control {
+      color: #c678dd;
+    }
+
+    .syntax--keyword.syntax--operator {
+      color: #abb2bf;
+    }
+
+    .syntax--keyword.syntax--other.syntax--special-method {
+      color: #61afef;
+    }
+
+    .syntax--keyword.syntax--other.syntax--unit {
+      color: #d19a66;
+    }
+
+    .syntax--storage {
+      color: #c678dd;
+    }
+
+    .syntax--storage.syntax--type.syntax--annotation,
+    .syntax--storage.syntax--type.syntax--primitive {
+      color: #c678dd;
+    }
+
+    .syntax--storage.syntax--modifier.syntax--package,
+    .syntax--storage.syntax--modifier.syntax--import {
+      color: #abb2bf;
+    }
+
+    .syntax--constant {
+      color: #d19a66;
+    }
+
+    .syntax--constant.syntax--variable {
+      color: #d19a66;
+    }
+
+    .syntax--constant.syntax--character.syntax--escape {
+      color: #56b6c2;
+    }
+
+    .syntax--constant.syntax--numeric {
+      color: #d19a66;
+    }
+
+    .syntax--constant.syntax--other.syntax--color {
+      color: #56b6c2;
+    }
+
+    .syntax--constant.syntax--other.syntax--symbol {
+      color: #56b6c2;
+    }
+
+    .syntax--variable {
+      color: #e06c75;
+    }
+
+    .syntax--variable.syntax--interpolation {
+      color: #be5046;
+    }
+
+    .syntax--variable.syntax--parameter {
+      color: #abb2bf;
+    }
+
+    .syntax--string {
+      color: #98c379;
+    }
+
+    .syntax--string.syntax--regexp {
+      color: #56b6c2;
+    }
+
+    .syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+      color: #e5c07b;
+    }
+
+    .syntax--string.syntax--other.syntax--link {
+      color: #e06c75;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--comment {
+      color: #5c6370;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--method-parameters,
+    .syntax--punctuation.syntax--definition.syntax--function-parameters,
+    .syntax--punctuation.syntax--definition.syntax--parameters,
+    .syntax--punctuation.syntax--definition.syntax--separator,
+    .syntax--punctuation.syntax--definition.syntax--seperator,
+    .syntax--punctuation.syntax--definition.syntax--array {
+      color: #abb2bf;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--heading,
+    .syntax--punctuation.syntax--definition.syntax--identity {
+      color: #61afef;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--bold {
+      color: #e5c07b;
+      font-weight: bold;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--italic {
+      color: #c678dd;
+      font-style: italic;
+    }
+
+    .syntax--punctuation.syntax--section.syntax--embedded {
+      color: #be5046;
+    }
+
+    .syntax--punctuation.syntax--section.syntax--method,
+    .syntax--punctuation.syntax--section.syntax--class,
+    .syntax--punctuation.syntax--section.syntax--inner-class {
+      color: #abb2bf;
+    }
+
+    .syntax--support.syntax--class {
+      color: #e5c07b;
+    }
+
+    .syntax--support.syntax--type {
+      color: #56b6c2;
+    }
+
+    .syntax--support.syntax--function {
+      color: #56b6c2;
+    }
+
+    .syntax--support.syntax--function.syntax--any-method {
+      color: #61afef;
+    }
+
+    .syntax--entity.syntax--name.syntax--function {
+      color: #61afef;
+    }
+
+    .syntax--entity.syntax--name.syntax--class,
+    .syntax--entity.syntax--name.syntax--type.syntax--class {
+      color: #e5c07b;
+    }
+
+    .syntax--entity.syntax--name.syntax--section {
+      color: #61afef;
+    }
+
+    .syntax--entity.syntax--name.syntax--tag {
+      color: #e06c75;
+    }
+
+    .syntax--entity.syntax--other.syntax--attribute-name {
+      color: #d19a66;
+    }
+
+    .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+      color: #61afef;
+    }
+
+    .syntax--meta.syntax--class {
+      color: #e5c07b;
+    }
+
+    .syntax--meta.syntax--class.syntax--body {
+      color: #abb2bf;
+    }
+
+    .syntax--meta.syntax--method-call,
+    .syntax--meta.syntax--method {
+      color: #abb2bf;
+    }
+
+    .syntax--meta.syntax--definition.syntax--variable {
+      color: #e06c75;
+    }
+
+    .syntax--meta.syntax--link {
+      color: #d19a66;
+    }
+
+    .syntax--meta.syntax--require {
+      color: #61afef;
+    }
+
+    .syntax--meta.syntax--selector {
+      color: #c678dd;
+    }
+
+    .syntax--meta.syntax--separator {
+      background-color: #373b41;
+      color: #abb2bf;
+    }
+
+    .syntax--meta.syntax--tag {
+      color: #abb2bf;
+    }
+
+    .syntax--underline {
+      text-decoration: underline;
+    }
+
+    .syntax--none {
+      color: #abb2bf;
+    }
+
+    .syntax--invalid.syntax--deprecated {
+      color: #523d14 !important;
+      background-color: #e0c285 !important;
+    }
+
+    .syntax--invalid.syntax--illegal {
+      color: white !important;
+      background-color: #e05252 !important;
+    }
+
+    .syntax--markup.syntax--bold {
+      color: #d19a66;
+      font-weight: bold;
+    }
+
+    .syntax--markup.syntax--changed {
+      color: #c678dd;
+    }
+
+    .syntax--markup.syntax--deleted {
+      color: #e06c75;
+    }
+
+    .syntax--markup.syntax--italic {
+      color: #c678dd;
+      font-style: italic;
+    }
+
+    .syntax--markup.syntax--heading {
+      color: #e06c75;
+    }
+
+    .syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+      color: #61afef;
+    }
+
+    .syntax--markup.syntax--link {
+      color: #56b6c2;
+    }
+
+    .syntax--markup.syntax--inserted {
+      color: #98c379;
+    }
+
+    .syntax--markup.syntax--quote {
+      color: #d19a66;
+    }
+
+    .syntax--markup.syntax--raw {
+      color: #98c379;
+    }
+
+    .syntax--source.syntax--c .syntax--keyword.syntax--operator {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--css .syntax--property-name,
+    .syntax--source.syntax--css .syntax--property-value {
+      color: #828997;
+    }
+
+    .syntax--source.syntax--css .syntax--property-name.syntax--support,
+    .syntax--source.syntax--css .syntax--property-value.syntax--support {
+      color: #abb2bf;
+    }
+
+    .syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+      color: #abb2bf;
+    }
+
+    .syntax--source.syntax--elixir .syntax--constant.syntax--language,
+    .syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+    .syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+      color: #61afef;
+    }
+
+    .syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+    .syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--elixir .syntax--quoted {
+      color: #98c379;
+    }
+
+    .syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+    .syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+    .syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+    .syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+      color: #be5046;
+    }
+
+    .syntax--source.syntax--elixir .syntax--separator,
+    .syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+      color: #d19a66;
+    }
+
+    .syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+      color: #e5c07b;
+    }
+
+    .syntax--source.syntax--elixir .syntax--array,
+    .syntax--source.syntax--elixir .syntax--scope,
+    .syntax--source.syntax--elixir .syntax--section {
+      color: #828997;
+    }
+
+    .syntax--source.syntax--gfm .syntax--markup {
+      -webkit-font-smoothing: auto;
+    }
+
+    .syntax--source.syntax--gfm .syntax--link .syntax--entity {
+      color: #61afef;
+    }
+
+    .syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+      color: #e5c07b;
+    }
+
+    .syntax--source.syntax--java .syntax--storage.syntax--type {
+      color: #e5c07b;
+    }
+
+    .syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair>.syntax--punctuation {
+      color: #abb2bf;
+    }
+
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator {
+      color: #56b6c2;
+    }
+
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+    .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation.syntax--string {
+      color: #e06c75;
+    }
+
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json,
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation,
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--value.syntax--json>.syntax--string.syntax--quoted.syntax--json>.syntax--punctuation {
+      color: #98c379;
+    }
+
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json>.syntax--constant.syntax--language.syntax--json,
+    .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json>.syntax--constant.syntax--language.syntax--json {
+      color: #56b6c2;
+    }
+
+    .syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol>.syntax--punctuation {
+      color: inherit;
+    }
+
+    .syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+      color: #c678dd;
+    }
+
+    .syntax--source.syntax--python .syntax--variable.syntax--parameter {
+      color: #d19a66;
+    }
+  </style>
+</head>
+
+<body class='markdown-preview'>
+  <h2>Chapter 2</h2>
+  <h2>Balance sheet (Point of time)</h2>
+  <p><strong>Assets = Liabilities + Stockholder’s Equity</strong></p>
+  <ul>
+    <li>
+      <p>Fixed Assets:</p>
+      <ol>
+        <li>
+          <p>Tangible, <code>EX: Property, Plants and Equipment</code>;</p>
+        </li>
+        <li>
+          <p>Intangible: <code>EX: copyrights goodwill</code>.</p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>Current Liability</p>
+      <ul>
+        <li>
+          <p>Account Payable: <code>trade/buy things from vender</code>;</p>
+        </li>
+        <li>
+          <p>Notes Payable: financial debt shorter than one year, <code>EX: loan less than one year, commercial paper</code>;</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>Shareholders Equity, <code>EX. Retained Earnings, money from stock issued</code>.</li>
+  </ul>
+  <h3>Liquidity</h3>
+  <p>Ease and quickness with which assets can be converted to cash.</p>
+  <ul>
+    <li>
+      <p>own Liquid Assets, can sell immediately without losing its value, <code>EX. Cash, Treasury Bill in low risk market.</code></p>
+    </li>
+    <li>
+      <p>The more liquid assets, with in certain amount of time, more ability to pay all bills.</p>
+    </li>
+    <li>
+      <p>Down side with too much liquid assets: lower return.</p>
+    </li>
+  </ul>
+  <p><code>Notes: current assets is a proxi but not same</code></p>
+  <h3>Leverage</h3>
+  <p>How much debt and Equity</p>
+  <ul>
+    <li>
+      <p>Being Leverage = using more debt = More risky to be bankrupt = Increase rate of return</p>
+    </li>
+    <li>
+      <p>Debt to Equity ratio measures leverags: <span class="math"><script type="math/tex">\frac {Debts}{Equity} = \frac{Total~Liability}{Total~Shareholders Equity}</script></span></p>
+    </li>
+  </ul>
+  <h3>Book Value Vs. Market Value</h3>
+  <p>Book value work with depreciation</p>
+  <p><br><br></p>
+  <h2>Income Statement (Period of time)</h2>
+  <p><strong>Revenue - Expenses = Income</strong></p>
+  <ul>
+    <li>
+      <p>Revenue is recognized when earned.</p>
+      <ul>
+        <li>
+          <p>transaction takes place → Account receivable created → revenue recognized</p>
+        </li>
+        <li>
+          <p>payed by customer ahead → Account Payable created → will pay back later but recognized.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Tax</h2>
+  <ul>
+    <li>
+      <p>Marginal: Next dollar rate</p>
+    </li>
+    <li>
+      <p>Average <span class="math"><script type="math/tex">= \frac {Total~tax}{Total~income}</script></span></p>
+    </li>
+    <li>
+      <p>Example: One earned $250,000 in taxable income:</p>
+    </li>
+  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Rate</th>
+        <th>Bracket Size</th>
+        <th>Pay in Bracket</th>
+        <th>Left to Pay</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>250,000</td>
+      </tr>
+      <tr>
+        <td>15%</td>
+        <td>50,000</td>
+        <td>50,000</td>
+        <td>200,000</td>
+      </tr>
+      <tr>
+        <td>25%</td>
+        <td>25000</td>
+        <td>25000</td>
+        <td>175,000</td>
+      </tr>
+      <tr>
+        <td>34%</td>
+        <td>25000</td>
+        <td>25000</td>
+        <td>150,000</td>
+      </tr>
+      <tr>
+        <td>39%</td>
+        <td>235,000</td>
+        <td>150,000</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Total tax = 80,750, Marginal Tax Rate 39%, Average Tax Rate = 32.3%</p>
+  <h2>Cash Flow</h2>
+  <ul>
+    <li>
+      <p>Total Cash from <strong>Operating</strong> cash flow (<strong>OCF</strong>) measures cash generated from operations not counting capital spending or working capital requirements.</p>
+      <ul>
+        <li>
+          <p>OCF = EBIT + Depreciation (because it is not cash exp.) - Taxes;</p>
+        </li>
+        <li>
+          <p>OCF = NI + Depreciation - Change in other current assets + Changes in Current Liability;</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Total Cash from <strong>Investing</strong> = -Change in Net Fixed Asset - depreciation</p>
+    </li>
+    <li>
+      <p>Total Cash from <strong>Financing</strong> Activities = Change in cash -Total Cash form Operation + Total Cash from Investing</p>
+      <ul>
+        <li>BEG Cash + Total Cash form Operation + Total Cash from Investing +Total Cash from Financing Activities = END Cash</li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Free Cash Flow</h2>
+  <ul>
+    <li>
+      <p>Cash flow received from the firm’s assets must equal the cash flows to the firm’s creditors and stockholders:</p>
+      <ul>
+        <li>
+          <p>CF(Assets)≡ CF(Bondholders) + CF(Shareholders)</p>
+        </li>
+        <li>
+          <p>CF(Assets)≡ OCF-Change in Net Working Capital - Net Capital Spending</p>
+        </li>
+        <li>
+          <p>Creditor - Debt (Interest)<br> CF(Creditors)=INT EXP - LT Debt</p>
+        </li>
+        <li>
+          <p>Stockholders - Equity (Dividends)<br> CF(Shareholders)= Div + Company Redeemed</p>
+        </li>
+        <li>
+          <p>Net Working Capital = Current Assets - Current Liability</p>
+        </li>
+        <li>
+          <p>Change in Net Working Capital = Current Net Working Capital - Prior Net Working Capital</p>
+        </li>
+        <li>
+          <p>Net Capital Spending = Net Fixed Asset Increased + Depreciation</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p><br><br><br> Chapter 3a</p>
+  <hr>
+  <h2>Book Ratios</h2>
+  <h3>Liquidity Ratios</h3>
+  <ul>
+    <li>
+      <p>Current ratio = <span class="math"><script type="math/tex">\frac {current~~assets}{current~~liabilities}</script></span></p>
+      <ul>
+        <li>
+          <p>if current ratio is $1.3, that means the company has $1.3 in current assets for every $1 in current liabilities, or it has its current liabilities covered 1.31 times over.</p>
+        </li>
+        <li>
+          <p>We expect a current ratio of at least 1.</p>
+        </li>
+        <li>
+          <p>a current ratio of less than 1 would mean that net working capital (current assets less current liabilities) is negative.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Quick ratio (Acid-test) = <span class="math"><script type="math/tex">\frac {Current~~Assets - Inventory}{Current~~Liabilities}</script></span></p>
+    </li>
+    <li>
+      <p>Cash Ratio = <span class="math"><script type="math/tex">\frac {Cash}{Current~~Liabilities}</script></span></p>
+    </li>
+  </ul>
+  <h3>Leverage Ratios (Long term/ Solvency Ratios)</h3>
+  <ul>
+    <li>
+      <p>Total Debt Ratio = <span class="math"><script type="math/tex">\frac{Total~~Assets - Total~~Equity}{Total~~Asset}</script></span></p>
+      <ul>
+        <li>
+          <p>larger has more leverage.</p>
+        </li>
+        <li>
+          <p>if total debt ratio is 0.28, for every $1 in assets, the company has $0.28 in debt, therefore $0.72 in equity.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Debt/Equity ratio = <span class="math"><script type="math/tex">\frac{Total~Debt}{Total~Equity}</script></span> = <span class="math"><script type="math/tex">\frac{Total~Debt ~Ratio}{1-Total~Debt~Ratio}</script></span></p>
+    </li>
+    <li>
+      <p>Equity Multiplier = <span class="math"><script type="math/tex">\frac {Total~~Assets}{Total~~Equity} = 1+</script></span> Debt/Equity ratio</p>
+    </li>
+  </ul>
+  <h3>Coverage Ratios</h3>
+  <ul>
+    <li>
+      <p>Times Interest Earned = <span class="math"><script type="math/tex">\frac{EBIT}{Interest}</script></span></p>
+    </li>
+    <li>
+      <p>Cash Coverage = <span class="math"><script type="math/tex">\frac{EBIT+Depreciation+Amortization}{Interest}</script></span></p>
+    </li>
+  </ul>
+  <h3>Inventory Ratios</h3>
+  <ul>
+    <li>
+      <p>Inventory Turnover = <span class="math"><script type="math/tex">\frac{Cost~~of~~Good~~Sold}{Inventory}</script></span></p>
+      <ul>
+        <li>
+          <p>Measures how many times you turnover the inventory in a year.</p>
+        </li>
+        <li>
+          <p>The higher, more efficiently to manage the Inventory.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Days’ Sales in inventory = <span class="math"><script type="math/tex">\frac{365}{inventory~~turnover}</script></span></p>
+      <ul>
+        <li>
+          <p>how long the good sits in the inventory before it is sold.</p>
+        </li>
+        <li>
+          <p>if Days’ Sale in inventory is 100, it means inventory sits 100 days on average before it is sold.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h3>Receivables Ratios</h3>
+  <ul>
+    <li>
+      <p>Receivables Turnover = <span class="math"><script type="math/tex">\frac{Sales}{Account~~Receivables}</script></span></p>
+      <ul>
+        <li>
+          <p>use credit sale if possible, use ending balance receivables or average of beg and end.</p>
+        </li>
+        <li>
+          <p>if RT is 12 times, means we collect money and lend again 12 times a year.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Days’ sales in receivable (Average collet credit)= <span class="math"><script type="math/tex">\frac{365}{Receivables~~turnover}</script></span></p>
+      <ul>
+        <li>how fast we collect sales</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>Cash Conversion Cycle</h3>
+  <ul>
+    <li>
+      <p>Cash Cycle = inventory period + accounts receivable period - account payable period</p>
+    </li>
+    <li>
+      <p>the smaller, the better. if negative, meaning the company receive the money from sales earlier than they need to pay the inventory.</p>
+    </li>
+  </ul>
+  <h3>Total Asset Turnover</h3>
+  <ul>
+    <li>
+      <p>Total Asset Turnover = <span class="math"><script type="math/tex">\frac {Sales}{Total~~Assets}</script></span></p>
+      <ul>
+        <li>not usual if &lt;1</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>Profitability Measures</h3>
+  <h4>Profit Margin</h4>
+  <ul>
+    <li>
+      <p>Gross Profit Margin = <span class="math"><script type="math/tex">\frac {Sales - COGS}{Sales}</script></span></p>
+      <ul>
+        <li>
+          <p>GPM is 23%, meaning every dollar in sale, the company keep $0.23 as net income.</p>
+        </li>
+        <li>
+          <p>the higher, more profitable for the company.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Operating Profit Margin = <span class="math"><script type="math/tex">\frac {EBIT}{Sales}</script></span></p>
+    </li>
+    <li>
+      <p>Profit Margin= <span class="math"><script type="math/tex">\frac{Net Income}{Sales}</script></span></p>
+      <ul>
+        <li>higher better.</li>
+        <li>if PM is 30%, meaning</li>
+      </ul>
+    </li>
+  </ul>
+  <h4>ROA &amp; ROE</h4>
+  <ul>
+    <li>
+      <p>ROA(Return on Assets or Return on investment) = <span class="math"><script type="math/tex">\frac{Net~Income}{Total~Assets}</script></span></p>
+    </li>
+    <li>
+      <p>ROE(Return on Equity) = <span class="math"><script type="math/tex">\frac{Net~~Income}{Total~~Equity}</script></span></p>
+    </li>
+  </ul>
+  <h2>Market Value Measures</h2>
+  <ul>
+    <li>
+      <p>Market Capitalization = price per share * shares outstanding</p>
+      <ul>
+        <li>Value of the <strong>equity</strong> of the firm.</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>PE Ratio = <span class="math"><script type="math/tex">\frac {Price~per~share}{Earning~per~share}</script></span></p>
+      <ul>
+        <li>
+          <p>what the market think the future of the firm, how much investors are willing to pay per dollar of current earnings.</p>
+        </li>
+        <li>
+          <p>higher PEs means firm has more significant prospects for future growth.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>Market-to-Book ratio= <span class="math"><script type="math/tex">\frac {market~value~per~share~of~Equity }{book~value~per~share~of~Equity}</script></span></p>
+    </li>
+    <li>
+      <p>Enterprise Value (EV) = Market Capitalization + Market value of Interest bearing debt - Cash.</p>
+    </li>
+    <li>
+      <p>EV Multiple = <span class="math"><script type="math/tex">\frac{EV}{EBITDA}</script></span></p>
+    </li>
+  </ul>
+  <h3>DuPont Identity</h3>
+  <p><span class="math"><script type="math/tex">ROE = \frac{Net ~ Income}{Total~Equity}</script></span></p>
+  <p><span class="math"><script type="math/tex">ROE = \frac{Net~Income}{Total~Assets} \frac{Total~Assets}{Total~Equity} =</script></span> ROA × Equity Multiplier;</p>
+  <p><span class="math"><script type="math/tex">ROE = \frac{Net~Income}{Total~Assets} \frac{Total~Assets}{Total~Equity} \frac{Sales}{Sales}</script></span> → <span class="math"><script type="math/tex">ROE = \frac{Net~Income}{Sales} \frac{Sales}{Total~Assets} \frac{Total~Assets}{Total Equity}</script></span></p>
+  <p>ROE = Profit Margin × Total Asset Turnover × Equity Multiplier.</p>
+  <p><br><br><br> Chapter 3b</p>
+  <hr>
+  <h2>Pro Forma Statements</h2>
+  <p>Set up projected financials Statements.</p>
+  <ul>
+    <li>profit margin is constant.</li>
+  </ul>
+  <p>After 20% growth in sale,Income statement Sale increase 20%($1,000 × 120%), Costs are projected by profit margin (<span class="math"><script type="math/tex">\frac{\$800}{\$1,000} × $1,200</script></span>).</p>
+  <p>But Pro Forma Balance Sheet have different ways to changes based on financial decision the company will make.</p>
+  <ol>
+    <li>
+      <p>Net Income $240 is retained, to Equity increse $240, to balance out with Assets, Debt has to be retired to $110.</p>
+    </li>
+    <li>
+      <p>Only $50 from net income goes to Equity, the rest $190 pay dividends, issued new debt.</p>
+    </li>
+  </ol>
+  <h3>Assets, liability and Equity</h3>
+  <ul>
+    <li>
+      <p>Assume all assets, including fixed, vary directly with sales.</p>
+    </li>
+    <li>
+      <p>Accounts payable normally vary directly with sales.</p>
+    </li>
+    <li>
+      <p>Notes payable, long-term debt, and equity generally do not vary with sales because they depend on management decisions about capital structure.</p>
+    </li>
+    <li>
+      <p>The change in the retained earnings portion of equity will come from the dividend decision.</p>
+    </li>
+  </ul>
+  <h3>Dividend</h3>
+  <ul>
+    <li>
+      <p>Dividend Pay Out Ratio = <span class="math"><script type="math/tex">\frac{Cash~Dividend}{Net~Income}</script></span></p>
+    </li>
+    <li>
+      <p>Retention Ratio or Plowback Ratio = <span class="math"><script type="math/tex">\frac{Addition~to~Retained~Earnings}{Net~Income} = 1-</script></span> dividend pay out ratio.</p>
+    </li>
+  </ul>
+  <h3>External Financing Needed (EFN)</h3>
+  <p>External Financing Needed (EFN) is the difference between the forecasted increase in assets and the forecasted increase in liabilities and equity.</p>
+  <p>EFN = (Projected year) Total Asset - Total liabilities owner’s equity.</p>
+  <p>If LT debt and equity do not change:<br> EFN = growth in assets - growth in account payable - additions to retained earnings<br>
+    <span class="math"><script type="math/tex">=</script></span> Old Assets <span class="math"><script type="math/tex">×</script></span> growth rate <span class="math"><script type="math/tex">-</script></span> Old Account Payable <span class="math"><script type="math/tex">×</script></span>    growth rate <span class="math"><script type="math/tex">-</script></span> Old Net Income <span class="math"><script type="math/tex">× (1+</script></span> growth rate <span class="math"><script type="math/tex">)× (1 -</script></span> payout rate)</p>
+  <p>EFN <span class="math"><script type="math/tex">= \frac{Assets}{Sales} × △Sales - \frac{Liability}{Sales} × △Sales - (PM × Projected Sales) × (1 - d), ~d</script></span> is Dividend Ratio, <span class="math"><script type="math/tex">1-d</script></span>    is Retention ratio.</p>
+  <h3>Internal growth rate</h3>
+  <p>How much the firm can grow assets using retained earnings as the only source of financing.</p>
+  <p>IGA= <span class="math"><script type="math/tex">\frac{ROA × b}{1-ROA×b}, ~ where ~ b</script></span> is the Retention Ratio.</p>
+  <h3>Sustainable growth rate</h3>
+  <p>How much the firm can grow by using internally generated funds and issuing debt to maintain a constant debt-to-equity ratio.</p>
+  <p>g = <span class="math"><script type="math/tex">\frac{ROE × b}{1-ROE × b}, ~ where ~ b</script></span> is the Retention Ratio.</p>
+  <p><br><br><br> Chapter 4 Discount Cash Flow</p>
+  <hr>
+  <h2>Discounting and Compounding</h2>
+  <h3>One Period Case</h3>
+  <ul>
+    <li>
+      <p><span class="math"><script type="math/tex">FV = C_0 × (1 + r)</script></span><br>
+        <code>r is the rate per period, year in this case.</code></p>
+    </li>
+    <li>
+      <p><span class="math"><script type="math/tex">PV = \frac{C_T}{1+r}</script></span></p>
+    </li>
+    <li>
+      <p><span class="math"><script type="math/tex">NPV =~ –~ Cost + PV</script></span><br>
+        <code>positive NPV</code> → <code>positive investment.</code></p>
+    </li>
+  </ul>
+  <h3>Multi-Period Case</h3>
+  <p>Compounding: Interest applies to the principle and interests from previous period</p>
+  <ul>
+    <li>
+      <p><span class="math"><script type="math/tex">FV = C_0 × (1+r)^T</script></span></p>
+    </li>
+    <li>
+      <p>Compounding adds up faster than Simple Interest.</p>
+    </li>
+    <li>
+      <p><span class="math"><script type="math/tex">PV = \frac {C_T}{(1+r)^T}</script></span></p>
+    </li>
+  </ul>
+  <h2>Excel Function</h2>
+  <ul>
+    <li>
+      <p>Future Value: FV(rate, nper, pmt, [pv])</p>
+    </li>
+    <li>
+      <p>Present Value: PV(rate, nper, pmt, [fv])</p>
+    </li>
+    <li>
+      <p>Number of Periods: NPER(rate, pmt, pv, [fv])</p>
+    </li>
+    <li>
+      <p>Required Rate: RATE(nper, pmt, pv, [fv])</p>
+    </li>
+  </ul>
+  <p><code>if use cell to represent anything in the formula:</code>, <code>A1</code> will change to relative cell, <code>$A$1</code> will not change the cell when drag the format.</p>
+  <h2>Compounding Periods</h2>
+  <ul>
+    <li>
+      <p><span class="math"><script type="math/tex">FV = C_0 × (1+\frac{r}{m})^{m×T}</script></span><br>
+        <code>r is the rate per periods, m is the numbers of periods in a year, T is the total years of investment</code></p>
+    </li>
+    <li>
+      <p>Example: <span class="math"><script type="math/tex">PV~=~50, ~T~=~3~years, ~rate~=~12%</script></span> compounded semi-annually: <span class="math"><script type="math/tex">FV = \$50 × (1 + \frac{12\%}{2})^{2×3}</script></span></p>
+    </li>
+    <li>
+      <p>Continuous Compounding: <span class="math"><script type="math/tex">lim~FV = C_0 × (1+\frac{r}{m})^{m×T} = e^{rT}</script></span></p>
+    </li>
+    <li>
+      <p>Discounting: <span class="math"><script type="math/tex">PV = FV × (1+\frac{r}{m})^{-~mT}</script></span></p>
+    </li>
+    <li>
+      <p>Continuous Discounting: <span class="math"><script type="math/tex">PV = e^{-~rT}</script></span></p>
+    </li>
+  </ul>
+  <h2>Effective Annual Rate</h2>
+  <ul>
+    <li>
+      <p>In previous example: <span class="math"><script type="math/tex">FV = \$50 × (1 + \frac{12\%}{2})^{2×3} = \$70.93</script></span><br> this is equal to <span class="math"><script type="math/tex">\$50 × (1+EAR)^3 = \$70.92</script></span></p>
+    </li>
+    <li>
+      <p>Solve for EAR : <span class="math"><script type="math/tex">\frac{FV}{PV}^{\frac{1}{T}} -1</script></span></p>
+    </li>
+  </ul>
+  <h2>Repeated periods</h2>
+  <h3>Perpetuity</h3>
+  <p>A constant Payment, starts next period, lasts forever, interest rate <span class="math"><script type="math/tex">r</script></span>:</p>
+  <p><span class="math"><script type="math/tex">PV = \frac{C}{1+r} + \frac{C}{(1+r)^2} + \frac{C}{(1+r)^3} +~... = \frac{C}{r}</script></span></p>
+  <h3>Growing Perpetuity</h3>
+  <p>A Growing Payment at rate <span class="math"><script type="math/tex">g</script></span>, starts next period, lasts forever, interest rate <span class="math"><script type="math/tex">r</script></span>:</p>
+  <p>discount rate &gt; growth rate</p>
+  <p><span class="math"><script type="math/tex">PV = \frac{C}{1+r} + \frac{C×(1+g)}{(1+r)^2} + \frac{C×(1+g)^2}{(1+r)^3} +~... = \frac{C}{r-g}</script></span></p>
+  <h4>Growing Perpetuity with first payment now</h4>
+  <p>starting as the second payment, fit with Growing Perpetuity, <span class="math"><script type="math/tex">C =</script></span> second payment, calculate the PV then <span class="math"><script type="math/tex">+</script></span> the current payment value.</p>
+  <h3>Annuity</h3>
+  <p>A constant payment, fixed maturity, fixed rate:</p>
+  <p><span class="math"><script type="math/tex">PV = \frac{C}{1+r} + \frac{C}{(1+r)^2} + ... +\frac{C}{(1+r)^T} = \frac{C}{r}[1- \frac{1}{(1+r)^T}]</script></span></p>
+  <h3>Growing Annuity</h3>
+  <p><span class="math"><script type="math/tex">PV = \frac{C}{1+r} + \frac{C×(1+g)}{(1+r)^2} + ... + \frac{C×(1+g)^{T-1}}{(1+r)^T} = \frac{C}{r-g}[1- (\frac{1+g}{1+r})^T]</script></span></p>
+  <h2>Loan Amortization</h2>
+  <h3>Pure Discount Loan:</h3>
+  <p>Pay principle and interest once in some future date.</p>
+  <h3>Interest Only Loan:</h3>
+  <p>Every period same interest payment : principle * interest rate<br> last period with additional payment of the principle.</p>
+  <h3>Fixed principle payment:</h3>
+  <p>Every period pay constant amount of principle, the interest will be different because for every interest incurred period, outstanding loan balance is decreasing. Total payment is decreasing.</p>
+  <h3>Fixed total payment:</h3>
+  <p>Total payment for each period is same, the portion of principle is increasing, the portion of interest is decreasing.</p>
+  <p>When given the loan amount, rate, total periods, then we can calculate the fixed payment for each period.<br> the first payment contains interest: total loan * int rate, and and portion of principle : pmt-int.</p>
+  <p><br><br><br> Chapter 5</p>
+  <hr>
+  <h2>NPV</h2>
+  <p>Net Present Value (NPV) = Total PV of future CF’s - Initial Investment</p>
+  <ul>
+    <li>Accept Criteria if NPV &gt; 0, NO otherwise.</li>
+  </ul>
+  <h2>The Payback Period Method</h2>
+  <p>Payback Period = number of years to recover initial costs;</p>
+  <p>Rule: Accept the project if payback period is shorter than cutoff date;</p>
+  <h2>The Discounted Payback Period Method</h2>
+  <p>Accept the project if it pays back on a discounted basis within the specified time.(not use that much)</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th>@10%</th>
+        <th>Cumulative</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>initial cost</td>
+        <td>$(10,000)</td>
+        <td>$(10,000)</td>
+        <td>$(10,000)</td>
+      </tr>
+      <tr>
+        <td>Year 1</td>
+        <td>1,000</td>
+        <td>909.09</td>
+        <td>(9,909.91)</td>
+      </tr>
+      <tr>
+        <td>Year 2</td>
+        <td>4,000</td>
+        <td>3,305.79</td>
+        <td>(5,785.12)</td>
+      </tr>
+      <tr>
+        <td>Year 3</td>
+        <td>5,000</td>
+        <td>3,756.57</td>
+        <td>(2,028.55)</td>
+      </tr>
+      <tr>
+        <td>Year 4</td>
+        <td>6,000</td>
+        <td>4,098.08</td>
+        <td>2,069.53</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Do not take this project if the cutoff is 3 year.</p>
+  <h2>The Internal Rate of Return(IRR Rule)</h2>
+  <p>IRR: the discount rate that sets NPV to zero</p>
+  <p>Accept the project if the IRR is greater than the required return(hurdle) rate</p>
+  <h3>Problems with the IRR Approach, <strong>NPV is right</strong></h3>
+  <p>Using IRR fail to select between mutually exclusive projects. IRR is breaking when multiple positive/negative cashflow involved.</p>
+  <ul>
+    <li>
+      <p>Scaling Problem: higher return with small limit of investment.</p>
+      <ul>
+        <li>
+          <p>IRR 100% profit on maximum $1 invested, or IRR 50% profit on maximum $100,000 investment.</p>
+        </li>
+        <li>
+          <p>Choose the second project but not the higher IRR.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Timing Problem: front/back loaded</p>
+      <ul>
+        <li>
+          <p>same investment with larger payment in different time points, the difference will be discounted.</p>
+        </li>
+        <li>
+          <p>Find NPV(A-B)=0, this is Crossover rate.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Profitability Index(PI)</h2>
+  <p><span class="math"><script type="math/tex">PI=\frac{Total~PV~of~Future~Cash~Flow}{initial~~investment}</script></span>, Accept if PY&gt;1, select highest PI.</p>
+  <p>Meaning for every dollar invested, the future profit is greater than $1.</p>
+</body>
+
+</html>
